@@ -3,6 +3,7 @@ import useScript from "@/components/useScript";
 import IframeResizer from "iframe-resizer-react";
 import React, { useRef } from "react";
 import Image from "next/image";
+import { CalendarCheck, CircleDollarSign, Target } from "lucide-react";
 const copy = [
   // {
   //   key: {
@@ -95,15 +96,24 @@ function SalesPage() {
         {
           //3 ROWS GRID
           <div className="w-[80vw] mx-auto  pb-20 grid grid-cols-1 sm:grid-cols-3 gap-10 ">
-            <h1 className="text-center text-white text-3xl font-black">
-              60% Open-Rate and 2 Positive Replies Per Day.{" "}
-            </h1>
-            <h1 className="text-center text-white text-3xl font-black">
-              4 Meetings Booked Per Week
-            </h1>
-            <h1 className="text-center text-white text-3xl font-black">
-              Getting On 5-Figure Sales Opportunities Every Week
-            </h1>
+            <div className="outline outline-white rounded-lg p-10 flex justify-start items-center flex-col">
+              <Target color="white" className="w-1/3 h-1/3 mb-5" />
+              <h1 className="text-center text-white text-3xl font-black">
+                60% Open-Rate and 2 Positive Replies Per Day
+              </h1>
+            </div>
+            <div className="outline outline-white rounded-lg p-10 flex justify-start items-center flex-col">
+              <CalendarCheck color="white" className="w-1/3 h-1/3 mb-5" />
+              <h1 className="text-center text-white text-3xl font-black">
+                4 Meetings Booked Per Week
+              </h1>
+            </div>
+            <div className="outline outline-white rounded-lg p-10 flex  justify-start items-center flex-col">
+              <CircleDollarSign color="white" className="w-1/3 h-1/3 mb-5" />
+              <h1 className="text-center text-white text-3xl font-black">
+                Getting On 5-Figure Sales Opportunities Every Week
+              </h1>
+            </div>
           </div>
         }
         <a
