@@ -31,26 +31,6 @@ function SalesPage() {
   useScript("https://fast.wistia.net/assets/external/E-v1.js");
   return (
     <div>
-      {window ? (
-        <div>
-          {window.location.href.split(".com/")[0].replace("https://", "") ==
-          "b2bacquisitionconsultant" ? (
-            <div
-              style={{ backgroundColor: "#F16B26" }}
-              className="px-4 py-3 text-white"
-            >
-              <p className="text-center text-lg font-medium">
-                B2B Acquisition Consultant is A Xentora Brand.
-              </p>
-            </div>
-          ) : (
-            ""
-          )}
-        </div>
-      ) : (
-        <div></div>
-      )}
-
       <h1
         dangerouslySetInnerHTML={{
           __html: copyRef.current.headline,
