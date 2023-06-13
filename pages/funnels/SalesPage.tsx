@@ -27,13 +27,11 @@ const copy = [
 ];
 
 function SalesPage() {
-  const [loading, setLoading] = React.useState(true);
-
   const copyRef = useRef(copy[0].key);
   useScript("https://fast.wistia.net/assets/external/E-v1.js");
   return (
     <div>
-      {typeof window != undefined ? (
+      {window ? (
         <div>
           {window.location.href.split(".com/")[0].replace("https://", "") ==
           "b2bacquisitionconsultant" ? (
