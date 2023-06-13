@@ -2,14 +2,13 @@ import React from "react";
 import { Loader2 } from "lucide-react";
 
 function Nav() {
-  const [checked, setChecked] = React.useState(false);
   return (
     <nav className="  flex justify-between items-center relative py-3 lg:px-20 px-5 text-white mx-auto">
       <input
-        checked={checked}
-        onClick={() => {
-          setChecked((c) => !c);
-        }}
+        // checked={checked}
+        // onClick={() => {
+        //   setChecked((c) => !c);
+        // }}
         type="checkbox"
         id="Navbar-2-checkbox"
         className="hidden peer"
