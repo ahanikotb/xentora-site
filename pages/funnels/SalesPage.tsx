@@ -33,7 +33,7 @@ function SalesPage() {
   useScript("https://fast.wistia.net/assets/external/E-v1.js");
   return (
     <div>
-      {typeof window == undefined ? (
+      {typeof window != undefined ? (
         <div>
           {window.location.href.split(".com/")[0].replace("https://", "") ==
           "b2bacquisitionconsultant" ? (
@@ -57,7 +57,7 @@ function SalesPage() {
         dangerouslySetInnerHTML={{
           __html: copyRef.current.headline,
         }}
-        className="mt-5 font-black leading-[1.2] text-white text-center w-[90%] lg:leading-[1.3] mx-auto text-4xl lg:text-5xl md:w-3/4 md:text-4xl xl:w-3/4 xl:text-7xl"
+        className="mt-5 font-black leading-[1.2] text-white text-center w-[90%] lg:leading-[1.3] mx-auto text-5xl lg:text-6xl md:w-4/5 md:text-7xl xl:w-3/4 xl:text-7xl"
       >
         {/* {copyRef.current.headline} */}
       </h1>
