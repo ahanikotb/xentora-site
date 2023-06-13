@@ -89,7 +89,7 @@ function SalesPage() {
               <br /> BEACON TALENT
             </h1>
             <h3 className="mt-3 text-white text-xl sm:text-2xl text-center font-bold">
-              BEACON TALENT is a Recruiting Firm in Brooklyn, New York
+              BEACON TALENT is a Recruiting Firm in Brooklyn, New York.
             </h3>
           </div>
         </div>
