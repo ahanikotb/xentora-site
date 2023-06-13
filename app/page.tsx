@@ -14,7 +14,7 @@ export default function Home() {
     ) {
       setShowBanner(true);
     }
-  });
+  }, []);
   const [showBanner, setShowBanner] = useState(false);
   return (
     <main>
