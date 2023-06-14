@@ -84,7 +84,7 @@ function SalesPage() {
       <section className=" bg-[#f16b26] rounded-lg w-[90%] mx-auto pb-10 ">
         <div className="w-[90vw] mx-auto  flex flex-col items-center justify-center">
           <div className="flex flex-col py-10  items-center justify-center">
-            <h1 className="mt-10 text-4xl sm:text-7xl font-black text-white text-center ">
+            <h1 className="mt-10 text-5xl sm:text-7xl font-black text-white text-center ">
               CASE STUDY:
               <br /> BEACON TALENT
             </h1>
@@ -133,13 +133,14 @@ function SalesPage() {
               </span>{" "}
               WITH A CHEAP ACQUISITION COST
             </h1>
-            {/* <Image
-              src={"/leadgen_for_marketing_agencies.drawio.png"}
-              width={400}
-              height={200}
-              alt={""}
-            ></Image>
-           */}
+            {/* <div className="bg-orange-600">
+              <Image
+                src={"/leadgen_for_marketing_agencies.drawio.png"}
+                width={400}
+                height={200}
+                alt={""}
+              ></Image>
+            </div> */}
           </div>
         </div>
 
