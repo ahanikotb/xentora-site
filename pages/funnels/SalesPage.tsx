@@ -21,7 +21,7 @@ function SalesPage() {
     [
       {
         headline:
-          'GET ON SALES CALLS <span class="text-red-500" >WITH READY-TO-BUY LEADS</span> <span class="text-yellow-400" > THAT UNDERSTAND AND NEED YOUR SERVICE </span>',
+          'GET ON  <span class="text-red-500" >  SALES CALLS </span> WITH <span class="text-red-500" > READY-TO-BUY </span>LEADS  THAT<span class="text-yellow-400" >  UNDERSTAND  </span>AND <span class="text-yellow-400" >NEED </span>YOUR SERVICE ',
         subtitle: "100% DONE FOR YOU. <br/> 100% PAY PER CALL.",
         video: "https://ahanikotb.wistia.com/medias/rcemhdzbg3",
         CTA: "Free Action Plan",
