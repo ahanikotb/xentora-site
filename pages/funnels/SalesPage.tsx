@@ -5,30 +5,30 @@ import React, { useRef } from "react";
 import Image from "next/image";
 import { CalendarCheck, CircleDollarSign, Target } from "lucide-react";
 import weightedRandom from "ts-weighted-random";
-const copy = new Map([
-  [
-    {
-      headline:
-        'ADD <span class="text-red-500" >$20K OF SWEET TAKE HOME PROFIT</span> TO YOUR AGENCY <br/> <span class="text-yellow-400" > IN 90 DAYS OR LESS.</span>',
-      subtitle: "100% DONE FOR YOU. <br/> 100% PERFORMANCE BASED.",
-      video: "https://ahanikotb.wistia.com/medias/rcemhdzbg3",
-      CTA: "Free Action Plan",
-    },
-    1,
-  ],
-  [
-    {
-      headline:
-        'GET ON SALES CALLS <span class="text-red-500" >WITH READY-TO-BUY LEADS</span> <span class="text-yellow-400" > THAT UNDERSTAND AND NEED YOUR SERVICE </span>',
-      subtitle: "100% DONE FOR YOU. <br/> 100% PAY PER CALL.",
-      video: "https://ahanikotb.wistia.com/medias/rcemhdzbg3",
-      CTA: "Free Action Plan",
-    },
-    1,
-  ],
-]);
 
 function SalesPage() {
+  const copy = new Map([
+    [
+      {
+        headline:
+          'ADD <span class="text-red-500" >$20K OF SWEET TAKE HOME PROFIT</span> TO YOUR AGENCY <br/> <span class="text-yellow-400" > IN 90 DAYS OR LESS.</span>',
+        subtitle: "100% DONE FOR YOU. <br/> 100% PERFORMANCE BASED.",
+        video: "https://ahanikotb.wistia.com/medias/rcemhdzbg3",
+        CTA: "Free Action Plan",
+      },
+      1,
+    ],
+    [
+      {
+        headline:
+          'GET ON SALES CALLS <span class="text-red-500" >WITH READY-TO-BUY LEADS</span> <span class="text-yellow-400" > THAT UNDERSTAND AND NEED YOUR SERVICE </span>',
+        subtitle: "100% DONE FOR YOU. <br/> 100% PAY PER CALL.",
+        video: "https://ahanikotb.wistia.com/medias/rcemhdzbg3",
+        CTA: "Free Action Plan",
+      },
+      1,
+    ],
+  ]);
   const copyRef = useRef(weightedRandom(copy));
   useScript("https://fast.wistia.net/assets/external/E-v1.js");
   return (
