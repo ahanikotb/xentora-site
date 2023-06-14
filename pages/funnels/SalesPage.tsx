@@ -10,7 +10,7 @@ const copy = new Map([
     {
       headline:
         'ADD <span class="text-red-500" >$20K OF SWEET TAKE HOME PROFIT</span> TO YOUR AGENCY <br/> <span class="text-yellow-400" > IN 90 DAYS OR LESS.</span>',
-      subtitle: "100% DONE FOR YOU. <br/> 100% PAY PER CALL.",
+      subtitle: "100% DONE FOR YOU. <br/> 100% PERFORMANCE BASED.",
       video: "https://ahanikotb.wistia.com/medias/rcemhdzbg3",
       CTA: "Free Action Plan",
     },
@@ -20,7 +20,7 @@ const copy = new Map([
     {
       headline:
         'GET ON SALES CALLS <span class="text-red-500" >WITH READY-TO-BUY LEADS</span> <span class="text-yellow-400" > THAT UNDERSTAND AND NEED YOUR SERVICE </span>',
-      subtitle: "100% DONE FOR YOU. <br/> 100% PERFORMANCE BASED.",
+      subtitle: "100% DONE FOR YOU. <br/> 100% PAY PER CALL.",
       video: "https://ahanikotb.wistia.com/medias/rcemhdzbg3",
       CTA: "Free Action Plan",
     },
