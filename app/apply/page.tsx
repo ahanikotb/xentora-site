@@ -11,8 +11,8 @@ function Page() {
 
   return (
     <ApplicationForm
-      goToBookingPage={() => {
-        router.push("/book");
+      goToBookingPage={(params: any) => {
+        router.push(`/book?${params}`);
       }}
     />
   );

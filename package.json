@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@horat1us/react-hooks": "^1.12.2",
     "@quillforms/react-renderer-utils": "^5.5.0",
     "@quillforms/renderer-core": "^5.4.0",
     "@radix-ui/react-navigation-menu": "^1.1.3",
@@ -28,6 +29,7 @@
     "postcss": "8.4.24",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-icons": "^4.9.0",
     "react-markdown": "^8.0.7",
     "react-player": "^2.12.0",
     "react-remark": "^2.1.0",
