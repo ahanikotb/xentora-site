@@ -50,24 +50,32 @@ function SalesPage() {
         className="mt-5 text-white font-light	 text-center w-[90%] mx-auto text-2xl lg:text-xl md:w-3/4 md:text-lg xl:w-3/4 xl:text-3xl"
       ></h1>
       <div className="mt-10 w-[90vw] sm:w-[50vw] mx-auto mb-10">
-        <div
-          style={{ position: "relative", paddingBottom: " 56.25%", height: 0 }}
-        >
-          <IframeResizer
-            src="https://www.loom.com/embed/2f077f2388144573b18aac23d82bf5c2?sid=8e4ae21d-9f4a-40e7-8ec8-9ace78e8a3e8"
-            frameBorder="0"
-            // webkitallowfullscreen
-            // mozallowfullscreen
-            allowFullScreen
+        <div className="wistia_responsive_padding">
+          <div
+            className="wistia_responsive_wrapper mx-auto sm:w-[80%]"
             style={{
-              position: "absolute",
-              top: 0,
-              left: 0,
-              width: "100%",
               height: "100%",
             }}
-          ></IframeResizer>
+          >
+            <IframeResizer
+              src="https://fast.wistia.net/embed/iframe/fhi8p923ml?videoFoam=true"
+              title="VSL_CTA Video"
+              allow="autoplay; fullscreen"
+              allowTransparency={true}
+              frameBorder={0}
+              scrolling={false}
+              className="wistia_embed"
+              name="wistia_embed"
+              allowFullScreen={true}
+              width="100%"
+              height="100%"
+            ></IframeResizer>
+          </div>
         </div>
+        {/* <script
+          src="https://fast.wistia.net/assets/external/E-v1.js"
+          async
+        ></script> */}
       </div>
       <a
         href="/book"
