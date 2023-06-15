@@ -12,7 +12,7 @@ const Footer = () => {
       }}
     >
       <a
-        href="https://www.linkedin.com/"
+        href="https://www.linkedin.com/in/ahanikotb/"
         target="_blank"
         rel="noopener noreferrer"
       >
