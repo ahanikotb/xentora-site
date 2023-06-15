@@ -31,7 +31,7 @@ function SalesPage() {
   ]);
   const copyRef = useRef(weightedRandom(copy));
   // <div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/2f077f2388144573b18aac23d82bf5c2?sid=8e4ae21d-9f4a-40e7-8ec8-9ace78e8a3e8" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
-  useScript("https://fast.wistia.net/assets/external/E-v1.js");
+  // useScript("https://fast.wistia.net/assets/external/E-v1.js");
   return (
     <div>
       <h1
@@ -72,10 +72,10 @@ function SalesPage() {
             ></IframeResizer>
           </div>
         </div>
-        {/* <script
+        <script
           src="https://fast.wistia.net/assets/external/E-v1.js"
           async
-        ></script> */}
+        ></script>
       </div>
       <a
         href="/book"
