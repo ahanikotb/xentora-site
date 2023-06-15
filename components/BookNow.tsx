@@ -5,10 +5,23 @@ import useScript from "@/components/useScript";
 import { Loader2 } from "lucide-react";
 function Page() {
   const [loading, setLoading] = useState(true);
+  const [button, setButton] = useState<Element>();
   useScript("https://api.leadconnectorhq.com/js/form_embed.js");
-  // useEffect(() => {
-  //   document.body.style.background = "#2E4057";
-  // }, []);
+
+  useEffect(() => {
+    if (button) {
+      //@ts-ignore
+      console.log(button.innerText);
+    }
+  }, [button]);
+
+  useEffect(() => {
+    if (loading == false) {
+      console.log("loaded");
+
+      // setButton(document.querySelector(".btn.btn-schedule")!);
+    }
+  }, [loading]);
 
   return (
     <div

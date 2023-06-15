@@ -30,6 +30,7 @@ function SalesPage() {
     ],
   ]);
   const copyRef = useRef(weightedRandom(copy));
+  // <div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/2f077f2388144573b18aac23d82bf5c2?sid=8e4ae21d-9f4a-40e7-8ec8-9ace78e8a3e8" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
   useScript("https://fast.wistia.net/assets/external/E-v1.js");
   return (
     <div>
@@ -49,32 +50,24 @@ function SalesPage() {
         className="mt-5 text-white font-light	 text-center w-[90%] mx-auto text-2xl lg:text-xl md:w-3/4 md:text-lg xl:w-3/4 xl:text-3xl"
       ></h1>
       <div className="mt-10 w-[90vw] sm:w-[50vw] mx-auto mb-10">
-        <div className="wistia_responsive_padding">
-          <div
-            className="wistia_responsive_wrapper mx-auto sm:w-[80%]"
+        <div
+          style={{ position: "relative", paddingBottom: " 56.25%", height: 0 }}
+        >
+          <IframeResizer
+            src="https://www.loom.com/embed/2f077f2388144573b18aac23d82bf5c2?sid=8e4ae21d-9f4a-40e7-8ec8-9ace78e8a3e8"
+            frameBorder="0"
+            // webkitallowfullscreen
+            // mozallowfullscreen
+            allowFullScreen
             style={{
+              position: "absolute",
+              top: 0,
+              left: 0,
+              width: "100%",
               height: "100%",
             }}
-          >
-            {/* <IframeResizer
-              src="https://fast.wistia.net/embed/iframe/1fox1cqmrd?videoFoam=true"
-              title="VSL_CTA Video"
-              allow="autoplay; fullscreen"
-              allowTransparency={true}
-              frameBorder={0}
-              scrolling={false}
-              className="wistia_embed"
-              name="wistia_embed"
-              allowFullScreen={true}
-              width="100%"
-              height="100%"
-            ></IframeResizer> */}
-          </div>
+          ></IframeResizer>
         </div>
-        {/* <script
-          src="https://fast.wistia.net/assets/external/E-v1.js"
-          async
-        ></script> */}
       </div>
       <a
         href="/book"
