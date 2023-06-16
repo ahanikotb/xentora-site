@@ -3,7 +3,7 @@ import React from "react";
 function BlogCard({ post }: any) {
   return (
     <div>
-      <article className="mb-10 border rounded-lg flex transition hover:shadow-xl">
+      <article className="transition-all duration-300 ease-in hover:p-10 mb-10 border rounded-lg flex hover:shadow-xl">
         <div className="rotate-180 p-2 [writing-mode:_vertical-lr]">
           <time
             // datetime="2022-10-10"

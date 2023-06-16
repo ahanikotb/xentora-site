@@ -27,14 +27,14 @@ function Nav() {
             AI TOOLS 🚀
           </a>
         </li> */}
-        {/* <li>
+        <li>
           <a
             href="/learn"
-            className="p-6 text-2xl  cursor-pointer flex lg:p-4 lg:hover:bg-inherit hover:bg-gray-500 transition-colors duration-700 ease-in"
+            className="p-6 text-2xl sm:hover:text-green-300  cursor-pointer flex lg:p-4 lg:hover:bg-inherit hover:bg-gray-500 transition-colors duration-700 ease-in"
           >
             LEARN
           </a>
-        </li> */}
+        </li>
         <li>
           <a
             href="/book"

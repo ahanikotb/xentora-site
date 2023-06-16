@@ -5,6 +5,8 @@ import React, { useRef } from "react";
 import Image from "next/image";
 import { CalendarCheck, CircleDollarSign, Target } from "lucide-react";
 import weightedRandom from "ts-weighted-random";
+// import { logEvent } from "firebase/analytics";
+// import { analytics } from "@/lib/firebase";
 
 function SalesPage() {
   const copy = new Map([
@@ -13,7 +15,7 @@ function SalesPage() {
         headline:
           'ADD <span class="text-red-500" >$20K OF SWEET TAKE HOME PROFIT</span> TO YOUR AGENCY <br/> <span class="text-yellow-400" > IN 90 DAYS OR LESS.</span>',
         subtitle: "100% DONE FOR YOU. <br/> 100% PERFORMANCE BASED.",
-        video: "https://ahanikotb.wistia.com/medias/rcemhdzbg3",
+        video: "https://ahanikotb.wistia.com/medias/fhi8p923ml",
         CTA: "Free Action Plan",
       },
       1,
@@ -23,15 +25,25 @@ function SalesPage() {
         headline:
           'GET ON  <span class="text-red-500" >  SALES CALLS </span> WITH <span class="text-red-500" > READY-TO-BUY </span>LEADS  THAT<span class="text-yellow-400" >  UNDERSTAND  </span>AND <span class="text-yellow-400" >NEED </span>YOUR SERVICE ',
         subtitle: "100% DONE FOR YOU. <br/> 100% PAY PER CALL.",
-        video: "https://ahanikotb.wistia.com/medias/rcemhdzbg3",
+        video: "https://ahanikotb.wistia.com/medias/fhi8p923ml",
         CTA: "Free Action Plan",
       },
       1,
     ],
   ]);
   const copyRef = useRef(weightedRandom(copy));
+  const timePageLoaded = useRef(Date.now());
   // <div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/2f077f2388144573b18aac23d82bf5c2?sid=8e4ae21d-9f4a-40e7-8ec8-9ace78e8a3e8" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
   // useScript("https://fast.wistia.net/assets/external/E-v1.js");
+
+  const logClick = () => {
+    // logEvent(analytics, "recpageconversion", {
+    //   headline: copyRef.current.headline,
+    //   page_structure: "vsl",
+    //   videoLink: copyRef.current.video,
+    //   timeSpentOnPage: Date.now() - timePageLoaded.current,
+    // });
+  };
   return (
     <div>
       <h1
@@ -78,6 +90,7 @@ function SalesPage() {
         ></script>
       </div>
       <a
+        onClick={logClick}
         href="/book"
         className="font-black text-white text-2xl hover:bg-green-800 cursor-pointer bg-green-700 p-5 mx-auto h-[60px] w-[220px] flex rounded-xl justify-center items-center mb-10  shadow-lg"
       >
@@ -120,6 +133,7 @@ function SalesPage() {
         }
         <a
           href="/book"
+          onClick={logClick}
           className="font-black  text-white text-2xl hover:bg-green-800 cursor-pointer bg-green-700 p-5 mx-auto h-[60px] w-[220px] flex rounded-xl justify-center items-center  shadow-lg"
         >
           BOOK NOW
