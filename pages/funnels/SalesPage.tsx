@@ -160,13 +160,41 @@ function SalesPage() {
           </div>
         </div>
 
-        {/* <a
-          href="/book"
-          className="font-black  text-white text-2xl hover:bg-green-800 cursor-pointer bg-green-700 p-5 mx-auto h-[60px] w-[220px] flex rounded-xl justify-center items-center  shadow-lg"
-        >
-          BOOK NOW
-        </a> */}
-        {/* <div className="pb-10"></div> */}
+        {/* {
+          //5 ROWS GRID
+          <div className="w-[80vw] mx-auto  pb-20 grid grid-cols-1 sm:grid-cols-5 gap-10 ">
+            <div className="outline outline-white rounded-lg p-10 flex justify-start items-center flex-col">
+              <Target color="white" className="w-1/3 h-1/3 mb-5" />
+              <h1 className="text-center text-white text-3xl font-black">
+                60% Open-Rate and 2 Positive Replies Per Day
+              </h1>
+            </div>
+            <div className="outline outline-white rounded-lg p-10 flex justify-start items-center flex-col">
+              <CalendarCheck color="white" className="w-1/3 h-1/3 mb-5" />
+              <h1 className="text-center text-white text-3xl font-black">
+                4 Meetings Booked Per Week
+              </h1>
+            </div>
+            <div className="outline outline-white rounded-lg p-10 flex  justify-start items-center flex-col">
+              <CircleDollarSign color="white" className="w-1/3 h-1/3 mb-5" />
+              <h1 className="text-center text-white text-3xl font-black">
+                Getting On 5-Figure Sales Opportunities Every Week
+              </h1>
+            </div>
+            <div className="outline outline-white rounded-lg p-10 flex  justify-start items-center flex-col">
+              <CircleDollarSign color="white" className="w-1/3 h-1/3 mb-5" />
+              <h1 className="text-center text-white text-3xl font-black">
+                Getting On 5-Figure Sales Opportunities Every Week
+              </h1>
+            </div>
+            <div className="outline outline-white rounded-lg p-10 flex  justify-start items-center flex-col">
+              <CircleDollarSign color="white" className="w-1/3 h-1/3 mb-5" />
+              <h1 className="text-center text-white text-3xl font-black">
+                Getting On 5-Figure Sales Opportunities Every Week
+              </h1>
+            </div>
+          </div>
+        } */}
       </section>
     </div>
   );
