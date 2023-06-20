@@ -5,8 +5,11 @@ import useScript from "@/components/useScript";
 import { Loader2 } from "lucide-react";
 import BookNow from "@/components/BookNow";
 import ApplicationForm from "@/components/applicationfrom/ApplicationForm";
+import { usePixel } from "@/components/usePixel";
 
 function Page() {
+  const pixel = usePixel();
+
   return <BookNow />;
 }
 
