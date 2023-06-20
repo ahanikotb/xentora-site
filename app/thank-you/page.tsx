@@ -32,7 +32,7 @@ const Footer = () => {
 };
 
 function ThankYou() {
-  const pixel = usePixel();
+  // const pixel = usePixel();
   // pixel?.trackCustom("ThankYou");
   return (
     <div style={{ width: "100vw", height: "100vh" }}>

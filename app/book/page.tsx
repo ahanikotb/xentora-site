@@ -8,10 +8,12 @@ import ApplicationForm from "@/components/applicationfrom/ApplicationForm";
 import { usePixel } from "@/components/usePixel";
 
 function Page() {
-  const pixel = usePixel();
-  pixel?.trackCustom("bookingVisit", {
-    test_event_code: "TEST11484",
-  });
+  // const pixel = usePixel();
+  // useEffect(() => {
+  //   pixel?.trackCustom("bookingVisit", {
+  //     test_event_code: "TEST11484",
+  //   });
+  //  }, []);
 
   return <BookNow />;
 }
