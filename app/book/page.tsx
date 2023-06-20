@@ -9,7 +9,7 @@ import { usePixel } from "@/components/usePixel";
 
 function Page() {
   const pixel = usePixel();
-  pixel?.track("bookingVisit", {
+  pixel?.trackCustom("bookingVisit", {
     test_event_code: "TEST11484",
   });
 
