@@ -12,6 +12,12 @@ function Page() {
 
   useEffect(() => {
     pixel?.trackCustom("bookingViewed");
+    //@ts-ignore
+    analytics &&
+      logEvent(analytics, "page_view", {
+        page_title: "/",
+        page_path: "/",
+      });
   }, []);
 
   return <BookNow />;
