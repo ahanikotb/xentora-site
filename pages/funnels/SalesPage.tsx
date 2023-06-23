@@ -1,12 +1,12 @@
 "use client";
 import useScript from "@/components/useScript";
 import IframeResizer from "iframe-resizer-react";
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import Image from "next/image";
 import { CalendarCheck, CircleDollarSign, Target } from "lucide-react";
 import weightedRandom from "ts-weighted-random";
-// import { logEvent } from "firebase/analytics";
-// import { analytics } from "@/lib/firebase";
+import { logEvent } from "firebase/analytics";
+import useGoogleAnalytics from "@/components/useGoogleAnalytics";
 
 function SalesPage() {
   const copy = new Map([
@@ -31,18 +31,30 @@ function SalesPage() {
       1,
     ],
   ]);
+  const analytics = useGoogleAnalytics();
+  useEffect(() => {
+    //@ts-ignore
+    if (analytics) {
+      logEvent(analytics, "page_view", {
+        page_title: "/",
+        page_path: "/",
+      });
+    }
+  }, [analytics]);
   const copyRef = useRef(weightedRandom(copy));
   const timePageLoaded = useRef(Date.now());
   // <div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/2f077f2388144573b18aac23d82bf5c2?sid=8e4ae21d-9f4a-40e7-8ec8-9ace78e8a3e8" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
   // useScript("https://fast.wistia.net/assets/external/E-v1.js");
 
   const logClick = () => {
-    // logEvent(analytics, "recpageconversion", {
-    //   headline: copyRef.current.headline,
-    //   page_structure: "vsl",
-    //   videoLink: copyRef.current.video,
-    //   timeSpentOnPage: Date.now() - timePageLoaded.current,
-    // });
+    if (analytics) {
+      logEvent(analytics, "recpageconversion", {
+        headline: copyRef.current.headline,
+        page_structure: "vsl",
+        videoLink: copyRef.current.video,
+        timeSpentOnPage: Date.now() - timePageLoaded.current,
+      });
+    }
   };
   return (
     <div className="overflow-hidden">

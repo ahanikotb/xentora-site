@@ -6,18 +6,25 @@ import { Loader2 } from "lucide-react";
 import BookNow from "@/components/BookNow";
 import ApplicationForm from "@/components/applicationfrom/ApplicationForm";
 import { usePixel } from "@/components/usePixel";
+import { logEvent } from "firebase/analytics";
+//@ts-ignore
+import { analytics } from "@/lib/firebase";
+import useGoogleAnalytics from "@/components/useGoogleAnalytics";
 
 function Page() {
   const pixel = usePixel();
-
+  const analytics = useGoogleAnalytics();
+  useEffect(() => {
+    //@ts-ignore
+    if (analytics) {
+      logEvent(analytics, "page_view", {
+        page_title: "/book",
+        page_path: "/book",
+      });
+    }
+  }, [analytics]);
   useEffect(() => {
     pixel?.trackCustom("bookingViewed");
-    //@ts-ignore
-    analytics &&
-      logEvent(analytics, "page_view", {
-        page_title: "/",
-        page_path: "/",
-      });
   }, []);
 
   return <BookNow />;
