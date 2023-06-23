@@ -1,5 +1,7 @@
 "use client";
+import useLinkedinTag from "@/components/useLinkedinTag";
 import { usePixel } from "@/components/usePixel";
+import useTwitterPixel from "@/components/useTwitterPixel";
 import React, { useEffect } from "react";
 import { FaLinkedin, FaTwitter } from "react-icons/fa";
 const Footer = () => {
@@ -33,7 +35,8 @@ const Footer = () => {
 
 function ThankYou() {
   const pixel = usePixel();
-
+  useLinkedinTag();
+  useTwitterPixel();
   useEffect(() => {
     pixel?.trackCustom("meetingBooked");
   }, []);

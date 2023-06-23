@@ -10,10 +10,14 @@ import { logEvent } from "firebase/analytics";
 //@ts-ignore
 import { analytics } from "@/lib/firebase";
 import useGoogleAnalytics from "@/components/useGoogleAnalytics";
+import useLinkedinTag from "@/components/useLinkedinTag";
+import useTwitterPixel from "@/components/useTwitterPixel";
 
 function Page() {
   const pixel = usePixel();
   const analytics = useGoogleAnalytics();
+  useLinkedinTag();
+  useTwitterPixel();
   useEffect(() => {
     //@ts-ignore
     if (analytics) {

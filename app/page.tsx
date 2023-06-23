@@ -2,8 +2,10 @@
 import BookNow from "@/components/BookNow";
 import Nav from "@/components/Nav";
 import useClearbit from "@/components/useClearbit";
+import useLinkedinTag from "@/components/useLinkedinTag";
 import { usePixel } from "@/components/usePixel";
 import useScript from "@/components/useScript";
+import useTwitterPixel from "@/components/useTwitterPixel";
 import SalesPage from "@/pages/funnels/SalesPage";
 import Image from "next/image";
 import { useEffect, useState } from "react";
@@ -13,7 +15,8 @@ export default function Home() {
     "https://tag.clearbitscripts.com/v1/pk_60e7c0678f1219a2a34fcf5c2b8be745/tags.js"
   );
   const pixel = usePixel();
-
+  useLinkedinTag();
+  useTwitterPixel();
   useEffect(() => {
     if (
       window.location.href.split(".com/")[0].replace("https://", "") ==
