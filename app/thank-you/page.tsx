@@ -1,6 +1,6 @@
 "use client";
 import { usePixel } from "@/components/usePixel";
-import React from "react";
+import React, { useEffect } from "react";
 import { FaLinkedin, FaTwitter } from "react-icons/fa";
 const Footer = () => {
   return (
@@ -32,8 +32,12 @@ const Footer = () => {
 };
 
 function ThankYou() {
-  // const pixel = usePixel();
-  // pixel?.trackCustom("ThankYou");
+  const pixel = usePixel();
+
+  useEffect(() => {
+    pixel?.trackCustom("meetingBooked");
+  }, []);
+
   return (
     <div style={{ width: "100vw", height: "100vh" }}>
       <img

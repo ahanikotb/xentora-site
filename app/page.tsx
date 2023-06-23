@@ -12,7 +12,7 @@ export default function Home() {
   useClearbit(
     "https://tag.clearbitscripts.com/v1/pk_60e7c0678f1219a2a34fcf5c2b8be745/tags.js"
   );
-  usePixel();
+  const pixel = usePixel();
 
   useEffect(() => {
     if (
@@ -21,6 +21,7 @@ export default function Home() {
     ) {
       setShowBanner(true);
     }
+    pixel?.trackCustom("salesPageViewed");
   }, []);
   const [showBanner, setShowBanner] = useState(false);
   return (
