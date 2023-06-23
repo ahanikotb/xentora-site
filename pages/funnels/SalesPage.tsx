@@ -10,16 +10,16 @@ import weightedRandom from "ts-weighted-random";
 
 function SalesPage() {
   const copy = new Map([
-    [
-      {
-        headline:
-          'ADD <span class="text-red-500" >$20K OF SWEET TAKE HOME PROFIT</span> TO YOUR AGENCY <br/> <span class="text-yellow-400" > IN 90 DAYS OR LESS.</span>',
-        subtitle: "100% DONE FOR YOU. <br/> 100% PERFORMANCE BASED.",
-        video: "https://ahanikotb.wistia.com/medias/fhi8p923ml",
-        CTA: "Free Action Plan",
-      },
-      1,
-    ],
+    // [
+    //   {
+    //     headline:
+    //       'ADD <span class="text-red-500" >$20K OF SWEET TAKE HOME PROFIT</span> TO YOUR AGENCY <br/> <span class="text-yellow-400" > IN 90 DAYS OR LESS.</span>',
+    //     subtitle: "100% DONE FOR YOU. <br/> 100% PERFORMANCE BASED.",
+    //     video: "https://ahanikotb.wistia.com/medias/fhi8p923ml",
+    //     CTA: "Free Action Plan",
+    //   },
+    //   1,
+    // ],
     [
       {
         headline:
@@ -45,7 +45,7 @@ function SalesPage() {
     // });
   };
   return (
-    <div>
+    <div className="overflow-hidden">
       <h1
         dangerouslySetInnerHTML={{
           __html: copyRef.current.headline,
@@ -54,7 +54,6 @@ function SalesPage() {
       >
         {/* {copyRef.current.headline} */}
       </h1>
-
       <h1
         dangerouslySetInnerHTML={{
           __html: copyRef.current.subtitle,
@@ -138,35 +137,26 @@ function SalesPage() {
         >
           BOOK NOW
         </a>
-      </section>
-      <section className=" mx-auto">
-        <div className="w-[90vw] mx-auto flex flex-col items-center justify-center">
-          <div className="flex flex-col items-center justify-center">
-            <h1 className="text-4xl sm:text-7xl font-black text-white text-center mt-10 mb-10">
-              ENJOY{" "}
-              <span className="underline decoration-green-700">
-                HIGH PROFIT MARGINS IN YOUR BUSINESS
-              </span>{" "}
-              WITH A CHEAP ACQUISITION COST
+      </section>{" "}
+      <section className="my-10 bg-[#0147a9] rounded-lg w-[90%] mx-auto pb-10 ">
+        <div className="w-[90vw] mx-auto  flex flex-col items-center justify-center">
+          <div className="flex flex-col py-10  items-center justify-center">
+            <h1 className="mt-10 text-5xl sm:text-7xl font-black text-white text-center ">
+              CASE STUDY:
+              <br /> REMOTE REP
             </h1>
-            {/* <div className="bg-orange-600">
-              <Image
-                src={"/leadgen_for_marketing_agencies.drawio.png"}
-                width={400}
-                height={200}
-                alt={""}
-              ></Image>
-            </div> */}
+            <h3 className="mt-3 text-white text-xl sm:text-2xl text-center font-bold">
+              Remote Rep is A Sales Outsourcing Company in Atlanta.
+            </h3>
           </div>
         </div>
-
-        {/* {
-          //5 ROWS GRID
-          <div className="w-[80vw] mx-auto  pb-20 grid grid-cols-1 sm:grid-cols-5 gap-10 ">
+        {
+          //3 ROWS GRID
+          <div className="w-[80vw] mx-auto  pb-20 grid grid-cols-1 sm:grid-cols-3 gap-10 ">
             <div className="outline outline-white rounded-lg p-10 flex justify-start items-center flex-col">
               <Target color="white" className="w-1/3 h-1/3 mb-5" />
               <h1 className="text-center text-white text-3xl font-black">
-                60% Open-Rate and 2 Positive Replies Per Day
+                70% Open-Rate and 3-4 Positive Replies Per Day
               </h1>
             </div>
             <div className="outline outline-white rounded-lg p-10 flex justify-start items-center flex-col">
@@ -181,21 +171,45 @@ function SalesPage() {
                 Getting On 5-Figure Sales Opportunities Every Week
               </h1>
             </div>
-            <div className="outline outline-white rounded-lg p-10 flex  justify-start items-center flex-col">
-              <CircleDollarSign color="white" className="w-1/3 h-1/3 mb-5" />
-              <h1 className="text-center text-white text-3xl font-black">
-                Getting On 5-Figure Sales Opportunities Every Week
-              </h1>
-            </div>
-            <div className="outline outline-white rounded-lg p-10 flex  justify-start items-center flex-col">
-              <CircleDollarSign color="white" className="w-1/3 h-1/3 mb-5" />
-              <h1 className="text-center text-white text-3xl font-black">
-                Getting On 5-Figure Sales Opportunities Every Week
-              </h1>
+          </div>
+        }
+        <a
+          href="/book"
+          onClick={logClick}
+          className="font-black  text-white text-2xl hover:bg-green-800 cursor-pointer bg-green-700 p-5 mx-auto h-[60px] w-[220px] flex rounded-xl justify-center items-center  shadow-lg"
+        >
+          BOOK NOW
+        </a>
+      </section>
+      <section className=" mx-auto">
+        <div className="w-[90vw] mx-auto flex flex-col items-center justify-center">
+          <div className="flex flex-col items-center justify-center">
+            <h1 className="text-4xl sm:text-7xl font-black text-white text-center mt-10 mb-10">
+              ENJOY{" "}
+              <span className="underline decoration-green-700">
+                HIGH PROFIT MARGINS IN YOUR BUSINESS
+              </span>{" "}
+              WITH A CHEAP ACQUISITION COST
+            </h1>
+            <div className="bg-gray-200 rounded-xl py-10 w-[80vw] sm:w-[50vw]">
+              <Image
+                className="mx-auto"
+                src={"/leadgen_for_marketing_agencies.drawio.png"}
+                width={400}
+                height={200}
+                alt={""}
+              ></Image>
             </div>
           </div>
-        } */}
+        </div>
       </section>
+      <a
+        onClick={logClick}
+        href="/book"
+        className="my-10 font-black text-white text-2xl hover:bg-green-800 cursor-pointer bg-green-700 p-5 mx-auto h-[60px] w-[220px] flex rounded-xl justify-center items-center mb-10  shadow-lg"
+      >
+        BOOK NOW
+      </a>
     </div>
   );
 }
