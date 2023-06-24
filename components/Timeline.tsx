@@ -1,14 +1,14 @@
 import React from "react";
 
-function Timeline({ CTA }: { CTA: string }) {
+function Timeline() {
   return (
     <section>
-      <h1 className="text-center text-7xl text-white font-black">
+      <h1 className="text-center text-7xl text-white font-black mt-40">
         How We Work
       </h1>
 
       <div>
-        <div className="w-9/12 md:w-7/12 lg:6/12 mx-auto relative py-10">
+        <div className="w-9/12 md:w-7/12 lg:6/12 mx-auto relative py-10 ">
           <div className=" mt-10">
             {/* Card 1 */}
             <div className="transform transition  hover:-translate-y-2 ml-10 relative flex items-center px-6 py-4  text-white rounded mb-10 flex-col md:flex-row space-y-4 md:space-y-0">

@@ -18,7 +18,7 @@ function SalesPage() {
           'GET 10 <span class="text-red-500" >  SALES CALLS </span> WITH <span class="text-red-500" > READY-TO-BUY </span>LEADS  THAT<span class="text-yellow-400" >  UNDERSTAND  </span>AND <span class="text-yellow-400" >NEED </span>YOUR SERVICE  <span class="text-red-500" > EVERY MONTH<span>',
         subtitle: "100% DONE FOR YOU.",
         video: "https://ahanikotb.wistia.com/medias/fhi8p923ml",
-        CTA: "BOOK NOW",
+        CTA: "GET STARTED",
       },
       1,
     ],
@@ -99,7 +99,7 @@ function SalesPage() {
       >
         {copyRef.current.CTA}
       </a>
-      <section className="outline outline-white rounded-xl p-10  w-[90%] sm:w-[80%] mx-auto">
+      <section className=" rounded-xl p-10  w-[90%] sm:w-[80%] mx-auto">
         <h1 className="text-white font-black text-center  sm:text-2xl">
           Clients We've Worked With
         </h1>
@@ -238,7 +238,7 @@ function SalesPage() {
           onClick={logClick}
           className="font-black  text-white text-2xl hover:bg-green-800 cursor-pointer bg-green-700 p-5 mx-auto h-[60px] w-[220px] flex rounded-xl justify-center items-center  shadow-lg"
         >
-          BOOK NOW
+          {copyRef.current.CTA}
         </a>
       </section>
       <section className=" mx-auto">
@@ -266,10 +266,40 @@ function SalesPage() {
         href="/book"
         className="my-10 font-black text-white text-2xl hover:bg-green-800 cursor-pointer bg-green-700 p-5 mx-auto h-[60px] w-[220px] flex rounded-xl justify-center items-center mb-10  shadow-lg"
       >
-        BOOK NOW
+        {copyRef.current.CTA}
       </a>
-      {/* <Timeline CTA={copyRef.current.CTA} /> */}
-      <PricingTable />
+      <Timeline />
+      <a
+        href="/book"
+        onClick={logClick}
+        className="font-black  text-white text-2xl hover:bg-green-800 cursor-pointer bg-green-700 p-5 mx-auto h-[60px] w-[220px] flex rounded-xl justify-center items-center  shadow-lg"
+      >
+        {copyRef.current.CTA}
+      </a>
+      <PricingTable CTA={copyRef.current.CTA} />
+      <section className="w-[90%] mx-auto">
+        <h1 className="font-black text-5xl  sm:text-7xl text-white text-center">
+          A Picture Is Worth A Thousand Words
+        </h1>
+        <img src="proof/email.png"></img>
+        {/* <img src="proof/linkedin.png"></img> */}
+      </section>
+      <section className="my-10 w-[70%] p-10  bg-blue-400 mx-auto rounded-lg">
+        <h1 className="font-black text-4xl sm:text-5xl text-white text-center">
+          WANT TO TALK TO SOMEONE ?
+        </h1>
+        <h3 className="text-center text-2xl text-white mt-2">
+          Our lead generation specialists are available to answer your questions
+          💬
+        </h3>
+        <a
+          href="/book"
+          onClick={logClick}
+          className="font-black mt-10   text-white text-2xl hover:bg-green-800 cursor-pointer bg-green-700 p-5 mx-auto h-[60px] w-[220px] flex rounded-xl justify-center items-center  shadow-lg"
+        >
+          {copyRef.current.CTA}
+        </a>
+      </section>
     </div>
   );
 }
