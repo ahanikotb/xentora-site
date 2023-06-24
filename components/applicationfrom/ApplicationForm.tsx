@@ -45,21 +45,21 @@ function App({ goToBookingPage }: any) {
             answersColor: "white",
           },
           blocks: [
-            {
-              name: "welcome-screen",
-              id: "jg1401r",
+            // {
+            //   name: "welcome-screen",
+            //   id: "jg1401r",
 
-              attributes: {
-                label: "Make Incredible Profits with Xentora",
-                description: "Apply to become Growth Partner today!",
-                attachment: {
-                  type: "image",
+            //   attributes: {
+            //     label: "Make Incredible Profits with Xentora",
+            //     description: "Apply to become Growth Partner today!",
+            //     attachment: {
+            //       type: "image",
 
-                  url: "/xentora_logo.png",
-                },
-                layout: "stack",
-              },
-            },
+            //       url: "/xentora_logo.png",
+            //     },
+            //     layout: "stack",
+            //   },
+            // },
             {
               name: "short-text",
               id: "first_name",
@@ -76,6 +76,16 @@ function App({ goToBookingPage }: any) {
                 classnames: "first-block",
                 required: true,
                 label: "What About Your Last Name?",
+              },
+            },
+            {
+              name: "short-text",
+              id: "current_monthly_revenue",
+
+              attributes: {
+                classnames: "first-block",
+                required: true,
+                label: "What is your Current Monthly Revenue?",
               },
             },
             {
@@ -136,6 +146,10 @@ function App({ goToBookingPage }: any) {
                 first_name: data.answers.first_name.value,
                 //@ts-ignore
                 last_name: data.answers.last_name.value,
+
+                current_monthly_revenue:
+                  //@ts-ignore
+                  data.answers.current_monthly_revenue.value,
               })
             );
             // completeForm();

@@ -140,7 +140,7 @@ const Index = ({ CTA }: { CTA: string }) => (
                     </ul>
 
                     <a
-                      href="/book"
+                      href="/apply"
                       // onClick={logClick}
                       className="font-black  text-white text-2xl hover:bg-green-800 cursor-pointer bg-green-700 p-5 mx-auto h-[60px] w-[220px] flex rounded-xl justify-center items-center  shadow-lg"
                     >
@@ -236,7 +236,7 @@ const Index = ({ CTA }: { CTA: string }) => (
                       </li>
                     </ul>
                     <a
-                      href="/book"
+                      href="/apply"
                       // onClick={logClick}
                       className="font-black  text-white text-2xl hover:bg-green-800 cursor-pointer bg-green-700 p-5 mx-auto h-[60px] w-[220px] flex rounded-xl justify-center items-center  shadow-lg"
                     >
@@ -303,7 +303,7 @@ const Index = ({ CTA }: { CTA: string }) => (
                     </ul>
 
                     <a
-                      href="/book"
+                      href="/apply"
                       // onClick={logClick}
                       className="font-black  text-white text-2xl hover:bg-green-800 cursor-pointer bg-green-700 p-5 mx-auto h-[60px] w-[220px] flex rounded-xl justify-center items-center  shadow-lg"
                     >

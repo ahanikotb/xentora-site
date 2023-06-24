@@ -94,7 +94,7 @@ function SalesPage() {
       </div>
       <a
         onClick={logClick}
-        href="/book"
+        href="/apply"
         className="font-black text-white text-2xl hover:bg-green-800 cursor-pointer bg-green-700 p-5 mx-auto h-[60px] w-[220px] flex rounded-xl justify-center items-center mb-10  shadow-lg"
       >
         {copyRef.current.CTA}
@@ -191,7 +191,7 @@ function SalesPage() {
           </div>
         }
         <a
-          href="/book"
+          href="/apply"
           onClick={logClick}
           className="font-black  text-white text-2xl hover:bg-green-800 cursor-pointer bg-green-700 p-5 mx-auto h-[60px] w-[220px] flex rounded-xl justify-center items-center  shadow-lg"
         >
@@ -234,7 +234,7 @@ function SalesPage() {
           </div>
         }
         <a
-          href="/book"
+          href="/apply"
           onClick={logClick}
           className="font-black  text-white text-2xl hover:bg-green-800 cursor-pointer bg-green-700 p-5 mx-auto h-[60px] w-[220px] flex rounded-xl justify-center items-center  shadow-lg"
         >
@@ -263,14 +263,14 @@ function SalesPage() {
       </section>
       <a
         onClick={logClick}
-        href="/book"
+        href="/apply"
         className="my-10 font-black text-white text-2xl hover:bg-green-800 cursor-pointer bg-green-700 p-5 mx-auto h-[60px] w-[220px] flex rounded-xl justify-center items-center mb-10  shadow-lg"
       >
         {copyRef.current.CTA}
       </a>
       <Timeline />
       <a
-        href="/book"
+        href="/apply"
         onClick={logClick}
         className="font-black  text-white text-2xl hover:bg-green-800 cursor-pointer bg-green-700 p-5 mx-auto h-[60px] w-[220px] flex rounded-xl justify-center items-center  shadow-lg"
       >
@@ -290,7 +290,7 @@ function SalesPage() {
           💬
         </h3>
         <a
-          href="/book"
+          href="/apply"
           onClick={logClick}
           className="font-black mt-10   text-white text-2xl hover:bg-green-800 cursor-pointer bg-green-700 p-5 mx-auto h-[60px] w-[220px] flex rounded-xl justify-center items-center  shadow-lg"
         >
