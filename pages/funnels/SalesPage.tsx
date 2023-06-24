@@ -99,7 +99,7 @@ function SalesPage() {
       >
         {copyRef.current.CTA}
       </a>
-      <section className=" rounded-xl p-10  w-[90%] sm:w-[80%] mx-auto">
+      <section className=" rounded-xl p-10  w-[90%] sm:w-[90%] mx-auto">
         <h1 className="text-white font-black text-center  sm:text-2xl">
           Clients We've Worked With
         </h1>
