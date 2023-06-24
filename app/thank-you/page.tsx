@@ -34,8 +34,6 @@ const Footer = () => {
 };
 
 function ThankYou() {
-  //@ts-ignore
-  document.body.style = "background:black;overflow-x:hidden;";
   const pixel = usePixel();
   useLinkedinTag();
   useTwitterPixel();
