@@ -14,6 +14,9 @@ import useLinkedinTag from "@/components/useLinkedinTag";
 import useTwitterPixel from "@/components/useTwitterPixel";
 
 function Page() {
+  //@ts-ignore
+  document.body.style = "background:black;overflow-x:hidden;";
+
   const pixel = usePixel();
   const analytics = useGoogleAnalytics();
   useLinkedinTag();
