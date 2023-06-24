@@ -278,9 +278,6 @@ function SalesPage() {
       </a>
       <PricingTable CTA={copyRef.current.CTA} />
       <section className="w-[90%] mx-auto">
-        <h1 className="font-black text-5xl  sm:text-7xl text-white text-center">
-          A Picture Is Worth A Thousand Words
-        </h1>
         <img src="proof/email.png"></img>
         {/* <img src="proof/linkedin.png"></img> */}
       </section>
