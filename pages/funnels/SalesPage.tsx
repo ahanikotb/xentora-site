@@ -7,26 +7,18 @@ import { CalendarCheck, CircleDollarSign, Target } from "lucide-react";
 import weightedRandom from "ts-weighted-random";
 import { logEvent } from "firebase/analytics";
 import useGoogleAnalytics from "@/components/useGoogleAnalytics";
+import PricingTable from "@/components/PricingTable";
+import Timeline from "@/components/Timeline";
 
 function SalesPage() {
   const copy = new Map([
-    // [
-    //   {
-    //     headline:
-    //       'ADD <span class="text-red-500" >$20K OF SWEET TAKE HOME PROFIT</span> TO YOUR AGENCY <br/> <span class="text-yellow-400" > IN 90 DAYS OR LESS.</span>',
-    //     subtitle: "100% DONE FOR YOU. <br/> 100% PERFORMANCE BASED.",
-    //     video: "https://ahanikotb.wistia.com/medias/fhi8p923ml",
-    //     CTA: "Free Action Plan",
-    //   },
-    //   1,
-    // ],
     [
       {
         headline:
-          'GET ON  <span class="text-red-500" >  SALES CALLS </span> WITH <span class="text-red-500" > READY-TO-BUY </span>LEADS  THAT<span class="text-yellow-400" >  UNDERSTAND  </span>AND <span class="text-yellow-400" >NEED </span>YOUR SERVICE ',
-        subtitle: "100% DONE FOR YOU. <br/> 100% PAY PER CALL.",
+          'GET 10 <span class="text-red-500" >  SALES CALLS </span> WITH <span class="text-red-500" > READY-TO-BUY </span>LEADS  THAT<span class="text-yellow-400" >  UNDERSTAND  </span>AND <span class="text-yellow-400" >NEED </span>YOUR SERVICE  <span class="text-red-500" > EVERY MONTH<span>',
+        subtitle: "100% DONE FOR YOU.",
         video: "https://ahanikotb.wistia.com/medias/fhi8p923ml",
-        CTA: "Free Action Plan",
+        CTA: "BOOK NOW",
       },
       1,
     ],
@@ -105,8 +97,64 @@ function SalesPage() {
         href="/book"
         className="font-black text-white text-2xl hover:bg-green-800 cursor-pointer bg-green-700 p-5 mx-auto h-[60px] w-[220px] flex rounded-xl justify-center items-center mb-10  shadow-lg"
       >
-        BOOK NOW
+        {copyRef.current.CTA}
       </a>
+      <section className="outline outline-white rounded-xl p-10  w-[90%] sm:w-[80%] mx-auto">
+        <h1 className="text-white font-black text-center  sm:text-2xl">
+          Clients We've Worked With
+        </h1>
+        <div className=" mx-auto mt-10">
+          <div className="grid grid-cols-2 gap-4">
+            <div className="flex justify-center items-center ">
+              <img
+                src="/clients/1.png"
+                className="max-h-20 max-w-20"
+                alt="Client 1"
+              />
+            </div>
+            <div className="flex justify-center items-center">
+              <img
+                src="/clients/2.png"
+                className="max-h-20 max-w-20"
+                alt="Client 2"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="my-10 sm:my-20  rounded-lg w-[90%] mx-auto pb-10 ">
+        <div className="w-[90vw] mx-auto  flex flex-col items-center justify-center">
+          <div className="flex flex-col py-5  items-center justify-center">
+            <h1 className="m-10 text-6xl sm:text-7xl font-black text-white text-center ">
+              Tired Of Uncertainty Within Your Business?
+            </h1>
+          </div>
+        </div>
+        {
+          //3 ROWS GRID
+          <div className="w-[80vw] mx-auto   pb-20 grid grid-cols-1 sm:grid-cols-3 gap-10 ">
+            <div className=" bg-white outline-white rounded-lg p-10 flex justify-start items-center flex-col">
+              <img src={"/painpoint/referrals.jpg"} />
+              {/* <h1 className="text-center text-white text-3xl font-black">
+                Being Over-Reliant on Referrals
+              </h1> */}
+            </div>
+            <div className="outline bg-white outline-white rounded-lg p-10 flex justify-start items-center flex-col">
+              <img src={"/painpoint/paidads.jpg"} />
+              {/* <h1 className="text-center text-white text-3xl font-black">
+                Not Knowing Where Your Next Client is Coming From
+              </h1> */}
+            </div>
+            <div className="outline bg-white outline-white rounded-lg p-10 flex  justify-start items-center flex-col">
+              <img src={"/painpoint/insecurity.jpg"} />
+
+              {/* <h1 className="text-center text-white text-3xl font-black">
+                Losing Money On Paid Ads
+              </h1> */}
+            </div>
+          </div>
+        }
+      </section>
       <section className=" bg-[#f16b26] rounded-lg w-[90%] mx-auto pb-10 ">
         <div className="w-[90vw] mx-auto  flex flex-col items-center justify-center">
           <div className="flex flex-col py-10  items-center justify-center">
@@ -147,7 +195,7 @@ function SalesPage() {
           onClick={logClick}
           className="font-black  text-white text-2xl hover:bg-green-800 cursor-pointer bg-green-700 p-5 mx-auto h-[60px] w-[220px] flex rounded-xl justify-center items-center  shadow-lg"
         >
-          BOOK NOW
+          {copyRef.current.CTA}
         </a>
       </section>{" "}
       <section className="my-10 bg-[#0147a9] rounded-lg w-[90%] mx-auto pb-10 ">
@@ -197,11 +245,9 @@ function SalesPage() {
         <div className="w-[90vw] mx-auto flex flex-col items-center justify-center">
           <div className="flex flex-col items-center justify-center">
             <h1 className="text-4xl sm:text-7xl font-black text-white text-center mt-10 mb-10">
-              ENJOY{" "}
-              <span className="underline decoration-green-700">
-                HIGH PROFIT MARGINS IN YOUR BUSINESS
-              </span>{" "}
-              WITH A CHEAP ACQUISITION COST
+              A{" "}
+              <span className="underline decoration-green-700">Consistent</span>{" "}
+              & Repeatable System For Closing Deals
             </h1>
             <div className="bg-gray-200 rounded-xl py-10 w-[80vw] sm:w-[50vw]">
               <Image
@@ -222,6 +268,8 @@ function SalesPage() {
       >
         BOOK NOW
       </a>
+      {/* <Timeline CTA={copyRef.current.CTA} /> */}
+      <PricingTable />
     </div>
   );
 }
