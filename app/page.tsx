@@ -2,6 +2,7 @@
 import BookNow from "@/components/BookNow";
 import Nav from "@/components/Nav";
 import useClearbit from "@/components/useClearbit";
+import useHotJar from "@/components/useHotJar";
 import useLinkedinTag from "@/components/useLinkedinTag";
 import { usePixel } from "@/components/usePixel";
 import useScript from "@/components/useScript";
@@ -17,6 +18,7 @@ export default function Home() {
   const pixel = usePixel();
   useLinkedinTag();
   useTwitterPixel();
+  useHotJar();
   useEffect(() => {
     if (
       window.location.href.split(".com/")[0].replace("https://", "") ==
