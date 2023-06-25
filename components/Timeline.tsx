@@ -2,7 +2,7 @@ import React from "react";
 
 function Timeline() {
   return (
-    <section>
+    <section id="ourprocess">
       <h1 className="text-center text-5xl sm:text-7xl text-white font-black mt-20 sm:mt-40">
         How We Work
       </h1>
