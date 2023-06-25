@@ -140,13 +140,13 @@ function SalesPage() {
               </h1> */}
             </div>
             <div className="outline bg-white  rounded-lg p-10 flex justify-start items-center flex-col">
-              <img src={"/painpoint/paidads.jpg"} />
+              <img src={"/painpoint/insecurity.jpg"} />
               {/* <h1 className="text-center text-white text-3xl font-black">
                 Not Knowing Where Your Next Client is Coming From
               </h1> */}
             </div>
             <div className="outline bg-white rounded-lg p-10 flex  justify-start items-center flex-col">
-              <img src={"/painpoint/insecurity.jpg"} />
+              <img src={"/painpoint/fillingcalendar.jpg"} />
 
               {/* <h1 className="text-center text-white text-3xl font-black">
                 Losing Money On Paid Ads

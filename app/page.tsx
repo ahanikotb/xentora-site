@@ -33,7 +33,11 @@ export default function Home() {
     <main>
       {showBanner ? (
         <div
-          style={{ backgroundColor: "#F16B26" }}
+          // style={{
+          //   background:
+          //     "radial-gradient(circle at 24.1% 68.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%)",
+          // }}
+          // style={{ backgroundColor: "#F16B26" }}
           className="px-4 py-3 text-white"
         >
           <p className="text-center text-lg font-medium">
