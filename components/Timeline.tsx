@@ -13,7 +13,7 @@ function Timeline() {
       const timeline = gsap.timeline({
         scrollTrigger: {
           trigger: "#ourprocess", // The ID of the trigger element
-          start: "top top", // Start the animation when the bottom of the trigger element reaches the bottom of the viewport
+          start: "top top",
           end: "bottom bottom",
           scrub: 0.01,
 
