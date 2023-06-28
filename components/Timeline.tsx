@@ -33,7 +33,7 @@ function Timeline() {
         }
       );
     }
-  }, []);
+  }, [scrollRef.current]);
   return (
     <div className="xl:container xl:flex mx-auto w-[90vw] " id="ourprocess">
       <div ref={scrollRef} className={`flex-1 `}>
