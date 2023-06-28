@@ -12,8 +12,10 @@ import { analytics } from "@/lib/firebase";
 import useGoogleAnalytics from "@/components/useGoogleAnalytics";
 import useLinkedinTag from "@/components/useLinkedinTag";
 import useTwitterPixel from "@/components/useTwitterPixel";
+import usePlerdy from "@/components/usePlerdy";
 
 function Page() {
+  usePlerdy();
   const pixel = usePixel();
   const analytics = useGoogleAnalytics();
   useLinkedinTag();

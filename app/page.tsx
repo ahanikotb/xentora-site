@@ -5,6 +5,7 @@ import useClearbit from "@/components/useClearbit";
 import useHotJar from "@/components/useHotJar";
 import useLinkedinTag from "@/components/useLinkedinTag";
 import { usePixel } from "@/components/usePixel";
+import usePlerdy from "@/components/usePlerdy";
 import useScript from "@/components/useScript";
 import useTwitterPixel from "@/components/useTwitterPixel";
 import SalesPage from "@/pages/funnels/SalesPage";
@@ -19,6 +20,7 @@ export default function Home() {
   useLinkedinTag();
   useTwitterPixel();
   useHotJar();
+  usePlerdy();
   useEffect(() => {
     if (
       window.location.href.split(".com/")[0].replace("https://", "") ==

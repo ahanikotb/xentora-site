@@ -215,7 +215,7 @@ function SalesPage() {
         </div>
         {
           //3 ROWS GRID
-          <div className="w-[80vw] mx-auto  pb-20 grid grid-cols-1 sm:grid-cols-3 gap-10 ">
+          <div className="w-[80vw] mx-auto  pb-20 grid grid-cols-1 sm:grid-cols-3 gap-10  ">
             <div className="outline outline-white rounded-lg p-10 flex justify-start items-center flex-col">
               <Target color="white" className="w-1/3 h-1/3 mb-5" />
               <h1 className="text-center text-white text-3xl font-black">
@@ -264,14 +264,14 @@ function SalesPage() {
         </div>
       </section>
       <CTAButton
-        additionalClasses={"mb-5"}
+        additionalClasses={"mt-10 xl:hidden"}
         onClick={logClick}
         CTA={copyRef.current.CTA}
         href="/apply"
       />
       <Timeline />
       <CTAButton
-        additionalClasses={"mb-5"}
+        additionalClasses={"mb-5 xl:hidden"}
         onClick={logClick}
         CTA={copyRef.current.CTA}
         href="/apply"
@@ -289,7 +289,12 @@ function SalesPage() {
           Our lead generation specialists are available to answer your questions
           💬
         </h3>
-        <CTAButton onClick={logClick} CTA={copyRef.current.CTA} href="/apply" />
+        <CTAButton
+          additionalClasses={"mt-5"}
+          onClick={logClick}
+          CTA={copyRef.current.CTA}
+          href="/apply"
+        />
       </section>
     </div>
   );

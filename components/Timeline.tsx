@@ -1,14 +1,25 @@
-import React from "react";
-
+"use client";
+import React, { useEffect, useRef, useState } from "react";
+import CTAButton from "./CtaButton";
+import { useScroll } from "framer-motion";
 function Timeline() {
   return (
-    <section id="ourprocess">
-      <h1 className="text-center text-5xl sm:text-7xl text-white font-black mt-20 sm:mt-40">
-        How We Work
-      </h1>
-
-      <div>
-        <div className="w-9/12 md:w-7/12 lg:6/12 mx-auto relative  ">
+    <section className="xl:flex mx-auto w-[90vw] " id="ourprocess">
+      <div className={`flex-1 `}>
+        <h1 className="xl:mb-5 text-center text-5xl sm:text-7xl text-white font-black mt-20 sm:mt-20">
+          How We Work
+        </h1>
+        <h3 className="hidden xl:flex xl:text-center text-white xl:mx-auto text-3xl w-[80%] justify-center mb-5">
+          Transparency and Constant Communication.
+        </h3>
+        <CTAButton
+          href="/apply"
+          additionalClasses="hidden xl:flex"
+          CTA="Get Started"
+        ></CTAButton>
+      </div>
+      <div className="flex-1 overflow-y-auto ">
+        <div className="w-9/12 md:w-7/12 lg:6/12 mx-auto relative   ">
           <div className=" mt-10">
             {/* Card 1 */}
             <div className="transform transition  hover:-translate-y-2 ml-10 relative flex items-center px-6 py-4  text-white rounded mb-10 flex-col md:flex-row space-y-4 md:space-y-0">
