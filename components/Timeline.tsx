@@ -3,7 +3,7 @@ import React, { useEffect, useRef, useState } from "react";
 import CTAButton from "./CtaButton";
 import { motion } from "framer-motion";
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import ScrollTrigger from "gsap/dist/ScrollTrigger";
 function Timeline() {
   const scrollRef = useRef<HTMLDivElement>(null);
 
