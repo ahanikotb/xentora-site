@@ -1,6 +1,7 @@
 "use client";
 import useLinkedinTag from "@/components/useLinkedinTag";
 import { usePixel } from "@/components/usePixel";
+import usePlerdy from "@/components/usePlerdy";
 import useTwitterPixel from "@/components/useTwitterPixel";
 import React, { useEffect } from "react";
 import { FaLinkedin, FaTwitter } from "react-icons/fa";
@@ -34,6 +35,7 @@ const Footer = () => {
 };
 
 function ThankYou() {
+  usePlerdy();
   const pixel = usePixel();
   useLinkedinTag();
   useTwitterPixel();
