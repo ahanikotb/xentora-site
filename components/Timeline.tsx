@@ -1,11 +1,42 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
 import CTAButton from "./CtaButton";
-import { useScroll } from "framer-motion";
+import { motion } from "framer-motion";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 function Timeline() {
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (scrollRef.current) {
+      const timeline = gsap.timeline({
+        scrollTrigger: {
+          trigger: "#ourprocess", // The ID of the trigger element
+          start: "top top", // Start the animation when the bottom of the trigger element reaches the bottom of the viewport
+          end: "bottom bottom",
+          scrub: 0.01,
+
+          // markers: true, // Add markers to visualize ScrollTrigger's behavior (optional)
+        },
+      });
+
+      timeline.fromTo(
+        scrollRef.current,
+        { translateY: 0, ease: "none" },
+        {
+          translateY: `+${
+            scrollRef.current!.getBoundingClientRect().height -
+            window.innerHeight
+          }`,
+          ease: "none",
+        }
+      );
+    }
+  }, []);
   return (
-    <section className="xl:flex mx-auto w-[90vw] " id="ourprocess">
-      <div className={`flex-1 `}>
+    <div className="xl:container xl:flex mx-auto w-[90vw] " id="ourprocess">
+      <div ref={scrollRef} className={`flex-1 `}>
         <h1 className="xl:mb-5 text-center text-5xl sm:text-7xl text-white font-black mt-20 sm:mt-20">
           How We Work
         </h1>
@@ -18,8 +49,8 @@ function Timeline() {
           CTA="Get Started"
         ></CTAButton>
       </div>
-      <div className="flex-1 overflow-y-auto ">
-        <div className="w-9/12 md:w-7/12 lg:6/12 mx-auto relative   ">
+      <div className="  container flex-1 overflow-y-auto no-scrollbar">
+        <div className="w-9/12 md:w-7/12 lg:6/12 mx-auto relative    ">
           <div className=" mt-10">
             {/* Card 1 */}
             <div className="transform transition  hover:-translate-y-2 ml-10 relative flex items-center px-6 py-4  text-white rounded mb-10 flex-col md:flex-row space-y-4 md:space-y-0">
@@ -132,7 +163,7 @@ function Timeline() {
               {/* Line that connecting the box with the vertical line */}
               {/* Content that showing in the box */}
               <div className="flex-auto">
-                <h1 className="text-lg">STEP 5</h1>
+                <h1 className="text-lg">STEP 6</h1>
                 <h1 className="text-4xl sm:text-6xl font-bold">
                   CAMPAIGN ADJUSTMENTS
                 </h1>
@@ -146,7 +177,7 @@ function Timeline() {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 }
 

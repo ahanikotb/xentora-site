@@ -19,7 +19,7 @@ export default function Home() {
   const pixel = usePixel();
   useLinkedinTag();
   useTwitterPixel();
-  useHotJar();
+  // useHotJar();
   usePlerdy();
   useEffect(() => {
     if (
