@@ -9,7 +9,6 @@ import { logEvent } from "firebase/analytics";
 import useGoogleAnalytics from "@/components/useGoogleAnalytics";
 import PricingTable from "@/components/PricingTable";
 import Timeline from "@/components/Timeline";
-import CTAButton from "@/components/CtaButton";
 
 function SalesPage() {
   const copy = new Map([
@@ -19,7 +18,7 @@ function SalesPage() {
           'Get 10 <span class="text-red-500" >  Sales Calls </span>Per Month With <span class="text-red-500" > Ready-To-Buy </span>Leads  That<span class="text-yellow-400" >  Understand  </span>And <span class="text-yellow-400" >Need </span>Your Service',
         subtitle: "100% DONE FOR YOU.",
         video: "https://ahanikotb.wistia.com/medias/fhi8p923ml",
-        CTA: "Get Started",
+        CTA: "GET STARTED",
       },
       1,
     ],
@@ -65,7 +64,7 @@ function SalesPage() {
         }}
         className="mt-2 text-white font-light	 text-center w-[90%] mx-auto text-lg lg:text-xl md:w-3/4 md:text-lg xl:w-3/4 xl:text-3xl"
       ></h1>
-      <div className="mt-3 sm:mt-10 h-[50] w-[90vw] sm:w-[60vw] mx-auto mb-10">
+      <div className="mt-10 w-[90vw] sm:w-[50vw] mx-auto mb-10">
         <div className="wistia_responsive_padding">
           <div
             className="wistia_responsive_wrapper mx-auto sm:w-[80%]"
@@ -93,17 +92,18 @@ function SalesPage() {
           async
         ></script>
       </div>
-      <CTAButton
-        additionalClasses={"mb-5"}
+      <a
         onClick={logClick}
-        CTA={copyRef.current.CTA}
         href="/apply"
-      />
-      <section className="mt-5 rounded-xl sm:p-10  w-[90%] sm:w-[90%] mx-auto">
+        className="font-black text-white text-2xl hover:bg-green-800 cursor-pointer bg-green-700 p-5 mx-auto h-[60px] w-[220px] flex rounded-xl justify-center items-center mb-10  shadow-lg"
+      >
+        {copyRef.current.CTA}
+      </a>
+      <section className=" rounded-xl sm:p-10  w-[90%] sm:w-[90%] mx-auto">
         <h1 className="text-white font-black text-center  sm:text-2xl">
           Clients We've Worked With
         </h1>
-        <div className=" mx-auto mt-2 sm:mt-10">
+        <div className=" mx-auto mt-10">
           <div className="grid grid-cols-2 gap-4">
             <div className="flex justify-center items-center ">
               <img
@@ -193,7 +193,13 @@ function SalesPage() {
             </div>
           </div>
         }
-        <CTAButton onClick={logClick} CTA={copyRef.current.CTA} href="/apply" />
+        <a
+          href="/apply"
+          onClick={logClick}
+          className="font-black  text-white text-2xl hover:bg-green-800 cursor-pointer bg-green-700 p-5 mx-auto h-[60px] w-[220px] flex rounded-xl justify-center items-center  shadow-lg"
+        >
+          {copyRef.current.CTA}
+        </a>
       </section>{" "}
       <section className="my-10 bg-[#0147a9] rounded-lg w-[90%] mx-auto pb-10 ">
         <div className="w-[90vw] mx-auto  flex flex-col items-center justify-center">
@@ -230,12 +236,13 @@ function SalesPage() {
             </div>
           </div>
         }
-        <CTAButton
-          // additionalClasses={"mb-5"}
-          onClick={logClick}
-          CTA={copyRef.current.CTA}
+        <a
           href="/apply"
-        />
+          onClick={logClick}
+          className="font-black  text-white text-2xl hover:bg-green-800 cursor-pointer bg-green-700 p-5 mx-auto h-[60px] w-[220px] flex rounded-xl justify-center items-center  shadow-lg"
+        >
+          {copyRef.current.CTA}
+        </a>
       </section>
       <section className=" mx-auto">
         <div className="w-[90vw] mx-auto flex flex-col items-center justify-center">
@@ -257,19 +264,21 @@ function SalesPage() {
           </div>
         </div>
       </section>
-      <CTAButton
-        additionalClasses={"mb-5"}
+      <a
         onClick={logClick}
-        CTA={copyRef.current.CTA}
         href="/apply"
-      />
+        className="my-10 font-black text-white text-2xl hover:bg-green-800 cursor-pointer bg-green-700 p-5 mx-auto h-[60px] w-[220px] flex rounded-xl justify-center items-center mb-10  shadow-lg"
+      >
+        {copyRef.current.CTA}
+      </a>
       <Timeline />
-      <CTAButton
-        additionalClasses={"mb-5"}
-        onClick={logClick}
-        CTA={copyRef.current.CTA}
+      <a
         href="/apply"
-      />
+        onClick={logClick}
+        className="font-black  text-white text-2xl hover:bg-green-800 cursor-pointer bg-green-700 p-5 mx-auto h-[60px] w-[220px] flex rounded-xl justify-center items-center  shadow-lg"
+      >
+        {copyRef.current.CTA}
+      </a>
       <PricingTable CTA={copyRef.current.CTA} />
       <section className="w-[90%] mx-auto">
         <img src="proof/email.png"></img>
@@ -283,7 +292,13 @@ function SalesPage() {
           Our lead generation specialists are available to answer your questions
           💬
         </h3>
-        <CTAButton onClick={logClick} CTA={copyRef.current.CTA} href="/apply" />
+        <a
+          href="/apply"
+          onClick={logClick}
+          className="font-black mt-10   text-white text-2xl hover:bg-green-800 cursor-pointer bg-green-700 p-5 mx-auto h-[60px] w-[220px] flex rounded-xl justify-center items-center  shadow-lg"
+        >
+          {copyRef.current.CTA}
+        </a>
       </section>
     </div>
   );

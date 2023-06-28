@@ -8,6 +8,7 @@ import Iframe from "iframe-resizer-react";
 import { useState, useEffect, useRef } from "react";
 import useScript from "../useScript";
 import { useMutationObserver } from "@horat1us/react-hooks";
+import { Button } from "@quillforms/admin-components";
 function convertToJsonParams(jsonObject: any) {
   const params = [];
 
@@ -40,7 +41,8 @@ function App({ goToBookingPage }: any) {
             progressBarFillColor: "#F16B26",
             questionsColor: "white",
             // backgroundColor: "#2E4057",
-            backgroundColor: "black",
+            backgroundColor:
+              "radial-gradient(circle at 24.1% 68.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%)",
             buttonsBgColor: "#F16B26",
             answersColor: "white",
           },
