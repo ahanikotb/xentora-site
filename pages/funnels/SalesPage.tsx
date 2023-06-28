@@ -37,7 +37,7 @@ function SalesPage() {
   const copyRef = useRef(weightedRandom(copy));
   const timePageLoaded = useRef(Date.now());
   // <div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/2f077f2388144573b18aac23d82bf5c2?sid=8e4ae21d-9f4a-40e7-8ec8-9ace78e8a3e8" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
-  // useScript("https://fast.wistia.net/assets/external/E-v1.js");
+  useScript("https://fast.wistia.net/assets/external/E-v1.js");
 
   const logClick = () => {
     if (analytics) {
@@ -50,55 +50,61 @@ function SalesPage() {
     }
   };
   return (
-    <div className="overflow-hidden">
-      <h1
-        dangerouslySetInnerHTML={{
-          __html: copyRef.current.headline,
-        }}
-        className="mt-5 font-black leading-[1.2] text-2xl  text-white text-center w-[90%] lg:leading-[1.3] mx-auto  lg:text-3xl md:w-4/5 md:text-3xl xl:w-3/4 xl:text-5xl"
-      >
-        {/* {copyRef.current.headline} */}
-      </h1>
-      <h1
-        dangerouslySetInnerHTML={{
-          __html: copyRef.current.subtitle,
-        }}
-        className="mt-2 text-white font-light	 text-center w-[90%] mx-auto text-lg lg:text-xl md:w-3/4 md:text-lg xl:w-3/4 xl:text-3xl"
-      ></h1>
-      <div className="mt-3 sm:mt-10  w-[90vw] sm:w-[60vw] mx-auto mb-10">
-        <div className="wistia_responsive_padding ">
-          <div
-            className="wistia_responsive_wrapper mx-auto xl:w-[35vw]"
-            style={{
-              height: "100%",
+    <div className="overflow-hidden ">
+      <section className="xl:mt-5 xl:flex xl:w-[90vw] xl:content-center xl:justify-center xl:mx-auto">
+        <div className="xl:flex-col xl:justify-center xl:content-center xl:my-auto xl:flex-1">
+          <h1
+            dangerouslySetInnerHTML={{
+              __html: copyRef.current.headline,
             }}
+            className="xl:my-0  mt-5 font-black leading-[1.2] text-2xl  text-white text-center w-[90%] lg:leading-[1.3] mx-auto xl:mx-auto  lg:text-3xl md:w-4/5 md:text-3xl xl:w-3/4 xl:text-6xl"
           >
-            <IframeResizer
-              src="https://fast.wistia.net/embed/iframe/fhi8p923ml?videoFoam=true"
-              title="VSL_CTA Video"
-              allow="autoplay; fullscreen"
-              allowTransparency={true}
-              frameBorder={0}
-              scrolling={false}
-              className="wistia_embed"
-              name="wistia_embed"
-              allowFullScreen={true}
-              width="100%"
-              height="100%"
-            ></IframeResizer>
+            {/* {copyRef.current.headline} */}
+          </h1>
+          <h1
+            dangerouslySetInnerHTML={{
+              __html: copyRef.current.subtitle,
+            }}
+            className="mt-2 xl:mb-0 text-white font-light 	 text-center w-[90%] mx-auto text-lg lg:text-xl xl:mx-auto md:w-3/4 md:text-lg xl:w-3/4 xl:text-3xl"
+          ></h1>
+          <CTAButton
+            additionalClasses={"mt-5 hidden xl:flex xl:p-0"}
+            onClick={logClick}
+            CTA={copyRef.current.CTA}
+            href="/apply"
+          />
+        </div>
+        <div className="mt-3 sm:mt-10  w-[90vw] sm:w-[60vw] mx-auto mb-10 xl:flex-1">
+          <div className="wistia_responsive_padding ">
+            <div
+              className="wistia_responsive_wrapper mx-auto xl:w-[35vw]"
+              style={{
+                height: "100%",
+              }}
+            >
+              <IframeResizer
+                src="https://fast.wistia.net/embed/iframe/fhi8p923ml?videoFoam=true"
+                title="VSL_CTA Video"
+                allow="autoplay; fullscreen"
+                allowTransparency={true}
+                frameBorder={0}
+                scrolling={false}
+                className="wistia_embed"
+                name="wistia_embed"
+                allowFullScreen={true}
+                width="100%"
+                height="100%"
+              ></IframeResizer>
+            </div>
           </div>
         </div>
-        <script
-          src="https://fast.wistia.net/assets/external/E-v1.js"
-          async
-        ></script>
-      </div>
-      <CTAButton
-        additionalClasses={"mb-5"}
-        onClick={logClick}
-        CTA={copyRef.current.CTA}
-        href="/apply"
-      />
+        <CTAButton
+          additionalClasses={"mb-5 xl:hidden"}
+          onClick={logClick}
+          CTA={copyRef.current.CTA}
+          href="/apply"
+        />
+      </section>
       <section className="mt-5 rounded-xl sm:p-10  w-[90%] sm:w-[90%] mx-auto">
         <h1 className="text-white font-black text-center  sm:text-2xl">
           Clients We've Worked With
