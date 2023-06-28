@@ -65,10 +65,10 @@ function SalesPage() {
         }}
         className="mt-2 text-white font-light	 text-center w-[90%] mx-auto text-lg lg:text-xl md:w-3/4 md:text-lg xl:w-3/4 xl:text-3xl"
       ></h1>
-      <div className="mt-3 sm:mt-10 h-[50] w-[90vw] sm:w-[60vw] mx-auto mb-10">
-        <div className="wistia_responsive_padding">
+      <div className="mt-3 sm:mt-10  w-[90vw] sm:w-[60vw] mx-auto mb-10">
+        <div className="wistia_responsive_padding ">
           <div
-            className="wistia_responsive_wrapper mx-auto sm:w-[80%]"
+            className="wistia_responsive_wrapper mx-auto xl:w-[35vw]"
             style={{
               height: "100%",
             }}
