@@ -10,6 +10,7 @@ import useGoogleAnalytics from "@/components/useGoogleAnalytics";
 import PricingTable from "@/components/PricingTable";
 import Timeline from "@/components/Timeline";
 import CTAButton from "@/components/CtaButton";
+import Testimonials from "@/components/Testimonials";
 
 function SalesPage() {
   const copy = new Map([
@@ -161,88 +162,7 @@ function SalesPage() {
           </div>
         }
       </section>
-      <section
-        id="casestudies"
-        className=" bg-[#f16b26] rounded-lg w-[90%] mx-auto pb-10 "
-      >
-        <div className="w-[90vw] mx-auto  flex flex-col items-center justify-center">
-          <div className="flex flex-col py-10  items-center justify-center">
-            <h1 className="mt-10 text-5xl sm:text-7xl font-black text-white text-center ">
-              CASE STUDY:
-              <br /> BEACON TALENT
-            </h1>
-            <h3 className="mt-3 text-white text-xl sm:text-2xl text-center font-bold">
-              BEACON TALENT is a Recruiting Firm in Brooklyn, New York.
-            </h3>
-          </div>
-        </div>
-        {
-          //3 ROWS GRID
-          <div className="w-[80vw] mx-auto  pb-20 grid grid-cols-1 sm:grid-cols-3 gap-10 ">
-            <div className="outline outline-white rounded-lg p-10 flex justify-start items-center flex-col">
-              <Target color="white" className="w-1/3 h-1/3 mb-5" />
-              <h1 className="text-center text-white text-3xl font-black">
-                60% Open-Rate and 2 Positive Replies Per Day
-              </h1>
-            </div>
-            <div className="outline outline-white rounded-lg p-10 flex justify-start items-center flex-col">
-              <CalendarCheck color="white" className="w-1/3 h-1/3 mb-5" />
-              <h1 className="text-center text-white text-3xl font-black">
-                4 Meetings Booked Per Week
-              </h1>
-            </div>
-            <div className="outline outline-white rounded-lg p-10 flex  justify-start items-center flex-col">
-              <CircleDollarSign color="white" className="w-1/3 h-1/3 mb-5" />
-              <h1 className="text-center text-white text-3xl font-black">
-                Getting On 5-Figure Sales Opportunities Every Week
-              </h1>
-            </div>
-          </div>
-        }
-        <CTAButton onClick={logClick} CTA={copyRef.current.CTA} href="/apply" />
-      </section>{" "}
-      <section className="my-10 bg-[#0147a9] rounded-lg w-[90%] mx-auto pb-10 ">
-        <div className="w-[90vw] mx-auto  flex flex-col items-center justify-center">
-          <div className="flex flex-col py-10  items-center justify-center">
-            <h1 className="mt-10 text-5xl sm:text-7xl font-black text-white text-center ">
-              CASE STUDY:
-              <br /> REMOTE REP
-            </h1>
-            <h3 className="mt-3 text-white text-xl sm:text-2xl text-center font-bold">
-              Remote Rep is A Sales Outsourcing Company in Atlanta.
-            </h3>
-          </div>
-        </div>
-        {
-          //3 ROWS GRID
-          <div className="w-[80vw] mx-auto  pb-20 grid grid-cols-1 sm:grid-cols-3 gap-10  ">
-            <div className="outline outline-white rounded-lg p-10 flex justify-start items-center flex-col">
-              <Target color="white" className="w-1/3 h-1/3 mb-5" />
-              <h1 className="text-center text-white text-3xl font-black">
-                70% Open-Rate and 3-4 Positive Replies Per Day
-              </h1>
-            </div>
-            <div className="outline outline-white rounded-lg p-10 flex justify-start items-center flex-col">
-              <CalendarCheck color="white" className="w-1/3 h-1/3 mb-5" />
-              <h1 className="text-center text-white text-3xl font-black">
-                4 Meetings Booked Per Week
-              </h1>
-            </div>
-            <div className="outline outline-white rounded-lg p-10 flex  justify-start items-center flex-col">
-              <CircleDollarSign color="white" className="w-1/3 h-1/3 mb-5" />
-              <h1 className="text-center text-white text-3xl font-black">
-                Getting On 5-Figure Sales Opportunities Every Week
-              </h1>
-            </div>
-          </div>
-        }
-        <CTAButton
-          // additionalClasses={"mb-5"}
-          onClick={logClick}
-          CTA={copyRef.current.CTA}
-          href="/apply"
-        />
-      </section>
+      <Testimonials />
       <section className=" mx-auto">
         <div className="w-[90vw] mx-auto flex flex-col items-center justify-center">
           <div className="flex flex-col items-center justify-center">
@@ -265,8 +185,9 @@ function SalesPage() {
       </section>
       <CTAButton
         additionalClasses={"mt-10 xl:hidden"}
-        onClick={logClick}
-        CTA={copyRef.current.CTA}
+        CTA="Get Started"
+        // onClick={logClick}
+        // CTA={copyRef.current.CTA}
         href="/apply"
       />
       <Timeline />
