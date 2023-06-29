@@ -20,7 +20,6 @@ function Timeline() {
             start: "top top",
             end: "bottom bottom",
             scrub: 0.01,
-            markers: true,
           },
         });
 
