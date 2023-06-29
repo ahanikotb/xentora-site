@@ -61,13 +61,13 @@ function Timeline() {
         <div className="w-9/12 md:w-7/12 lg:6/12 mx-auto relative    ">
           <div className=" mt-10">
             {/* Card 1 */}
-            <div className="transform transition  hover:-translate-y-2 ml-10 relative flex items-center px-6 py-4  text-white rounded mb-10 flex-col md:flex-row space-y-4 md:space-y-0">
+            <div className="transform transition  hover:-translate-y-2 ml-20 relative flex items-center px-6 py-4  text-white rounded mb-10 flex-col md:flex-row space-y-4 md:space-y-0">
               {/* Dot Follwing the Left Vertical Line */}
-              <div className="w-[6rem] h-[6rem]  absolute -left-10 transform -translate-x-2/4 rounded-full z-10 mt-2 md:mt-0 flex justify-items-center">
+              <div className="w-[5rem] h-[5rem] sm:w-[6rem] sm:h-[6rem]  absolute -left-20 transform -translate-x-3/4 rounded-full z-10 mt-2 md:mt-0 flex justify-items-center">
                 <img src="/steps/step1.png" />
               </div>
               {/* Line that connecting the box with the vertical line */}
-              {/* <div className="w-10 h-1 bg-blue-300 absolute -left-10 z-0" /> */}
+              {/* <div className="w-10 h-1 bg-blue-300 absolute -left-20 z-0" /> */}
               {/* Content that showing in the box */}
               <div className="flex-auto">
                 <h1 className="text-lg">Step 1</h1>
@@ -82,13 +82,13 @@ function Timeline() {
               </div>
             </div>
             {/* Card 2 */}
-            <div className="transform transition  hover:-translate-y-2 ml-10 relative flex items-center px-6 py-4 text-white rounded mb-10 flex-col md:flex-row space-y-4 md:space-y-0">
+            <div className="transform transition  hover:-translate-y-2 ml-20 relative flex items-center px-6 py-4 text-white rounded mb-10 flex-col md:flex-row space-y-4 md:space-y-0">
               {/* Dot Follwing the Left Vertical Line */}
-              <div className="flex justify-items-center w-[6rem] h-[6rem] absolute -left-10 transform -translate-x-2/4 rounded-full z-10 mt-2 md:mt-0">
+              <div className="flex justify-items-center w-[5rem] h-[5rem] sm:w-[6rem] sm:h-[6rem] absolute -left-20 transform -translate-x-3/4 rounded-full z-10 mt-2 md:mt-0">
                 <img src="/steps/step2.png" />
               </div>
               {/* Line that connecting the box with the vertical line */}
-              {/* <div className="w-10 h-1 bg-pink-300 absolute -left-10 z-0" /> */}
+              {/* <div className="w-10 h-1 bg-pink-300 absolute -left-20 z-0" /> */}
               {/* Content that showing in the box */}
               <div className="flex-auto">
                 <h1 className="text-xl">Step 2</h1>
@@ -102,13 +102,13 @@ function Timeline() {
               </div>
             </div>
             {/* Card 3 */}
-            <div className="transform transition  hover:-translate-y-2 ml-10 relative flex items-center px-6 py-4  text-white rounded mb-10 flex-col md:flex-row space-y-4 md:space-y-0">
+            <div className="transform transition  hover:-translate-y-2 ml-20 relative flex items-center px-6 py-4  text-white rounded mb-10 flex-col md:flex-row space-y-4 md:space-y-0">
               {/* Dot Follwing the Left Vertical Line */}
-              <div className="flex justify-items-center w-[6rem] h-[6rem] absolute -left-10 transform -translate-x-2/4 rounded-full z-10 mt-2 md:mt-0">
+              <div className="flex justify-items-center w-[4rem] h-[4rem] sm:w-[6rem] sm:h-[6rem] absolute -left-20 transform -translate-x-3/4 rounded-full z-10 mt-2 md:mt-0">
                 <img src="/steps/step3.png" />
               </div>
               {/* Line that connecting the box with the vertical line */}
-              {/* <div className="w-10 h-1 bg-green-300 absolute -left-10 z-0" /> */}
+              {/* <div className="w-10 h-1 bg-green-300 absolute -left-20 z-0" /> */}
               {/* Content that showing in the box */}
               <div className="flex-auto">
                 <h1 className="text-lg">STEP 3</h1>
@@ -123,13 +123,13 @@ function Timeline() {
               </div>
             </div>
             {/* Card 4 */}
-            <div className="transform transition  hover:-translate-y-2 ml-10 relative flex items-center px-6 py-4  text-white rounded mb-10 flex-col md:flex-row space-y-4 md:space-y-0">
+            <div className="transform transition  hover:-translate-y-2 ml-20 relative flex items-center px-6 py-4  text-white rounded mb-10 flex-col md:flex-row space-y-4 md:space-y-0">
               {/* Dot Follwing the Left Vertical Line */}
-              <div className="flex justify-items-center w-[6rem] h-[6rem]  absolute -left-10 transform -translate-x-2/4 rounded-full z-10 mt-2 md:mt-0">
+              <div className="flex justify-items-center  w-[4rem] h-[4rem] sm:w-[6rem] sm:h-[6rem]  absolute -left-20 transform -translate-x-3/4 rounded-full z-10 mt-2 md:mt-0">
                 <img src="/steps/step4.png" />
               </div>
               {/* Line that connecting the box with the vertical line */}
-              {/* <div className="w-10 h-1 bg-purple-300 absolute -left-10 z-0" /> */}
+              {/* <div className="w-10 h-1 bg-purple-300 absolute -left-20 z-0" /> */}
               {/* Content that showing in the box */}
               <div className="flex-auto">
                 <h1 className="text-lg">STEP 4</h1>
@@ -143,13 +143,13 @@ function Timeline() {
               </div>
             </div>
             {/* Card 5 */}
-            <div className="transform transition  hover:-translate-y-2 ml-10 relative flex items-center px-6 py-4 text-white rounded mb-10 flex-col md:flex-row">
+            <div className="transform transition  hover:-translate-y-2 ml-20 relative flex items-center px-6 py-4 text-white rounded mb-10 flex-col md:flex-row">
               {/* Dot Follwing the Left Vertical Line */}
-              <div className="flex justify-items-center w-[6rem] h-[6rem] absolute -left-10 transform -translate-x-2/4 rounded-full z-10 -mt-2 md:mt-0">
+              <div className="flex justify-items-center  w-[4rem] h-[4rem] sm:w-[6rem] sm:h-[6rem] absolute -left-20 transform -translate-x-3/4 rounded-full z-10 -mt-2 md:mt-0">
                 <img src="/steps/step5.png" />
               </div>
               {/* Line that connecting the box with the vertical line */}
-              {/* <div className="w-10 h-1 bg-yellow-300 absolute -left-10 z-0" /> */}
+              {/* <div className="w-10 h-1 bg-yellow-300 absolute -left-20 z-0" /> */}
               {/* Content that showing in the box */}
               <div className="flex-auto">
                 <h1 className="text-lg">STEP 5</h1>
@@ -163,9 +163,9 @@ function Timeline() {
               </div>
             </div>{" "}
             {/* Card 5 */}
-            <div className="transform transition  hover:-translate-y-2 ml-10 relative flex items-center px-6 py-4  text-white rounded mb-10 flex-col md:flex-row">
+            <div className="transform transition  hover:-translate-y-2 ml-20 relative flex items-center px-6 py-4  text-white rounded mb-10 flex-col md:flex-row">
               {/* Dot Follwing the Left Vertical Line */}
-              <div className="flex justify-items-center w-[6rem] h-[6rem]  absolute -left-10 transform -translate-x-2/4 rounded-full z-10 -mt-2 md:mt-0">
+              <div className="flex justify-items-center w-[4rem] h-[4rem] sm:w-[6rem] sm:h-[6rem]  absolute -left-[6rem] transform -translate-x-3/4 rounded-full z-10 -mt-2 md:mt-0">
                 <img src="/steps/step6.png" />
               </div>
               {/* Line that connecting the box with the vertical line */}
