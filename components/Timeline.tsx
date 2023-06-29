@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
 import CTAButton from "./CtaButton";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 
@@ -9,33 +9,36 @@ gsap.registerPlugin(ScrollTrigger);
 
 function Timeline() {
   const component = useRef<HTMLDivElement>(null); // we only need a ref for the root-level element of this component so we can use selector text for everything else.
+  const inView = useInView(component);
 
   useEffect(() => {
-    let ctx = gsap.context(() => {
-      const timeline = gsap.timeline({
-        scrollTrigger: {
-          trigger: component.current, // The ID of the trigger element
-          start: "top center",
-          end: "bottom bottom",
-          scrub: 0.01,
-          markers: true,
-        },
-      });
+    if (component.current && inView) {
+      let ctx = gsap.context(() => {
+        const timeline = gsap.timeline({
+          scrollTrigger: {
+            trigger: component.current, // The ID of the trigger element
+            start: "top top",
+            end: "bottom bottom",
+            scrub: 0.01,
+            markers: true,
+          },
+        });
 
-      timeline.fromTo(
-        "#work",
-        { translateY: 0, ease: "none" },
-        {
-          translateY: `+${
-            document.getElementById("work")!.getBoundingClientRect().height -
-            window.innerHeight
-          }`,
-          ease: "none",
-        }
-      );
-    }, component);
-    return () => ctx.revert();
-  }, []);
+        timeline.fromTo(
+          "#work",
+          { translateY: 0, ease: "none" },
+          {
+            translateY: `+${
+              document.getElementById("work")!.getBoundingClientRect().height -
+              window.innerHeight
+            }`,
+            ease: "none",
+          }
+        );
+      }, component);
+      return () => ctx.revert();
+    }
+  }, [inView]);
   return (
     <div
       ref={component}
