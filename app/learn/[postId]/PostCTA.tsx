@@ -131,7 +131,12 @@ export default function PostData() {
   );
 }
 
-function CTAButton({ onClick, CTA, additionalClasses, href = "/apply" }: any) {
+export function CTAButton({
+  onClick,
+  CTA,
+  additionalClasses,
+  href = "/apply",
+}: any) {
   const [loading, setLoading] = useState(false);
   return (
     <a

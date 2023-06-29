@@ -4,8 +4,7 @@ import ReactMarkdown from "react-markdown";
 import Nav from "@/components/Nav";
 import rehypeRaw from "rehype-raw";
 import { MDXRemote } from "next-mdx-remote/rsc";
-import PostCTA from "./PostCTA";
-
+import CTAButton from "@/components/CtaButton";
 type Props = {
   params: {
     postId: string;
@@ -29,7 +28,7 @@ function Page({ params: { postId } }: Props) {
           className=" text-2xl prose-invert  prose xl:prose-2xl xl:text-3xl"
         ></ReactMarkdown> */}
       </div>
-      {/* <PostCTA /> */}
+      <CTAButton href="/apply" CTA="Get Started"></CTAButton>
     </div>
   );
 }
