@@ -18,15 +18,15 @@ function Page({ params: { postId } }: Props) {
     <div>
       <Nav />
       <div className="p-10 grid place-content-center pt-15">
-        {/* <div className="text-2xl prose-invert  prose xl:prose-2xl xl:text-3xl">
+        <div className="text-2xl prose-invert  prose xl:prose-2xl xl:text-3xl">
           <MDXRemote source={post} />
-        </div> */}
+        </div>
 
-        <ReactMarkdown
+        {/* <ReactMarkdown
           rehypePlugins={[rehypeRaw]}
           children={post}
           className=" text-2xl prose-invert  prose xl:prose-2xl xl:text-3xl"
-        ></ReactMarkdown>
+        ></ReactMarkdown> */}
       </div>
     </div>
   );
@@ -35,9 +35,8 @@ function Page({ params: { postId } }: Props) {
 export default Page;
 
 function getPostBySlug(slug: string) {
-  if (slug) {
-    return `
-    ## **Add 5 to 10 Clients In The Next 90 Days with this Automated Outbound System**
+  return `
+ ## **Add 5 to 10 Clients In The Next 90 Days with this Automated Outbound System**
 
 <div
   style={{
@@ -62,6 +61,5 @@ function getPostBySlug(slug: string) {
   />
 </div>
 `;
-  }
-  return fs.readFileSync(`./public/posts/${slug}.mdX`, "utf-8");
+  //return fs.readFileSync(`./public/posts/${slug}.mdX`, "utf-8");
 }
