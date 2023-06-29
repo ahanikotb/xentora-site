@@ -11,14 +11,19 @@ import PricingTable from "@/components/PricingTable";
 import Timeline from "@/components/Timeline";
 import CTAButton from "@/components/CtaButton";
 import Testimonials from "@/components/Testimonials";
+import Statement from "@/components/Statement";
 
 function SalesPage() {
   const copy = new Map([
     [
       {
+        preheadline: "<span class='text-red-500'>Founders And CEOs<span/>",
         headline:
-          'Get 10 <span class="text-red-500" >  Sales Calls </span>Per Month With <span class="text-red-500" > Ready-To-Buy </span>Leads  That<span class="text-yellow-400" >  Understand  </span>And <span class="text-yellow-400" >Need </span>Your Service',
-        subtitle: "100% DONE FOR YOU.",
+          "<span class='font-bold'>Install A Proven Lead Generation System In Your Business And Bank A Minimum of 10X ROI BY Predictably Getting Clients Online</span>",
+        // '10<span class="text-red-500" >  Sales Calls </span>Per Month With <span class="text-red-500" > Ready-To-Buy </span>Leads  That<span class="text-yellow-400" >  Understand  </span>And <span class="text-yellow-400" >Need </span>Your Service',
+        // subtitle: "100% DONE FOR YOU.",
+        subtitle:
+          "Business To Business Digital Marketing and Sales System. <br/><span class='text-red-500'>100% Done For You ",
         video: "https://ahanikotb.wistia.com/medias/fhi8p923ml",
         CTA: "Get Started",
       },
@@ -54,20 +59,29 @@ function SalesPage() {
     <div className="overflow-hidden ">
       <section className="xl:mt-5 xl:flex xl:w-[90vw] xl:content-center xl:justify-center xl:mx-auto">
         <div className="xl:flex-col xl:justify-center xl:content-center xl:my-auto xl:flex-1">
+          {" "}
           <h1
             dangerouslySetInnerHTML={{
-              __html: copyRef.current.headline,
+              __html: copyRef.current.preheadline,
             }}
-            className="xl:my-0  mt-5 font-black leading-[1.2] text-2xl  text-white text-center w-[90%] lg:leading-[1.3] mx-auto xl:mx-auto  lg:text-4xl md:w-4/5 md:text-3xl xl:w-3/4 xl:text-4xl 2xl:text-6xl"
+            className="xl:my-0 mt-3 font-black leading-[1.2] text-lg  text-white text-center w-[90%] lg:leading-[1.3] mx-auto xl:mx-auto  lg:text-4xl md:w-4/5 md:text-3xl xl:w-3/4 xl:text-4xl 2xl:text-xl"
           >
             {/* {copyRef.current.headline} */}
           </h1>
           <h1
             dangerouslySetInnerHTML={{
+              __html: copyRef.current.headline,
+            }}
+            className="xl:my-0  mt-0 font-black leading-[1.2] text-2xl  text-white text-center w-[90%] lg:leading-[1.3] mx-auto xl:mx-auto  lg:text-4xl md:w-4/5 md:text-3xl xl:w-3/4 xl:text-4xl 2xl:text-5xl"
+          >
+            {/* {copyRef.current.headline} */}
+          </h1>
+          {/* <h1
+            dangerouslySetInnerHTML={{
               __html: copyRef.current.subtitle,
             }}
             className="mt-2 xl:mb-0 text-white font-light 	 text-center w-[90%] mx-auto text-lg lg:text-xl xl:mx-auto md:w-3/4 md:text-lg xl:w-3/4 xl:text-3xl"
-          ></h1>
+          ></h1> */}
           <CTAButton
             additionalClasses={"mt-5 hidden xl:flex xl:p-0"}
             onClick={logClick}
@@ -139,21 +153,28 @@ function SalesPage() {
         </div>
         {
           //3 ROWS GRID
-          <div className="w-[80vw] mx-auto   sm:pb-20 grid grid-cols-1 sm:grid-cols-3 gap-10 ">
-            <div className=" bg-white rounded-lg p-10 flex justify-start items-center flex-col">
+          <div className="w-[80vw] mx-auto   sm:pb-10 grid grid-cols-2 sm:grid-cols-4 gap-10 ">
+            <div className=" bg-white rounded-lg outline outline-5 sm:p-10 flex justify-start items-center flex-col">
               <img src={"/painpoint/referrals.jpg"} />
               {/* <h1 className="text-center text-white text-3xl font-black">
                 Being Over-Reliant on Referrals
               </h1> */}
             </div>
-            <div className="outline bg-white  rounded-lg p-10 flex justify-start items-center flex-col">
+            <div className="outline bg-white outline-5 rounded-lg sm:p-10 flex justify-start items-center flex-col">
               <img src={"/painpoint/insecurity.jpg"} />
               {/* <h1 className="text-center text-white text-3xl font-black">
                 Not Knowing Where Your Next Client is Coming From
               </h1> */}
             </div>
-            <div className="outline bg-white rounded-lg p-10 flex  justify-start items-center flex-col">
+            <div className="outline bg-white outline-5 rounded-lg sm:p-10 flex  justify-start items-center flex-col">
               <img src={"/painpoint/fillingcalendar.jpg"} />
+
+              {/* <h1 className="text-center text-white text-3xl font-black">
+                Losing Money On Paid Ads
+              </h1> */}
+            </div>{" "}
+            <div className="outline bg-white outline-5 rounded-lg sm:p-10 flex  justify-start items-center flex-col">
+              <img src={"/painpoint/paidads.jpg"} />
 
               {/* <h1 className="text-center text-white text-3xl font-black">
                 Losing Money On Paid Ads
@@ -162,7 +183,10 @@ function SalesPage() {
           </div>
         }
       </section>
+
+      {/* <Statement /> */}
       <Testimonials />
+
       <section className=" mx-auto">
         <div className="w-[90vw] mx-auto flex flex-col items-center justify-center">
           <div className="flex flex-col items-center justify-center">
@@ -198,8 +222,17 @@ function SalesPage() {
         href="/apply"
       />
       <PricingTable CTA={copyRef.current.CTA} />
-      <section className="w-[90%] mx-auto">
-        <img src="proof/email.png"></img>
+      <section className="w-[90vw] mx-auto">
+        <img src="proof/email-1.png"></img>
+        <div className="grid grid-cols-1 sm:grid-cols-2  mt-10 w-[80vw]  ">
+          <img className="p-10" src="proof/email-2.png"></img>
+          <img
+            className="py-10 px-1 overflow-hidden"
+            src="proof/email-3.png"
+          ></img>
+        </div>
+        {/* <img src="proof/email.png"></img> */}
+        {/* <img src="proof/email.png"></img> */}
         {/* <img src="proof/linkedin.png"></img> */}
       </section>
       <section className="my-10 w-[90%] sm:w-[70%] p-10  bg-blue-400 mx-auto rounded-lg">

@@ -165,7 +165,7 @@ function Timeline() {
             {/* Card 5 */}
             <div className="transform transition  hover:-translate-y-2 ml-20 relative flex items-center px-6 py-4  text-white rounded mb-10 flex-col md:flex-row">
               {/* Dot Follwing the Left Vertical Line */}
-              <div className="flex justify-items-center w-[4rem] h-[4rem] sm:w-[6rem] sm:h-[6rem]  absolute -left-[6rem] transform -translate-x-3/4 rounded-full z-10 -mt-2 md:mt-0">
+              <div className="flex justify-items-center w-[4rem] h-[4rem] sm:w-[6rem] sm:h-[6rem]  absolute -left-[6rem] sm:-left-20  transform -translate-x-3/4 rounded-full z-10 -mt-2 md:mt-0">
                 <img src="/steps/step6.png" />
               </div>
               {/* Line that connecting the box with the vertical line */}

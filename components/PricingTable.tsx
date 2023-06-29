@@ -74,16 +74,6 @@ const Index = ({ CTA }: { CTA: string }) => (
                           alt="check-mark"
                         />
                         <p className="text-gray-800 text-base font-normal">
-                          30 Google Workspace Accounts
-                        </p>
-                      </li>{" "}
-                      <li className="flex items-center mb-2.5">
-                        <img
-                          src="https://cdn.tuk.dev/assets/templates/weCare/checkMark.png"
-                          className="mr-4"
-                          alt="check-mark"
-                        />
-                        <p className="text-gray-800 text-base font-normal">
                           Instantly Mass Email Sending Tool
                         </p>
                       </li>{" "}
