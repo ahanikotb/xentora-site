@@ -18,7 +18,7 @@ function Page({ params: { postId } }: Props) {
     <div>
       <Nav />
       <div className="p-10 grid place-content-center pt-15">
-        <div className="text-2xl prose-invert  prose xl:prose-2xl xl:text-3xl">
+        <div className="text-lg prose-invert lg:text-2xl  prose xl:prose-2xl xl:text-3xl text-center sm:text-start">
           <MDXRemote source={post} />
         </div>
 
