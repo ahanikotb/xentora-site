@@ -15,11 +15,10 @@ function Timeline() {
       const timeline = gsap.timeline({
         scrollTrigger: {
           trigger: component.current, // The ID of the trigger element
-          start: "top top",
+          start: "top center",
           end: "bottom bottom",
           scrub: 0.01,
-
-          // markers: true, // Add markers to visualize ScrollTrigger's behavior (optional)
+          markers: true,
         },
       });
 
