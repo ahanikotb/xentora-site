@@ -1,5 +1,6 @@
 "use client";
 import BookNow from "@/components/BookNow";
+import Footer from "@/components/Footer";
 import Nav from "@/components/Nav";
 import useClearbit from "@/components/useClearbit";
 import useHotJar from "@/components/useHotJar";
@@ -52,6 +53,7 @@ export default function Home() {
 
       <Nav />
       <SalesPage />
+      {/* <Footer /> */}
       {/* 
       <BookNow /> */}
     </main>
