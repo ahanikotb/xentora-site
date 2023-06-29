@@ -235,7 +235,12 @@ function SalesPage() {
         {/* <img src="proof/email.png"></img> */}
         {/* <img src="proof/linkedin.png"></img> */}
       </section>
-      <section className="my-10 w-[90%] sm:w-[70%] p-10  bg-blue-400 mx-auto rounded-lg">
+      <section
+        style={{
+          background: "rgba(0, 0,0, 0.2)",
+        }}
+        className="my-10 w-[90%] sm:w-[70%] p-10   mx-auto rounded-lg"
+      >
         <h1 className="font-black text-4xl sm:text-5xl text-white text-center">
           WANT TO TALK TO SOMEONE ?
         </h1>
