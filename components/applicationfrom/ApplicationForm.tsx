@@ -42,7 +42,7 @@ function App({ goToBookingPage }: any) {
             questionsColor: "white",
             // backgroundColor: "#2E4057",
             backgroundColor:
-              "radial-gradient(circle at 24.1% 68.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%)",
+              "radial-gradient(circle at 24.1% 68.8%, rgb(50, 50, 70) 0%, rgb(0, 0, 15) 99.4%)",
             buttonsBgColor: "#F16B26",
             answersColor: "white",
           },

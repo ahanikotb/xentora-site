@@ -1,19 +1,20 @@
 "use client";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
 import CTAButton from "./CtaButton";
 import { motion } from "framer-motion";
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
 function Timeline() {
-  const scrollRef = useRef<HTMLDivElement>(null);
+  const component = useRef<HTMLDivElement>(null); // we only need a ref for the root-level element of this component so we can use selector text for everything else.
 
   useEffect(() => {
-    if (scrollRef.current) {
-      gsap.registerPlugin(ScrollTrigger);
-
+    let ctx = gsap.context(() => {
       const timeline = gsap.timeline({
         scrollTrigger: {
-          trigger: "#ourprocess", // The ID of the trigger element
+          trigger: component.current, // The ID of the trigger element
           start: "top top",
           end: "bottom bottom",
           scrub: 0.01,
@@ -23,21 +24,26 @@ function Timeline() {
       });
 
       timeline.fromTo(
-        scrollRef.current,
+        "#work",
         { translateY: 0, ease: "none" },
         {
           translateY: `+${
-            scrollRef.current!.getBoundingClientRect().height -
+            document.getElementById("work")!.getBoundingClientRect().height -
             window.innerHeight
           }`,
           ease: "none",
         }
       );
-    }
-  }, [scrollRef.current]);
+    }, component);
+    return () => ctx.revert();
+  }, []);
   return (
-    <div className="xl:container xl:flex mx-auto w-[90vw] " id="ourprocess">
-      <div ref={scrollRef} className={`flex-1 `}>
+    <div
+      ref={component}
+      className="xl:container xl:flex mx-auto w-[90vw] "
+      id="ourprocess"
+    >
+      <div id="work" className={`flex-1 `}>
         <h1 className="xl:mb-5 text-center text-5xl sm:text-7xl text-white font-black mt-20 sm:mt-20">
           How We Work
         </h1>
