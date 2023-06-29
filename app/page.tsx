@@ -53,7 +53,7 @@ export default function Home() {
 
       <Nav />
       <SalesPage />
-      {/* <Footer /> */}
+      <Footer />
       {/* 
       <BookNow /> */}
     </main>
