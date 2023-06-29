@@ -4,6 +4,7 @@ import ReactMarkdown from "react-markdown";
 import Nav from "@/components/Nav";
 import rehypeRaw from "rehype-raw";
 import { MDXRemote } from "next-mdx-remote/rsc";
+import PostCTA from "./PostCTA";
 
 type Props = {
   params: {
@@ -28,6 +29,7 @@ function Page({ params: { postId } }: Props) {
           className=" text-2xl prose-invert  prose xl:prose-2xl xl:text-3xl"
         ></ReactMarkdown> */}
       </div>
+      {/* <PostCTA /> */}
     </div>
   );
 }
