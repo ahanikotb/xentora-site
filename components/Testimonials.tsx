@@ -25,10 +25,10 @@ function Testimonials() {
       {currentCaseStudy == 0 ? (
         <section
           id="casestudies"
-          className=" rounded-lg w-[90%] mx-auto pb-10 "
+          className=" rounded-lg w-[90%] mx-auto pb-10  xl:flex xl:flex-row"
         >
-          <div className="w-[90vw] mx-auto  flex flex-col items-center justify-center">
-            <div className="flex flex-col py-10  items-center justify-center">
+          <div className="w-[90vw] mx-auto  flex flex-col items-center justify-center xl:justify-start xl:content-center">
+            <div className="flex flex-col py-10  items-center justify-center ">
               <h1 className="mt-10 text-5xl sm:text-7xl font-black text-white text-center ">
                 CASE STUDY:
                 <br /> BEACON TALENT
@@ -84,9 +84,9 @@ function Testimonials() {
       {currentCaseStudy == 1 ? (
         <section
           id="casestudies"
-          className=" rounded-lg w-[90%] mx-auto pb-10 "
+          className=" rounded-lg w-[90%] mx-auto pb-10  xl:flex xl:flex-row"
         >
-          <div className="w-[90vw] mx-auto  flex flex-col items-center justify-center">
+          <div className="w-[90vw] mx-auto  flex flex-col items-center justify-center xl:justify-start xl:content-center">
             <div className="flex flex-col py-10  items-center justify-center">
               <h1 className="mt-10 text-5xl sm:text-7xl font-black text-white text-center ">
                 CASE STUDY:
