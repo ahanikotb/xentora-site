@@ -7,6 +7,7 @@ function CTAButton({ onClick, CTA, additionalClasses, href = "/apply" }: any) {
   const [loading, setLoading] = useState(false);
   return (
     <a
+      id="bookingButton"
       href={href}
       onClick={() => {
         setLoading(true);
