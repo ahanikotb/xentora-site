@@ -1,3 +1,5 @@
+import CTAButton from "./CtaButton";
+
 const Index = ({ CTA }: { CTA: string }) => (
   <div>
     <section className="px-6 xl:px-0">
@@ -128,14 +130,7 @@ const Index = ({ CTA }: { CTA: string }) => (
                         </p>
                       </li>
                     </ul>
-
-                    <a
-                      href="/apply"
-                      // onClick={logClick}
-                      className="font-black  text-white text-2xl hover:bg-green-800 cursor-pointer bg-green-700 p-5 mx-auto h-[60px] w-[220px] flex rounded-xl justify-center items-center  shadow-lg"
-                    >
-                      {CTA}
-                    </a>
+                    <CTAButton href="/apply" CTA={CTA}></CTAButton>
                   </div>
                 </div>
                 <div className="w-full xl:w-1/3 lg:w-1/3 md:w-1/2 sm:w-1/2 mb-4 px-6">
@@ -225,13 +220,7 @@ const Index = ({ CTA }: { CTA: string }) => (
                         </p>
                       </li>
                     </ul>
-                    <a
-                      href="/apply"
-                      // onClick={logClick}
-                      className="font-black  text-white text-2xl hover:bg-green-800 cursor-pointer bg-green-700 p-5 mx-auto h-[60px] w-[220px] flex rounded-xl justify-center items-center  shadow-lg"
-                    >
-                      {CTA}
-                    </a>
+                    <CTAButton href="/apply" CTA={CTA}></CTAButton>
                   </div>
                 </div>
                 <div className="w-full xl:w-1/3 lg:w-1/3 md:w-1/2 sm:w-1/2 mb-4 px-6">
@@ -292,13 +281,7 @@ const Index = ({ CTA }: { CTA: string }) => (
                       </li>
                     </ul>
 
-                    <a
-                      href="/apply"
-                      // onClick={logClick}
-                      className="font-black  text-white text-2xl hover:bg-green-800 cursor-pointer bg-green-700 p-5 mx-auto h-[60px] w-[220px] flex rounded-xl justify-center items-center  shadow-lg"
-                    >
-                      {CTA}
-                    </a>
+                    <CTAButton href="/apply" CTA={CTA}></CTAButton>
                   </div>
                 </div>
               </div>
