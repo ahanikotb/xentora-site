@@ -15,6 +15,9 @@ import useTwitterPixel from "@/components/useTwitterPixel";
 import usePlerdy from "@/components/usePlerdy";
 
 function Page() {
+  // useEffect(() => {
+  //   console.log(window.location.pathname);
+  // }, []);
   // usePlerdy();
   // const pixel = usePixel();
   // const analytics = useGoogleAnalytics();

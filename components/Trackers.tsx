@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import useTwitterPixel from "./useTwitterPixel";
 import useLinkedinTag from "./useLinkedinTag";
 import usePlerdy from "./usePlerdy";
@@ -15,8 +15,12 @@ function Trackers() {
   useLinkedinTag();
   usePlerdy();
   useGoogleAnalytics();
-  usePixel();
-
+  const pixel = usePixel();
+  useEffect(() => {
+    if (pixel) {
+      if (window.location.pathname === "/thank-you") pixel.track("Schedule");
+    }
+  }, [pixel]);
   return <div></div>;
 }
 
