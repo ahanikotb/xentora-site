@@ -9,7 +9,7 @@ import { useRouter } from "next/navigation";
 import usePlerdy from "@/components/usePlerdy";
 function Page() {
   const router = useRouter();
-  usePlerdy();
+  // usePlerdy();
   return (
     <ApplicationForm
       goToBookingPage={(params: any) => {

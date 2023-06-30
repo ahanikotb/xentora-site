@@ -9,6 +9,7 @@
 //     try{document.head.appendChild(plerdyScript)}catch(t){console.log(t,"unable add script tag")}
 // </script>
 // <!-- END PLERDY CODE -->
+import exp from "constants";
 import { useEffect } from "react";
 
 const usePlerdy = () => {
@@ -35,3 +36,7 @@ const usePlerdy = () => {
 };
 
 export default usePlerdy;
+
+export const PlerdyComponent = () => {
+  usePlerdy();
+};

@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import "./globals.css";
+import Trackers from "@/components/Trackers";
 
 export const metadata = {
   title: "XENTORA - Agency Growth Partners",
@@ -22,6 +23,7 @@ export default function RootLayout({
         }}
       >
         <div id="root">{children}</div>
+        <Trackers />
       </body>
     </html>
   );

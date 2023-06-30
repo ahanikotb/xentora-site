@@ -15,23 +15,23 @@ import useTwitterPixel from "@/components/useTwitterPixel";
 import usePlerdy from "@/components/usePlerdy";
 
 function Page() {
-  usePlerdy();
-  const pixel = usePixel();
-  const analytics = useGoogleAnalytics();
-  useLinkedinTag();
-  useTwitterPixel();
-  useEffect(() => {
-    //@ts-ignore
-    if (analytics) {
-      logEvent(analytics, "page_view", {
-        page_title: "/book",
-        page_path: "/book",
-      });
-    }
-  }, [analytics]);
-  useEffect(() => {
-    pixel?.trackCustom("bookingViewed");
-  }, []);
+  // usePlerdy();
+  // const pixel = usePixel();
+  // const analytics = useGoogleAnalytics();
+  // useLinkedinTag();
+  // useTwitterPixel();
+  // useEffect(() => {
+  //   //@ts-ignore
+  //   if (analytics) {
+  //     logEvent(analytics, "page_view", {
+  //       page_title: "/book",
+  //       page_path: "/book",
+  //     });
+  //   }
+  // }, [analytics]);
+  // useEffect(() => {
+  //   pixel?.trackCustom("bookingViewed");
+  // }, []);
 
   return <BookNow />;
 }

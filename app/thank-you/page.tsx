@@ -35,13 +35,13 @@ const Footer = () => {
 };
 
 function ThankYou() {
-  usePlerdy();
-  const pixel = usePixel();
-  useLinkedinTag();
-  useTwitterPixel();
-  useEffect(() => {
-    pixel?.trackCustom("meetingBooked");
-  }, []);
+  // usePlerdy();
+  // const pixel = usePixel();
+  // useLinkedinTag();
+  // useTwitterPixel();
+  // useEffect(() => {
+  //   pixel?.trackCustom("meetingBooked");
+  // }, []);
 
   return (
     <div style={{ width: "100vw", height: "100vh" }}>
