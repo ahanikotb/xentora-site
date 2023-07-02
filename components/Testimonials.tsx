@@ -190,7 +190,7 @@ function Testimonials() {
               position: "absolute",
               filter: "brightness(0) invert(1)",
               opacity: isInView ? 1 : 0,
-              transition: "opacity 1s ease-in-out",
+              transition: "opacity 0.5s ease-in-out",
             }}
             className="w-40 -translate-x-1 translate-y-20 lg:translate-x-5 xl:translate-x-10 2xl:translate-x-20"
             src="/click_here.png"
