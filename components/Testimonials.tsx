@@ -4,7 +4,7 @@ import CTAButton from "./CtaButton";
 import { CalendarCheck, CircleDollarSign, Target } from "lucide-react";
 import Image from "next/image";
 import { ArrowBigLeft, ArrowBigRight } from "lucide-react";
-import { useAnimate, stagger } from "framer-motion";
+import { useAnimate, stagger, motion, AnimatePresence } from "framer-motion";
 
 function Testimonials() {
   const [scope, animate] = useAnimate();
@@ -168,14 +168,28 @@ function Testimonials() {
             onClick={() => switchCaseStudy("back")}
             className="text-white cursor-pointer"
           >
-            <ArrowBigLeft fill="white" className="w-10 h-10" />
+            <ArrowBigLeft fill="white" className="w-[5rem] h-[5rem]" />
           </div>
           <div
             onClick={() => switchCaseStudy("next")}
             className="text-white cursor-pointer "
           >
-            <ArrowBigRight fill="white" className="w-10 h-10" />
+            <ArrowBigRight fill="white" className="w-[5rem] h-[5rem]" />
           </div>
+          <AnimatePresence>
+            <motion.img
+              transition={{ duration: 0.5 }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              style={{
+                position: "absolute",
+                filter: "brightness(0) invert(1)",
+              }}
+              className="w-40 -translate-x-1 translate-y-20 lg:translate-x-5 xl:translate-x-10 2xl:translate-x-20"
+              src="/click_here.png"
+            ></motion.img>
+          </AnimatePresence>
         </div>
       </div>
 

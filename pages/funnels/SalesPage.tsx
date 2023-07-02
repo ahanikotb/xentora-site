@@ -64,7 +64,7 @@ function SalesPage() {
             dangerouslySetInnerHTML={{
               __html: copyRef.current.preheadline,
             }}
-            className="xl:my-0 mt-3 font-black leading-[1.2] text-lg  text-white text-center w-[90%] lg:leading-[1.3] mx-auto xl:mx-auto  lg:text-4xl md:w-4/5 md:text-3xl xl:w-3/4 xl:text-4xl 2xl:text-xl"
+            className="xl:my-0 mt-3 font-black leading-[1.2] text-lg  text-white text-center w-[90%] lg:leading-[1.3] mx-auto xl:mx-auto  lg:text-2xl md:w-4/5 md:text-2xl xl:w-3/4 xl:text-xl 2xl:text-xl"
           >
             {/* {copyRef.current.headline} */}
           </h1>
