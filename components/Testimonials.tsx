@@ -4,7 +4,13 @@ import CTAButton from "./CtaButton";
 import { CalendarCheck, CircleDollarSign, Target } from "lucide-react";
 import Image from "next/image";
 import { ArrowBigLeft, ArrowBigRight } from "lucide-react";
-import { useAnimate, stagger, motion, AnimatePresence } from "framer-motion";
+import {
+  useAnimate,
+  stagger,
+  motion,
+  AnimatePresence,
+  useInView,
+} from "framer-motion";
 
 function Testimonials() {
   const [scope, animate] = useAnimate();
