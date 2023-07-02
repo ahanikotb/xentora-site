@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import CTAButton from "./CtaButton";
 import { CalendarCheck, CircleDollarSign, Target } from "lucide-react";
 import Image from "next/image";
@@ -14,7 +14,8 @@ import {
 
 function Testimonials() {
   const [scope, animate] = useAnimate();
-
+  const ref = useRef(null);
+  const isInView = useInView(ref);
   const [currentCaseStudy, setCurrentCaseStudy] = React.useState(0);
 
   function switchCaseStudy(arg0: string) {
@@ -182,20 +183,18 @@ function Testimonials() {
           >
             <ArrowBigRight fill="white" className="w-[5rem] h-[5rem]" />
           </div>
-          <AnimatePresence>
-            <motion.img
-              transition={{ duration: 0.5 }}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              style={{
-                position: "absolute",
-                filter: "brightness(0) invert(1)",
-              }}
-              className="w-40 -translate-x-1 translate-y-20 lg:translate-x-5 xl:translate-x-10 2xl:translate-x-20"
-              src="/click_here.png"
-            ></motion.img>
-          </AnimatePresence>
+
+          <motion.img
+            ref={ref}
+            style={{
+              position: "absolute",
+              filter: "brightness(0) invert(1)",
+              opacity: isInView ? 1 : 0,
+              transition: "opacity 1s ease-in-out",
+            }}
+            className="w-40 -translate-x-1 translate-y-20 lg:translate-x-5 xl:translate-x-10 2xl:translate-x-20"
+            src="/click_here.png"
+          ></motion.img>
         </div>
       </div>
 
