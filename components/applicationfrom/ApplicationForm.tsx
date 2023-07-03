@@ -30,7 +30,13 @@ registerCoreBlocks();
 
 function App({ goToBookingPage }: any) {
   const [allowBook, setAllowBook] = useState(true);
-
+  const url = new URL(window.location.href);
+  let showFirstBlock = true;
+  if (url.searchParams.has("disableFirstBlock")) {
+    showFirstBlock = false;
+  }
+  // const [showFirstBlock, setShowFirstBlock] = useState(true);
+  // useEffect(() => {}, []);
   return (
     <div style={{ width: "100%", height: "100vh" }}>
       <Form
@@ -47,21 +53,27 @@ function App({ goToBookingPage }: any) {
             answersColor: "white",
           },
           blocks: [
-            // {
-            //   name: "welcome-screen",
-            //   id: "jg1401r",
+            //@ts-ignore
+            ...(showFirstBlock
+              ? [
+                  {
+                    name: "welcome-screen",
+                    id: "jg1401r",
 
-            //   attributes: {
-            //     label: "Make Incredible Profits with Xentora",
-            //     description: "Apply to become Growth Partner today!",
-            //     attachment: {
-            //       type: "image",
+                    attributes: {
+                      label: "Make Incredible Profits with Xentora",
+                      description: "Apply to become Growth Partner today!",
+                      attachment: {
+                        type: "image",
 
-            //       url: "/xentora_logo.png",
-            //     },
-            //     layout: "stack",
-            //   },
-            // },
+                        url: "/xentora_logo.png",
+                      },
+                      layout: "stack",
+                    },
+                  },
+                ]
+              : []),
+
             {
               name: "short-text",
               id: "first_name",
