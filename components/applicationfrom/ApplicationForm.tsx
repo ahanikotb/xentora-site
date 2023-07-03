@@ -30,11 +30,25 @@ registerCoreBlocks();
 
 function App({ goToBookingPage }: any) {
   const [allowBook, setAllowBook] = useState(true);
-  const url = new URL(window.location.href);
-  let showFirstBlock = true;
-  if (url.searchParams.has("disableFirstBlock")) {
-    showFirstBlock = false;
-  }
+  const [showFirstBlock, setShowFirstBlock] = useState(true);
+
+  useEffect(() => {
+    const url = new URL(window.location.href);
+    let FirstBlock = true;
+    if (url.searchParams.has("disableFirstBlock")) {
+      FirstBlock = false;
+    }
+
+    setShowFirstBlock(FirstBlock);
+  }, []);
+  const removeFirstBlock = (myList: any, TrueOrFalse: boolean) => {
+    //return the list without the first item
+    if (TrueOrFalse) return myList;
+    return myList.slice(1);
+  };
+  const unpackList = (arr: any) => {
+    return arr[0];
+  };
   // const [showFirstBlock, setShowFirstBlock] = useState(true);
   // useEffect(() => {}, []);
   return (
@@ -44,103 +58,109 @@ function App({ goToBookingPage }: any) {
         formId={2}
         formObj={{
           theme: {
-            progressBarFillColor: "#F16B26",
+            progressBarFillColor: "#38a169",
             questionsColor: "white",
             // backgroundColor: "#2E4057",
             backgroundColor:
               "radial-gradient(circle at 24.1% 68.8%, rgb(50, 50, 70) 0%, rgb(0, 0, 15) 99.4%)",
-            buttonsBgColor: "#F16B26",
+            buttonsBgColor: "#38a169",
             answersColor: "white",
           },
-          blocks: [
-            //@ts-ignore
-            ...(showFirstBlock
-              ? [
-                  {
-                    name: "welcome-screen",
-                    id: "jg1401r",
+          blocks: removeFirstBlock(
+            [
+              unpackList([
+                {
+                  name: "welcome-screen",
+                  id: "jg1401r",
 
-                    attributes: {
-                      label: "Make Incredible Profits with Xentora",
-                      description: "Apply to become Growth Partner today!",
-                      attachment: {
-                        type: "image",
+                  attributes: {
+                    label: "Make Incredible Profits with Xentora",
+                    description: "Apply to become Growth Partner today!",
+                    attachment: {
+                      type: "image",
 
-                        url: "/xentora_logo.png",
-                      },
-                      layout: "stack",
+                      url: "/xentora_logo.png",
                     },
+                    layout: "stack",
                   },
-                ]
-              : []),
+                },
+              ]),
 
-            {
-              name: "short-text",
-              id: "first_name",
-              attributes: {
-                classnames: "first-block",
-                required: true,
-                label: "Let's start with your First Name",
-              },
-            },
-            {
-              name: "short-text",
-              id: "last_name",
-              attributes: {
-                classnames: "first-block",
-                required: true,
-                label: "What About Your Last Name?",
-              },
-            },
-            {
-              name: "short-text",
-              id: "current_monthly_revenue",
+              {
+                name: "short-text",
+                id: "first_name",
+                attributes: {
+                  classnames: "first-block",
+                  required: true,
+                  label: "Let's start with your First Name",
+                  // attachment: {
+                  //   type: "image",
 
-              attributes: {
-                classnames: "first-block",
-                required: true,
-                label: "What is your Current Monthly Revenue?",
+                  //   url: "/xentora_logo.png",
+                  // },
+                  // layout: "float-right",
+                },
               },
-            },
-            {
-              name: "email",
-              id: "email",
+              {
+                name: "short-text",
+                id: "last_name",
+                attributes: {
+                  classnames: "first-block",
+                  required: true,
+                  label: "What About Your Last Name?",
+                },
+              },
+              {
+                name: "short-text",
+                id: "current_monthly_revenue",
 
-              attributes: {
-                classnames: "first-block",
-                required: true,
-                label: "What's your email address?",
+                attributes: {
+                  classnames: "first-block",
+                  required: true,
+                  label: "What is your Current Monthly Revenue?",
+                },
               },
-            },
-            {
-              name: "multiple-choice",
-              id: "referral",
-              attributes: {
-                required: true,
-                multiple: false,
-                verticalAlign: false,
-                label: "How Did You Find Out About us?",
-                choices: [
-                  {
-                    label: "Email",
-                    value: "email",
-                  },
-                  {
-                    label: "LinkedIn",
-                    value: "linkedin",
-                  },
-                  {
-                    label: "Twitter",
-                    value: "twitter",
-                  },
-                  {
-                    label: "Youtube",
-                    value: "youtube",
-                  },
-                ],
+              {
+                name: "email",
+                id: "email",
+
+                attributes: {
+                  classnames: "first-block",
+                  required: true,
+                  label: "What's your email address?",
+                },
               },
-            },
-          ],
+              {
+                name: "multiple-choice",
+                id: "referral",
+                attributes: {
+                  required: true,
+                  multiple: false,
+                  verticalAlign: false,
+                  label: "How Did You Find Out About us?",
+                  choices: [
+                    {
+                      label: "Email",
+                      value: "email",
+                    },
+                    {
+                      label: "LinkedIn",
+                      value: "linkedin",
+                    },
+                    {
+                      label: "Twitter",
+                      value: "twitter",
+                    },
+                    {
+                      label: "Youtube",
+                      value: "youtube",
+                    },
+                  ],
+                },
+              },
+            ],
+            showFirstBlock
+          ),
         }}
         onSubmit={(
           data,
