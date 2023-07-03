@@ -52,7 +52,7 @@ function Timeline() {
           Transparency and Constant Communication.
         </h3>
         <CTAButton
-          href="/apply"
+          href="/apply?disableFirstBlock"
           additionalClasses="hidden xl:flex"
           CTA="Get Started"
         ></CTAButton>

@@ -3,7 +3,12 @@ import { cn } from "@/lib/utils";
 import { Loader2 } from "lucide-react";
 import React, { useState } from "react";
 
-function CTAButton({ onClick, CTA, additionalClasses, href = "/apply" }: any) {
+function CTAButton({
+  onClick,
+  CTA,
+  additionalClasses,
+  href = "/apply?disableFirstBlock",
+}: any) {
   const [loading, setLoading] = useState(false);
   return (
     <a

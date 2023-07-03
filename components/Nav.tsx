@@ -53,7 +53,7 @@ function Nav() {
         </li> */}
           <li>
             <a
-              href="/apply"
+              href="/apply?disableFirstBlock"
               className=" p-6 sm:px-20 text-xl wrap-no  lg:bg-green-700 sm:text-center cursor-pointer lg:rounded-xl flex lg:p-4 lg:hover:p-4 hover:bg-green-800 transition-colors duration-000 ease-in"
             >
               Get Started

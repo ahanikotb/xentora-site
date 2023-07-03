@@ -86,7 +86,8 @@ function SalesPage() {
             additionalClasses={"mt-5 hidden xl:flex xl:p-0"}
             onClick={logClick}
             CTA={copyRef.current.CTA}
-            href="/apply"
+            href="/apply?disableFirstBlock
+"
           />
         </div>
         <div className="mt-3 sm:mt-10  w-[90vw] sm:w-[60vw] mx-auto mb-10 xl:flex-1">
@@ -117,7 +118,8 @@ function SalesPage() {
           additionalClasses={"mb-5 xl:hidden"}
           onClick={logClick}
           CTA={copyRef.current.CTA}
-          href="/apply"
+          href="/apply?disableFirstBlock
+"
         />
       </section>
       <section className="mt-5 rounded-xl sm:p-10  w-[90%] sm:w-[90%] mx-auto">
@@ -212,14 +214,16 @@ function SalesPage() {
         CTA="Get Started"
         // onClick={logClick}
         // CTA={copyRef.current.CTA}
-        href="/apply"
+        href="/apply?disableFirstBlock
+"
       />
       <Timeline />
       <CTAButton
         additionalClasses={"mb-5 xl:hidden"}
         onClick={logClick}
         CTA={copyRef.current.CTA}
-        href="/apply"
+        href="/apply?disableFirstBlock
+"
       />
       <PricingTable CTA={copyRef.current.CTA} />
       <section className="w-[90vw] mx-auto">
@@ -252,7 +256,8 @@ function SalesPage() {
           additionalClasses={"mt-5"}
           onClick={logClick}
           CTA={copyRef.current.CTA}
-          href="/apply"
+          href="/apply?disableFirstBlock
+"
         />
       </section>
     </div>

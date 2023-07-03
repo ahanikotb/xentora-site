@@ -58,7 +58,7 @@ function Testimonials() {
               // additionalClasses={"mb-5"}
               //   onClick={logClick}
               CTA="Get Started"
-              href="/apply"
+              href="/apply?disableFirstBlock"
             />
           </div>
           {
@@ -123,7 +123,7 @@ function Testimonials() {
               additionalClasses={"hidden xl:flex"}
               //   onClick={logClick}
               CTA="Get Started"
-              href="/apply"
+              href="/apply?disableFirstBlock"
             />
           </div>
           {
@@ -202,7 +202,7 @@ function Testimonials() {
         // additionalClasses={"mb-5"}
         //   onClick={logClick}
         CTA="Get Started"
-        href="/apply"
+        href="/apply?disableFirstBlock"
       /> */}
     </div>
   );

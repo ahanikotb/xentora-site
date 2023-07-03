@@ -130,7 +130,10 @@ const Index = ({ CTA }: { CTA: string }) => (
                         </p>
                       </li>
                     </ul>
-                    <CTAButton href="/apply" CTA={CTA}></CTAButton>
+                    <CTAButton
+                      href="/apply?disableFirstBlock"
+                      CTA={CTA}
+                    ></CTAButton>
                   </div>
                 </div>
                 <div className="w-full xl:w-1/3 lg:w-1/3 md:w-1/2 sm:w-1/2 mb-4 px-6">
@@ -220,7 +223,10 @@ const Index = ({ CTA }: { CTA: string }) => (
                         </p>
                       </li>
                     </ul>
-                    <CTAButton href="/apply" CTA={CTA}></CTAButton>
+                    <CTAButton
+                      href="/apply?disableFirstBlock"
+                      CTA={CTA}
+                    ></CTAButton>
                   </div>
                 </div>
                 <div className="w-full xl:w-1/3 lg:w-1/3 md:w-1/2 sm:w-1/2 mb-4 px-6">
@@ -281,7 +287,10 @@ const Index = ({ CTA }: { CTA: string }) => (
                       </li>
                     </ul>
 
-                    <CTAButton href="/apply" CTA={CTA}></CTAButton>
+                    <CTAButton
+                      href="/apply?disableFirstBlock"
+                      CTA={CTA}
+                    ></CTAButton>
                   </div>
                 </div>
               </div>
