@@ -8,18 +8,18 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import useScript from "@/components/useScript";
 import IframeResizer from "iframe-resizer-react";
-import { ChevronsRight, Loader2 } from "lucide-react";
+import { Loader2 } from "lucide-react";
 import { useRouter } from "next/navigation";
-import { FaLinkedin, FaTwitter } from "react-icons/fa";
 const copy = new Map([
   [
     {
       preheadline: "",
       headline:
-        "Last Step: Watch 2 Minute Video So We Can Hit The Ground Running With Your Call",
-      subtitle: "",
+        "<span class='text-black'>Step 2: Watch The Video Below To Access Your Guide + 30+ Hours Of Free Course Material<span/>",
+      subtitle:
+        'Access My Free "7-Figure Selling Secrets Course" By Watching The Video And Completing The Last Step',
       video: "https://ahanikotb.wistia.com/medias/fhi8p923ml",
-      CTA: "Watch The Recording Now",
+      CTA: "👉  Access My Free Course + The Guide",
     },
     1,
   ],
@@ -61,14 +61,7 @@ export function CTAButton({ onClick, CTA, additionalClasses, href = "" }: any) {
         additionalClasses
       )}
     >
-      {loading ? (
-        <Loader2 className="animate-spin"></Loader2>
-      ) : (
-        <div className="flex justify-center items-center">
-          {CTA}
-          <ChevronsRight className="w-8 h-8" />
-        </div>
-      )}
+      {loading ? <Loader2 className="animate-spin"></Loader2> : CTA}
     </a>
   );
 }
@@ -85,7 +78,14 @@ function page() {
 
   useScript("https://fast.wistia.net/assets/external/E-v1.js");
   return (
-    <div>
+    <div className="bg-white">
+      <style jsx global>
+        {`
+          body {
+            background: white;
+          }
+        `}
+      </style>
       <div>
         {/* <NavFunnel /> */}
         <h3
@@ -93,7 +93,7 @@ function page() {
           dangerouslySetInnerHTML={{ __html: copyRef.current.preheadline }}
         ></h3>
         <h1
-          className="text-center font-bold my-10 sm:my-2 text-3xl sm:text-4xl text-white  w-[80vw] mx-auto xl:w-[50vw]  "
+          className="text-center font-bold my-10 sm:my-2 text-3xl sm:text-4xl text-black  w-[80vw] mx-auto xl:w-[50vw]  "
           dangerouslySetInnerHTML={{ __html: copyRef.current.headline }}
         ></h1>
 
@@ -131,97 +131,30 @@ function page() {
             submitStep();
           }}
           // href=""
-          additionalClasses="w-[90%] text-center sm:w-[450px]  lg:w-[450px]"
+          additionalClasses="w-[90%] text-center sm:w-[450px]  lg:w-[70%] xl:w-[600px]"
           CTA={copyRef.current.CTA}
         ></CTAButton>
+      </div>
+      <div>
+        <div className="flex flex-row w-[80%] sm:w-[30vw] my-5 sm:mt-20 mx-auto items-center justify-between ">
+          <a href="/privacy-policy" className="text-gray-500  text-center ">
+            Privacy Policy
+          </a>
+          <a className="text-gray-500  text-center ">Terms Of Service</a>
+          {/* <a className="text-white text-center ">Privacy Policy</a> */}
+        </div>
+        <div className="text-gray-500 text-center w-[90%] sm:w-[90%] mx-auto">
+          We use cookies to help improve, promote and protect our services.
+          <br /> By continuing to use this site, you agree to our privacy policy
+          and terms of use.
+          <br /> This site is not a part of Facebook website or Facebook, Inc.{" "}
+          <br />
+          This site is NOT endorsed by Facebook in any way. FACEBOOK is a
+          trademark of FACEBOOK, Inc.
+        </div>
       </div>
     </div>
   );
 }
 
 export default page;
-
-// "use client";
-// import useLinkedinTag from "@/components/useLinkedinTag";
-// import { usePixel } from "@/components/usePixel";
-// import usePlerdy from "@/components/usePlerdy";
-// import useTwitterPixel from "@/components/useTwitterPixel";
-// import React, { useEffect } from "react";
-// import { FaLinkedin, FaTwitter } from "react-icons/fa";
-const Footer = () => {
-  return (
-    <footer
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        marginLeft: "auto",
-        marginRight: "auto",
-        marginTop: "20px",
-      }}
-    >
-      <a
-        href="https://www.linkedin.com/in/ahanikotb/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <FaLinkedin color="white" size={32} style={{ marginRight: "50px" }} />
-      </a>
-
-      <a
-        href="https://twitter.com/ahmedhanykotb_"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <FaTwitter color="white" size={32} />
-      </a>
-    </footer>
-  );
-};
-
-// function ThankYou() {
-//   // usePlerdy();
-//   // const pixel = usePixel();
-//   // useLinkedinTag();
-//   // useTwitterPixel();
-//   // useEffect(() => {
-//   //   pixel?.trackCustom("meetingBooked");
-//   // }, []);
-
-//   return (
-//     <div style={{ width: "100vw", height: "100vh" }}>
-//       <img
-//         className="mx-auto my-10 w-[20rem]"
-//         alt="xentora Logo"
-//         // style={{ width: "150px", margin: "auto", marginTop: "5vh" }}
-//         src={"/xentora_logo.png"}
-//       />
-//       <h1 className="font-black text-5xl sm:text-6xl text-center text-white">
-//         You're Booked !
-//       </h1>
-//       <img
-//         alt="xentora Logo"
-//         style={{ width: "150px", margin: "auto", marginTop: "5vh" }}
-//         src="/confirm_check.png"
-//       />
-// <div
-//   className="text-white font-bold mx-auto text-center mt-10 text-xl sm:text-4xl sm:mt-20"
-//   style={{ width: "90%" }}
-// >
-//   We sent you an email confirming the date/time. Please mark this in your
-//   calendar now.
-// </div>
-// <div
-//   className="text-white leading-10  mx-auto text-center mt-10 sm:text-3xl"
-//   style={{ width: "90vw" }}
-// >
-//   We will meet you via Google-meet at your selected date/time.
-//   <br /> Please show up on-time, in a quiet room, with no distractions.
-//   <br /> We look forward to meeting you and serving you! <br />
-//   <span className="font-bold">- The team at Xentora</span>
-// </div>
-//       <Footer />
-//     </div>
-//   );
-// }
-
-// export default ThankYou;

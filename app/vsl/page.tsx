@@ -8,18 +8,17 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import useScript from "@/components/useScript";
 import IframeResizer from "iframe-resizer-react";
-import { ChevronsRight, Loader2 } from "lucide-react";
+import { Loader2 } from "lucide-react";
 import { useRouter } from "next/navigation";
-import { FaLinkedin, FaTwitter } from "react-icons/fa";
 const copy = new Map([
   [
     {
       preheadline: "",
       headline:
-        "Last Step: Watch 2 Minute Video So We Can Hit The Ground Running With Your Call",
-      subtitle: "",
+        "We'll Place A Client Aqcuisition System Within Your Business And If You Don't Get 5-10 Sales Calls With Your Ideal Clients Per Month Don't Pay",
+      subtitle: "Watch this 5 Minute Video Below For How This Offer Works",
       video: "https://ahanikotb.wistia.com/medias/fhi8p923ml",
-      CTA: "Watch The Recording Now",
+      CTA: "👉 Schedule Demo",
     },
     1,
   ],
@@ -61,14 +60,7 @@ export function CTAButton({ onClick, CTA, additionalClasses, href = "" }: any) {
         additionalClasses
       )}
     >
-      {loading ? (
-        <Loader2 className="animate-spin"></Loader2>
-      ) : (
-        <div className="flex justify-center items-center">
-          {CTA}
-          <ChevronsRight className="w-8 h-8" />
-        </div>
-      )}
+      {loading ? <Loader2 className="animate-spin"></Loader2> : CTA}
     </a>
   );
 }
@@ -79,7 +71,7 @@ function page() {
   // }, []);
   const router = useRouter();
   const submitStep = async () => {
-    router.push("/go/inbound-leads/3");
+    router.push("/apply");
   };
   const copyRef = useRef(weightedRandom(copy));
 
@@ -89,19 +81,17 @@ function page() {
       <div>
         {/* <NavFunnel /> */}
         <h3
-          className="text-center italic  sm:pt-5 mx-auto"
+          className="text-center italic  text-white  sm:pt-5 mx-auto"
           dangerouslySetInnerHTML={{ __html: copyRef.current.preheadline }}
         ></h3>
         <h1
           className="text-center font-bold my-10 sm:my-2 text-3xl sm:text-4xl text-white  w-[80vw] mx-auto xl:w-[50vw]  "
           dangerouslySetInnerHTML={{ __html: copyRef.current.headline }}
         ></h1>
-
         <h2
-          className="text-center text-red-500 my-5 text-xl sm:text-2xl w-[90%] sm:w-50% mx-auto "
+          className="text-center text-white my-5 text-xl sm:text-2xl w-[90%] sm:w-50% mx-auto "
           dangerouslySetInnerHTML={{ __html: copyRef.current.subtitle }}
         ></h2>
-
         <div className="mt-10 w-[90vw] sm:w-[50vw] mx-auto mb-10">
           <div className="wistia_responsive_padding">
             <div
@@ -126,12 +116,18 @@ function page() {
             </div>
           </div>
         </div>
+        <h2
+          className="text-center text-white my-5 text-xl sm:text-2xl w-[90%] sm:w-50% mx-auto "
+          dangerouslySetInnerHTML={{
+            __html:
+              "Watch This Brief 5 minute Video Above & Then Schedule A Demo Below",
+          }}
+        ></h2>
         <CTAButton
           onClick={() => {
             submitStep();
           }}
-          // href=""
-          additionalClasses="w-[90%] text-center sm:w-[450px]  lg:w-[450px]"
+          additionalClasses="w-[250px] text-center sm:w-[350px]  lg:w-[70%] xl:w-[350px]"
           CTA={copyRef.current.CTA}
         ></CTAButton>
       </div>
@@ -140,88 +136,3 @@ function page() {
 }
 
 export default page;
-
-// "use client";
-// import useLinkedinTag from "@/components/useLinkedinTag";
-// import { usePixel } from "@/components/usePixel";
-// import usePlerdy from "@/components/usePlerdy";
-// import useTwitterPixel from "@/components/useTwitterPixel";
-// import React, { useEffect } from "react";
-// import { FaLinkedin, FaTwitter } from "react-icons/fa";
-const Footer = () => {
-  return (
-    <footer
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        marginLeft: "auto",
-        marginRight: "auto",
-        marginTop: "20px",
-      }}
-    >
-      <a
-        href="https://www.linkedin.com/in/ahanikotb/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <FaLinkedin color="white" size={32} style={{ marginRight: "50px" }} />
-      </a>
-
-      <a
-        href="https://twitter.com/ahmedhanykotb_"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <FaTwitter color="white" size={32} />
-      </a>
-    </footer>
-  );
-};
-
-// function ThankYou() {
-//   // usePlerdy();
-//   // const pixel = usePixel();
-//   // useLinkedinTag();
-//   // useTwitterPixel();
-//   // useEffect(() => {
-//   //   pixel?.trackCustom("meetingBooked");
-//   // }, []);
-
-//   return (
-//     <div style={{ width: "100vw", height: "100vh" }}>
-//       <img
-//         className="mx-auto my-10 w-[20rem]"
-//         alt="xentora Logo"
-//         // style={{ width: "150px", margin: "auto", marginTop: "5vh" }}
-//         src={"/xentora_logo.png"}
-//       />
-//       <h1 className="font-black text-5xl sm:text-6xl text-center text-white">
-//         You're Booked !
-//       </h1>
-//       <img
-//         alt="xentora Logo"
-//         style={{ width: "150px", margin: "auto", marginTop: "5vh" }}
-//         src="/confirm_check.png"
-//       />
-// <div
-//   className="text-white font-bold mx-auto text-center mt-10 text-xl sm:text-4xl sm:mt-20"
-//   style={{ width: "90%" }}
-// >
-//   We sent you an email confirming the date/time. Please mark this in your
-//   calendar now.
-// </div>
-// <div
-//   className="text-white leading-10  mx-auto text-center mt-10 sm:text-3xl"
-//   style={{ width: "90vw" }}
-// >
-//   We will meet you via Google-meet at your selected date/time.
-//   <br /> Please show up on-time, in a quiet room, with no distractions.
-//   <br /> We look forward to meeting you and serving you! <br />
-//   <span className="font-bold">- The team at Xentora</span>
-// </div>
-//       <Footer />
-//     </div>
-//   );
-// }
-
-// export default ThankYou;

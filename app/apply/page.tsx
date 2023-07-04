@@ -7,15 +7,33 @@ import BookNow from "@/components/BookNow";
 import ApplicationForm from "@/components/applicationfrom/ApplicationForm";
 import { useRouter } from "next/navigation";
 import usePlerdy from "@/components/usePlerdy";
+import NavFunnel from "@/components/NavFunnel";
 function Page() {
   const router = useRouter();
   // usePlerdy();
   return (
-    <ApplicationForm
-      goToBookingPage={(params: any) => {
-        router.push(`/book?${params}`);
+    <div
+      style={{
+        background:
+          "radial-gradient(circle at 24.1% 68.8%, rgb(50, 50, 70) 0%, rgb(0, 0, 15) 99.4%)",
+        width: "100vw",
+        height: "100vh",
       }}
-    />
+    >
+      <NavFunnel />
+      {/* STEP 1 8vh nav  */}
+      <h1 className="text-center font-bold my-10 sm:my-2 text-3xl sm:text-4xl text-white  w-[80vw] mx-auto xl:w-[50vw]  ">
+        Step 1: Fill Out The Form Below. Once Complete, You Will Book Your Call
+        On The Following Page
+      </h1>
+      <ApplicationForm
+        width={"100vw"}
+        height={"50vh"}
+        goToBookingPage={(params: any) => {
+          router.push(`/book?${params}`);
+        }}
+      />
+    </div>
   );
 }
 

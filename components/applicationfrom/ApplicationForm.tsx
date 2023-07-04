@@ -28,7 +28,7 @@ function convertToJsonParams(jsonObject: any) {
 }
 registerCoreBlocks();
 
-function App({ goToBookingPage }: any) {
+function App({ goToBookingPage, width, height }: any) {
   const [allowBook, setAllowBook] = useState(true);
   const [showFirstBlock, setShowFirstBlock] = useState(true);
 
@@ -43,7 +43,7 @@ function App({ goToBookingPage }: any) {
   }, []);
   const removeFirstBlock = (myList: any, TrueOrFalse: boolean) => {
     //return the list without the first item
-    if (TrueOrFalse) return myList;
+    // if (TrueOrFalse) return myList;
     return myList.slice(1);
   };
   const unpackList = (arr: any) => {
@@ -52,7 +52,7 @@ function App({ goToBookingPage }: any) {
   // const [showFirstBlock, setShowFirstBlock] = useState(true);
   // useEffect(() => {}, []);
   return (
-    <div style={{ width: "100%", height: "100vh" }}>
+    <div style={{ width, height }}>
       <Form
         applyLogic={true}
         formId={2}
@@ -61,14 +61,13 @@ function App({ goToBookingPage }: any) {
             progressBarFillColor: "#38a169",
             questionsColor: "white",
             // backgroundColor: "#2E4057",
-            backgroundColor:
-              "radial-gradient(circle at 24.1% 68.8%, rgb(50, 50, 70) 0%, rgb(0, 0, 15) 99.4%)",
+            backgroundColor: "transparent",
             buttonsBgColor: "#38a169",
             answersColor: "white",
           },
           blocks: removeFirstBlock(
             [
-              unpackList([
+              [
                 {
                   name: "welcome-screen",
                   id: "jg1401r",
@@ -84,7 +83,7 @@ function App({ goToBookingPage }: any) {
                     layout: "stack",
                   },
                 },
-              ]),
+              ],
 
               {
                 name: "short-text",
@@ -111,13 +110,31 @@ function App({ goToBookingPage }: any) {
                 },
               },
               {
-                name: "short-text",
+                name: "multiple-choice",
                 id: "current_monthly_revenue",
 
                 attributes: {
                   classnames: "first-block",
                   required: true,
                   label: "What is your Current Monthly Revenue?",
+                  choices: [
+                    {
+                      label: "$0 - $10k",
+                      value: "0 - 10k",
+                    },
+                    {
+                      label: "$10k to $20k",
+                      value: "10k to 20k",
+                    },
+                    {
+                      label: "$20k to $50k",
+                      value: "20k to 50k",
+                    },
+                    {
+                      label: "$50k+",
+                      value: "50k+",
+                    },
+                  ],
                 },
               },
               {
