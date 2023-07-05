@@ -155,7 +155,7 @@ function SalesPage() {
         </div>
         {
           //3 ROWS GRID
-          <div className="w-[80vw] mx-auto   sm:pb-10 grid grid-cols-2 sm:grid-cols-4 gap-10 ">
+          <div className="w-[80vw] mx-auto   sm:pb-10 grid grid-cols-2 lg:grid-cols-4  gap-10 ">
             <div className=" bg-white rounded-lg outline outline-5 sm:p-10 flex justify-start items-center flex-col">
               <img src={"/painpoint/referrals.jpg"} />
               {/* <h1 className="text-center text-white text-3xl font-black">
