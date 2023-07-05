@@ -153,8 +153,16 @@ function page() {
   };
   if (step === 1) {
     return (
-      <div className="w-screen h-screen flex justify-center items-start pt-10">
+      <div
+        onClick={() => {
+          setStep(0);
+        }}
+        className="w-screen h-screen flex justify-center items-start pt-10"
+      >
         <motion.div
+          onClick={(e) => {
+            e.stopPropagation();
+          }}
           initial={{ y: "-100vh" }}
           transition={{ duration: 0.2 }}
           animate={{ y: 0 }}
