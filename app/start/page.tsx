@@ -1,7 +1,7 @@
 "use client";
 import NavFunnel from "@/components/NavFunnel";
 import { cn } from "@/lib/utils";
-import React, { forwardRef, useRef, useState } from "react";
+import React, { forwardRef, useEffect, useRef, useState } from "react";
 import weightedRandom from "ts-weighted-random";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
@@ -14,6 +14,7 @@ import PhoneInput, { isValidPhoneNumber } from "react-phone-number-input";
 
 import { useForm, Resolver } from "react-hook-form";
 import { motion } from "framer-motion";
+import ExitIntent from "@/components/ExitIntent";
 
 const copy = new Map([
   [
@@ -21,7 +22,7 @@ const copy = new Map([
       preheadline:
         "<span class='text-white'>For Recruiters , and Agency Owners  Looking To Fill Their Callendar With Qualified Appointments    <span/>",
       headline:
-        "How To Generate 1-2 Inbound Leads Per Week On Autopilot Using Linkedin without having a lot of followers  or spending hours writing content",
+        "We'll Place A Client Aqcuisition System Within Your Business And If You Don't Get 5-10 Sales Calls With Your Ideal Clients Per Month Don't Pay",
       // '10<span class="text-red-500" >  Sales Calls </span>Per Month With <span class="text-red-500" > Ready-To-Buy </span>Leads  That<span class="text-yellow-400" >  Understand  </span>And <span class="text-yellow-400" >Need </span>Your Service',
       // subtitle: "100% DONE FOR YOU.",
       subtitle:
@@ -66,10 +67,31 @@ const validateEmail = (email: string) => {
 };
 
 function page() {
+  useEffect(() => {
+    const removeExitIntent = ExitIntent({
+      threshold: 30,
+      eventThrottle: 100,
+      onExitIntent: () => {
+        setStep(1);
+        // setShowPopup(true);
+      },
+    });
+    return () => {
+      removeExitIntent();
+    };
+  });
+  const handleLeave = () => {
+    setStep(1);
+  };
   const router = useRouter();
   const [buttonLoading, setButtonLoading] = useState(false);
   const [step, setStep] = useState(0);
-
+  useEffect(() => {
+    window.addEventListener("unload", handleLeave);
+    return () => {
+      window.removeEventListener("unload", handleLeave);
+    };
+  }, []);
   const copyRef = useRef(weightedRandom(copy));
   const [error, setError] = useState({
     name: "",
@@ -138,7 +160,7 @@ function page() {
           animate={{ y: 0 }}
           className="bg-white outline-4 outline-dashed animate-stripes outline-blue-700 rounded-lg p-10 w-[98%] sm:max-w-[750px]"
         >
-          <div className="grid grid-cols-2 w-[90%] sm:w-[70%] mx-auto bg-blue-500">
+          <div className="grid grid-cols-2 w-[90%] sm:w-[70%] mx-auto bg-blue-800">
             <div className="progress-bar w-full h-[30px] flex justify-center items-center relative overflow-hidden">
               <p className="text-white font-bold">Step 1 of 2...</p>
             </div>
