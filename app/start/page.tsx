@@ -169,8 +169,10 @@ function page() {
 
           <div className="my-10 ">
             <h2 className=" text-2xl text-center text-black w-[90%] sm:w-[70%] mx-auto">
-              Enter Your Info Below And We'll Send You A One-Pager On How This
-              Offer Works👇
+              Enter Your Info Below And We'll Send You A One-Pager On How We'll
+              Place A Client Aqcuisition System Within Your Business And If You
+              Don't Get 5-10 Sales Calls With Your Ideal Clients Per Month Don't
+              Pay 👇
             </h2>
             <FunnelInput
               error={error.name}
