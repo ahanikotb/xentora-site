@@ -43,14 +43,15 @@ function Nav() {
               {/* AI TOOLS 🚀 */}
             </a>
           </li>
-          {/* <li>
-          <a
-            href="/learn"
-            className="p-6 text-2xl sm:hover:text-green-300  cursor-pointer flex lg:p-4 lg:hover:bg-inherit hover:bg-gray-500 transition-colors duration-700 ease-in"
-          >
-            LEARN
-          </a>
-        </li> */}
+          <li>
+            <a
+              href="/resources"
+              className="p-6 text-xl  cursor-pointer flex lg:p-4 lg:hover:bg-inherit hover:bg-gray-500 transition-colors duration-700 ease-in"
+            >
+              Resources
+              {/* AI TOOLS 🚀 */}
+            </a>
+          </li>
           <li>
             <a
               href="/apply?disableFirstBlock"

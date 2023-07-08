@@ -13,6 +13,8 @@
     "@mdx-js/loader": "^2.3.0",
     "@mdx-js/react": "^2.3.0",
     "@next/mdx": "^13.4.7",
+    "@notion-cms/client": "^0.2.0",
+    "@notion-cms/react": "^0.2.0",
     "@quillforms/blocks": "^4.1.1",
     "@quillforms/react-renderer-utils": "^5.5.0",
     "@quillforms/renderer-core": "^5.4.0",

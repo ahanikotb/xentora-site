@@ -25,7 +25,7 @@ function BlogCard({ post }: any) {
 
         <div className="flex flex-1 flex-col justify-between">
           <div className="border-s border-gray-900/10 p-4 sm:border-l-transparent sm:p-6">
-            <a href={post.postSlug}>
+            <a href={post.postSlug + "." + post.id}>
               <h3 className="text-white font-bold uppercase text-2xl sm:text-4xl ">
                 {post.title}
               </h3>
@@ -38,7 +38,7 @@ function BlogCard({ post }: any) {
 
           <div className="sm:flex sm:items-end sm:justify-end">
             <a
-              href={post.postSlug}
+              href={post.postSlug + "." + post.id}
               className="block  px-5 py-3 text-center text-xs font-bold uppercase rounded-b-lg rounded-l-none  text-white transition duration-600"
             >
               Read More
