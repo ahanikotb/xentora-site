@@ -47,7 +47,7 @@ const FunnelInput = ({
   );
 };
 
-export function CTAButton({ onClick, CTA, additionalClasses, href = "" }: any) {
+function CTAButton({ onClick, CTA, additionalClasses, href = "" }: any) {
   const [loading, setLoading] = useState(false);
   return (
     <a

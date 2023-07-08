@@ -309,7 +309,7 @@ function page() {
 
 export default page;
 
-export function CTAButton({
+function CTAButton({
   onClick,
   CTA,
   additionalClasses,
