@@ -18,7 +18,7 @@ const copy = new Map([
       headline:
         "Last Step: Watch 2 Minute Video So We Can Hit The Ground Running With Your Call",
       subtitle: "",
-      video: "https://ahanikotb.wistia.com/medias/fhi8p923ml",
+      video: "https://fast.wistia.net/embed/iframe/66z7nygwuh?videoFoam=true",
       CTA: "Watch The Recording Now",
     },
     1,
@@ -79,7 +79,7 @@ function page() {
   // }, []);
   const router = useRouter();
   const submitStep = async () => {
-    router.push("/go/inbound-leads/3");
+    router.push("/precall");
   };
   const copyRef = useRef(weightedRandom(copy));
 
@@ -111,7 +111,7 @@ function page() {
               }}
             >
               <IframeResizer
-                src="https://fast.wistia.net/embed/iframe/fhi8p923ml?videoFoam=true"
+                src={copyRef.current.video}
                 title="VSL_CTA Video"
                 allow="autoplay; fullscreen"
                 allowTransparency={true}

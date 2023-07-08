@@ -147,7 +147,7 @@ function page() {
       });
       setButtonLoading(true);
 
-      // await sendOptin(data);
+      await sendOptin(data);
       router.push("/vsl");
     }
   };
