@@ -29,7 +29,7 @@ async function Page({ params: { postId } }: Props) {
         {/* <div className="text-lg prose-invert lg:text-2xl  prose xl:prose-2xl xl:text-3xl text-center sm:text-start">
           <MDXRemote source={post} />
         </div> */}
-        <div className="text-lg  lg:text-xl prose-invert prose xl:prose-xl xl:text-xl sm:text-start">
+        <div className="w-[90%] mx-auto lg:text-xl prose-invert prose xl:prose-xl xl:text-xl sm:text-start">
           <Blocks blocks={post.blocks} />
         </div>
         {/* <ReactMarkdown
@@ -53,6 +53,5 @@ async function getPostBySlug(
   const id = postId.split(".").pop();
   console.log(id);
   const page = await notion.loadPage(id!);
-
   return page;
 }
