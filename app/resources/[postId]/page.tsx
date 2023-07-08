@@ -25,7 +25,7 @@ async function Page({ params: { postId } }: Props) {
   return (
     <div className="">
       <Nav />
-      <div className="p-10 grid place-content-center pt-15 bg-white">
+      <div className="p-10 grid place-content-center pt-15 ">
         {/* <div className="text-lg prose-invert lg:text-2xl  prose xl:prose-2xl xl:text-3xl text-center sm:text-start">
           <MDXRemote source={post} />
         </div> */}
