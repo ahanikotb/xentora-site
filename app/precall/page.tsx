@@ -98,11 +98,8 @@ function page() {
             allowTransparency={true}
             frameBorder={0}
             scrolling={false}
-            className="wistia_embed"
-            name="wistia_embed"
+            className="mx-auto w-[90vw] h-[40vh] sm:h-[420px] sm:w-[50vw]"
             allowFullScreen={true}
-            width="100%"
-            height="100%"
           ></IframeResizer>
         </div>
         <h2
