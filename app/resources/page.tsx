@@ -17,7 +17,10 @@ async function Page() {
       </h1>
       <div className="mx-auto w-[80vw] my-20">
         {db.map((p, i) => (
-          <BlogCard post={{ ...p.props, id: p.id }} key={i} />
+          <BlogCard
+            post={{ ...p.props, id: p.props.publicNotionPageId }}
+            key={i}
+          />
         ))}
       </div>
     </div>
