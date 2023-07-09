@@ -115,14 +115,14 @@ function Footer() {
             {/* Products section */}
             <div>
               <h6 className="mb-4 flex justify-center font-semibold uppercase md:justify-start">
-                Blog
+                Resources
               </h6>
               <p className="mb-4">
                 <a
-                  href="/learn/add-5-to-10-new-clients-in-the-next-90-days"
+                  href="/resources/how-to-get-1-2-inbound-leads-per-week-on-linkedin.96a0435c523b4e569bf18159df7aeb20"
                   className="text-white dark:text-neutral-200"
                 >
-                  How To Get 4-5 Clients Per Month On Autopilot
+                  How We Get 1-2 Inbound Leads Per Week On LinkedIn
                 </a>
               </p>
               {/* <p className="mb-4">
