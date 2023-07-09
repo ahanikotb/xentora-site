@@ -48,7 +48,8 @@ export const NotionPage = ({
         rootPageId={rootPageId}
         fullPage={false}
         darkMode={true}
-        previewImages={previewImagesEnabled}
+        header={true}
+        // previewImages={previewImagesEnabled}
         components={{
           nextLink: Link,
           Code,
