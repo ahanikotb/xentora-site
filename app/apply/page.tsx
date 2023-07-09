@@ -15,8 +15,8 @@ function Page() {
   return (
     <div
       style={{
-        background:
-          "radial-gradient(circle at 24.1% 68.8%, rgb(50, 50, 70) 0%, rgb(0, 0, 15) 99.4%)",
+        // background:
+        //   "radial-gradient(circle at 24.1% 68.8%, rgb(50, 50, 70) 0%, rgb(0, 0, 15) 99.4%)",
         width: "100vw",
         height: "100vh",
       }}
