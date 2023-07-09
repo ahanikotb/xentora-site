@@ -33,6 +33,7 @@ async function Page({ params: { postId } }: Props) {
           <MDXRemote source={post} />
         </div> */}
         <div className="">
+          {/*prose prose-2xl prose-invert  w-[90vw] mx-auto*/}
           <NotionPage recordMap={post} />
         </div>
         {/* <ReactMarkdown
