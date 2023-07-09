@@ -117,7 +117,14 @@ body {
   background-size: 200% 200%;
   animation: barberpole 10s linear infinite;
 }
+.no-outline-on-focus {
+  outline: none;
+}
 
+.no-outline-on-focus:focus {
+  border: none !important;
+  outline: none !important;
+}
 @keyframes barberpole {
   100% {
     background-position: 100% 100%;

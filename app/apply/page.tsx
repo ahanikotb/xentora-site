@@ -8,6 +8,7 @@ import ApplicationForm from "@/components/applicationfrom/ApplicationForm";
 import { useRouter } from "next/navigation";
 import usePlerdy from "@/components/usePlerdy";
 import NavFunnel from "@/components/NavFunnel";
+import { sendApplication } from "./submitApplication";
 function Page() {
   const router = useRouter();
   // usePlerdy();
@@ -29,9 +30,13 @@ function Page() {
       <ApplicationForm
         width={"100vw"}
         height={"50vh"}
+        goToThankYouPage={(params: any) => {
+          router.push(`/thankyou?${params}`);
+        }}
         goToBookingPage={(params: any) => {
           router.push(`/book?${params}`);
         }}
+        sendApplication={sendApplication}
       />
     </div>
   );

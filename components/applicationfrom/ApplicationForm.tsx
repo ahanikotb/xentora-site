@@ -9,6 +9,7 @@ import { useState, useEffect, useRef } from "react";
 import useScript from "../useScript";
 import { useMutationObserver } from "@horat1us/react-hooks";
 import { Button } from "@quillforms/admin-components";
+import "./phoneBlock";
 function convertToJsonParams(jsonObject: any) {
   const params = [];
 
@@ -28,7 +29,13 @@ function convertToJsonParams(jsonObject: any) {
 }
 registerCoreBlocks();
 
-function App({ goToBookingPage, width, height }: any) {
+function App({
+  sendApplication,
+  goToBookingPage,
+  goToThankYouPage,
+  width,
+  height,
+}: any) {
   const [allowBook, setAllowBook] = useState(true);
   const [showFirstBlock, setShowFirstBlock] = useState(true);
 
@@ -148,6 +155,15 @@ function App({ goToBookingPage, width, height }: any) {
                 },
               },
               {
+                name: "phone",
+                id: "phone",
+                attributes: {
+                  classnames: "first-block",
+                  required: false,
+                  label: "What's the best number to reach you at? (optional)",
+                },
+              },
+              {
                 name: "multiple-choice",
                 id: "referral",
                 attributes: {
@@ -185,26 +201,34 @@ function App({ goToBookingPage, width, height }: any) {
         ) => {
           setTimeout(() => {
             setIsSubmitting(false);
-            setAllowBook(true);
+            // setAllowBook(true);
 
-            console.log(data);
+            const formAnswers = {
+              //@ts-ignore
+              email: data.answers.email.value,
+              //@ts-ignore
+              first_name: data.answers.first_name.value,
+              //@ts-ignore
+              last_name: data.answers.last_name.value,
+              //@ts-ignore
+              phone: data.answers.phone.value,
+              current_monthly_revenue:
+                //@ts-ignore
+                data.answers.current_monthly_revenue.value[0],
+              //@ts-ignore
+              referral: data.answers.referral.value[0],
+            };
 
-            goToBookingPage(
-              convertToJsonParams({
-                //@ts-ignore
-                email: data.answers.email.value,
-                //@ts-ignore
-                first_name: data.answers.first_name.value,
-                //@ts-ignore
-                last_name: data.answers.last_name.value,
+            //@ts-ignore
+            if (data.answers.current_monthly_revenue.value == "0 - 10k") {
+              //submit to retable
+              sendApplication({ ...formAnswers, qualification: "Unqualified" });
+              goToThankYouPage(convertToJsonParams(formAnswers));
+              return;
+            }
+            sendApplication({ ...formAnswers, qualification: "Qualified" });
+            goToBookingPage(convertToJsonParams(formAnswers));
 
-                current_monthly_revenue:
-                  //@ts-ignore
-                  data.answers.current_monthly_revenue.value,
-                //@ts-ignore
-                referral: data.answers.referral.value,
-              })
-            );
             // completeForm();
           }, 500);
         }}
