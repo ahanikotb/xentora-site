@@ -23,7 +23,7 @@ function Page() {
     >
       <NavFunnel />
       {/* STEP 1 8vh nav  */}
-      <h1 className="text-center font-bold my-10 sm:my-2 text-3xl sm:text-4xl text-white  w-[80vw] mx-auto xl:w-[50vw]  ">
+      <h1 className="text-center font-bold my-2 sm:my-2 text-3xl sm:text-4xl text-white  w-[80vw] mx-auto xl:w-[50vw]  ">
         Step 1: Fill Out The Form Below. Once Complete, You Will Book Your Call
         On The Following Page
       </h1>
