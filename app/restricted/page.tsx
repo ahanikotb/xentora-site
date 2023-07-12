@@ -1,5 +1,6 @@
 import { FaLinkedin, FaTwitter } from "react-icons/fa";
-
+import logo from "./xentora_logo.png";
+import Image from "next/image";
 const Footer = () => {
   return (
     <footer
@@ -39,11 +40,11 @@ function Restricted() {
 
   return (
     <div style={{ width: "100vw", height: "100vh" }}>
-      <img
+      <Image
         className="mx-auto my-10 w-[20rem]"
         alt="xentora Logo"
         // style={{ width: "150px", margin: "auto", marginTop: "5vh" }}
-        src={"/xentora_logo.png"}
+        src={logo}
       />
       <h1 className="font-black text-5xl sm:text-6xl text-center text-white">
         Xentora Is Not Available In Your Country
