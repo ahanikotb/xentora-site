@@ -1,7 +1,7 @@
 import useScript from "@/components/useScript";
 import IframeResizer from "iframe-resizer-react";
 import React, { useEffect, useRef } from "react";
-import Image from "next/image";
+// import Image from "next/image";
 import { CalendarCheck, CircleDollarSign, Target } from "lucide-react";
 import weightedRandom from "ts-weighted-random";
 import { logEvent } from "firebase/analytics";
@@ -11,6 +11,7 @@ import Timeline from "@/components/Timeline";
 import CTAButton from "@/components/CtaButton";
 import Testimonials from "@/components/Testimonials";
 import Statement from "@/components/Statement";
+import { ImageGroup, Image } from "react-fullscreen-image";
 
 function SalesPage() {
   const copy = new Map([
@@ -162,6 +163,7 @@ function SalesPage() {
         <img src="proof/email-1.png"></img>
         <div className="grid grid-cols-1 sm:grid-cols-2  mt-10 w-[80vw]  ">
           <img className="p-10" src="proof/email-2.png"></img>
+
           <img
             className="py-10 px-1 overflow-hidden"
             src="proof/email-3.png"
