@@ -32,7 +32,7 @@ function SalesPage() {
       {
         preheadline: "<span class='text-red-500'>Recruiters Only<span/>",
         headline:
-          "<span class='font-bold'>Add 40k Additonal Monthly Reccuring Revenue in 30 Days Without Cold Calling Or Manual Outreach</span>",
+          "<span class='font-bold'>Add $40,000 Of Additonal Monthly Reccuring Revenue in 30 Days Without Cold Calling Or Manual Outreach</span>",
         // '10<span class="text-red-500" >  Sales Calls </span>Per Month With <span class="text-red-500" > Ready-To-Buy </span>Leads  That<span class="text-yellow-400" >  Understand  </span>And <span class="text-yellow-400" >Need </span>Your Service',
         // subtitle: "100% DONE FOR YOU.",
         subtitle:
@@ -158,6 +158,19 @@ function SalesPage() {
           </div>
         </div>
       </section>
+      <section className="w-[90vw] mx-auto">
+        <img src="proof/email-1.png"></img>
+        <div className="grid grid-cols-1 sm:grid-cols-2  mt-10 w-[80vw]  ">
+          <img className="p-10" src="proof/email-2.png"></img>
+          <img
+            className="py-10 px-1 overflow-hidden"
+            src="proof/email-3.png"
+          ></img>
+        </div>
+        {/* <img src="proof/email.png"></img> */}
+        {/* <img src="proof/email.png"></img> */}
+        {/* <img src="proof/linkedin.png"></img> */}
+      </section>
       <section className="my-10 sm:my-20  rounded-lg w-[90%] mx-auto pb-10 ">
         <div className="w-[90vw] mx-auto  flex flex-col items-center justify-center">
           <div className="flex flex-col py-5  items-center justify-center">
@@ -198,10 +211,7 @@ function SalesPage() {
           </div>
         }
       </section>
-
       {/* <Statement /> */}
-      <Testimonials />
-
       <section className=" mx-auto">
         <div className="w-[90vw] mx-auto flex flex-col items-center justify-center">
           <div className="flex flex-col items-center justify-center">
@@ -222,14 +232,16 @@ function SalesPage() {
           </div>
         </div>
       </section>
+
       <CTAButton
-        additionalClasses={"mt-10 xl:hidden"}
+        additionalClasses={"my-10 "}
         CTA="Get Started"
         // onClick={logClick}
         // CTA={copyRef.current.CTA}
         href="/apply?disableFirstBlock
 "
       />
+      <Testimonials />
       <Timeline />
       <CTAButton
         additionalClasses={"mb-5 xl:hidden"}
@@ -239,19 +251,6 @@ function SalesPage() {
 "
       />
       <PricingTable CTA={copyRef.current.CTA} />
-      <section className="w-[90vw] mx-auto">
-        <img src="proof/email-1.png"></img>
-        <div className="grid grid-cols-1 sm:grid-cols-2  mt-10 w-[80vw]  ">
-          <img className="p-10" src="proof/email-2.png"></img>
-          <img
-            className="py-10 px-1 overflow-hidden"
-            src="proof/email-3.png"
-          ></img>
-        </div>
-        {/* <img src="proof/email.png"></img> */}
-        {/* <img src="proof/email.png"></img> */}
-        {/* <img src="proof/linkedin.png"></img> */}
-      </section>
       <section
         style={{
           background: "rgba(0, 0,0, 0.2)",
