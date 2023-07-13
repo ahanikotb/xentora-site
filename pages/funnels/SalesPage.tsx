@@ -1,7 +1,7 @@
 import useScript from "@/components/useScript";
 import IframeResizer from "iframe-resizer-react";
 import React, { useEffect, useRef } from "react";
-// import Image from "next/image";
+import Image from "next/image";
 import { CalendarCheck, CircleDollarSign, Target } from "lucide-react";
 import weightedRandom from "ts-weighted-random";
 import { logEvent } from "firebase/analytics";
@@ -11,7 +11,6 @@ import Timeline from "@/components/Timeline";
 import CTAButton from "@/components/CtaButton";
 import Testimonials from "@/components/Testimonials";
 import Statement from "@/components/Statement";
-import { ImageGroup, Image } from "react-fullscreen-image";
 
 function SalesPage() {
   const copy = new Map([
