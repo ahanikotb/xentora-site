@@ -1,4 +1,3 @@
-"use client";
 import useScript from "@/components/useScript";
 import IframeResizer from "iframe-resizer-react";
 import React, { useEffect, useRef } from "react";
@@ -29,6 +28,20 @@ function SalesPage() {
       },
       1,
     ],
+    [
+      {
+        preheadline: "<span class='text-red-500'>Recruiters Only<span/>",
+        headline:
+          "<span class='font-bold'>Add 40k MRR  in 30 Days Without Cold Calling Or Manual Outreach</span>",
+        // '10<span class="text-red-500" >  Sales Calls </span>Per Month With <span class="text-red-500" > Ready-To-Buy </span>Leads  That<span class="text-yellow-400" >  Understand  </span>And <span class="text-yellow-400" >Need </span>Your Service',
+        // subtitle: "100% DONE FOR YOU.",
+        subtitle:
+          "Business To Business Digital Marketing and Sales System. <br/><span class='text-red-500'>100% Done For You ",
+        video: "https://ahanikotb.wistia.com/medias/fhi8p923ml",
+        CTA: "Get Started",
+      },
+      1,
+    ],
   ]);
   const analytics = useGoogleAnalytics();
   useEffect(() => {
@@ -40,7 +53,7 @@ function SalesPage() {
       });
     }
   }, [analytics]);
-  const copyRef = useRef(weightedRandom(copy));
+  const copyRef = useRef<any>(weightedRandom(copy));
   const timePageLoaded = useRef(Date.now());
   // <div style="position: relative; padding-bottom: 56.25%; height: 0;"><iframe src="https://www.loom.com/embed/2f077f2388144573b18aac23d82bf5c2?sid=8e4ae21d-9f4a-40e7-8ec8-9ace78e8a3e8" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
   useScript("https://fast.wistia.net/assets/external/E-v1.js");
