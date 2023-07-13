@@ -167,6 +167,10 @@ function SalesPage() {
             src="proof/email-3.png"
           ></img>
         </div>
+        <img
+          className="py-10 px-1 overflow-hidden"
+          src="proof/calendar.png"
+        ></img>
         {/* <img src="proof/email.png"></img> */}
         {/* <img src="proof/email.png"></img> */}
         {/* <img src="proof/linkedin.png"></img> */}
