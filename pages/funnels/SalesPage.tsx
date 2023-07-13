@@ -170,7 +170,8 @@ function SalesPage() {
         <img
           className="py-10 px-1 overflow-hidden"
           src="proof/calendar.png"
-        ></img>
+        ></img>{" "}
+        <img className="py-10 px-1 overflow-hidden" src="proof/ghl.png"></img>
         {/* <img src="proof/email.png"></img> */}
         {/* <img src="proof/email.png"></img> */}
         {/* <img src="proof/linkedin.png"></img> */}
@@ -245,16 +246,17 @@ function SalesPage() {
         href="/apply?disableFirstBlock
 "
       />
-      <Testimonials />
-      <Timeline />
-      <CTAButton
+
+      {/* <Timeline /> */}
+      {/* <CTAButton
         additionalClasses={"mb-5 xl:hidden"}
         onClick={logClick}
         CTA={copyRef.current.CTA}
         href="/apply?disableFirstBlock
 "
-      />
+      /> */}
       <PricingTable CTA={copyRef.current.CTA} />
+      <Testimonials />
       <section
         style={{
           background: "rgba(0, 0,0, 0.2)",
