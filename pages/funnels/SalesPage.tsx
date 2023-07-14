@@ -11,6 +11,7 @@ import Timeline from "@/components/Timeline";
 import CTAButton from "@/components/CtaButton";
 import Testimonials from "@/components/Testimonials";
 import Statement from "@/components/Statement";
+import ImageWithCaption from "@/components/ImageWithCaption";
 
 function SalesPage() {
   const copy = new Map([
@@ -159,21 +160,44 @@ function SalesPage() {
         </div>
       </section>
       <section className="w-[90vw] mx-auto">
-        <img src="proof/email-1.png"></img>
+        <ImageWithCaption
+          caption="Figure 1: Cold Email Campaign That Generated 6 Meetings In the first Week."
+          src="proof/email-1.png"
+        ></ImageWithCaption>
+        {/* <img src="proof/email-1.png"></img> */}
         <div className="grid grid-cols-1 sm:grid-cols-2  mt-10 w-[80vw]  ">
-          <img className="p-10" src="proof/email-2.png"></img>
+          <ImageWithCaption
+            caption="Figure 2: Positive Replies On Outreach Efforts."
+            src="proof/email-2.png"
+            className="p-10"
+          ></ImageWithCaption>
+          {/* <img className="p-10" src="proof/email-2.png"></img> */}
 
-          <img
+          {/* <img
             className="py-10 px-1 overflow-hidden"
             src="proof/email-3.png"
-          ></img>
+          ></img> */}
+          <ImageWithCaption
+            caption="Figure 3: Another Interested Prospect When you write a good message."
+            src="proof/email-3.png"
+            className="py-10 px-1 overflow-hidden"
+          ></ImageWithCaption>
         </div>
-        <img
+        {/* <img
           className="py-10 px-1 overflow-hidden"
           src="proof/calendar.png"
-        ></img>
-
-        <img className="py-10 px-1 overflow-hidden" src="proof/ghl.png"></img>
+        ></img> */}
+        <ImageWithCaption
+          caption="Figure 4: My fully booked calendar on april 2023 all using cold email."
+          src="proof/calendar.png"
+          className="py-10 px-1 overflow-hidden"
+        ></ImageWithCaption>
+        <ImageWithCaption
+          caption="Figure 5: My Crm packed with discovery calls."
+          src="proof/ghl.png"
+          className="py-10 px-1 overflow-hidden"
+        ></ImageWithCaption>
+        {/* <img className="py-10 px-1 overflow-hidden" src="proof/ghl.png"></img> */}
         {/* <img src="proof/email.png"></img> */}
         {/* <img src="proof/email.png"></img> */}
         {/* <img src="proof/linkedin.png"></img> */}
