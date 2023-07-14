@@ -14,7 +14,7 @@ function ImageWithCaption({ src, alt, caption, className }: any) {
     <div
       onClick={toggleFullScreen}
       className={cn(
-        ` flex flex-col-reverse   justify-center ${
+        ` flex flex-col-reverse  justify-center ${
           isFullScreen
             ? "fixed inset-0 z-50 bg-black flex-col-reverse sm:flex-col-reverse"
             : ""
@@ -33,7 +33,13 @@ function ImageWithCaption({ src, alt, caption, className }: any) {
 
       <img
         src={src}
-        className={cn("hover:cursor-zoom-in", imageClassName)}
+        className={cn(
+          "hover:cursor-zoom-in",
+          imageClassName,
+          isFullScreen
+            ? "object-contain w-full h-full hover:cursor-zoom-out"
+            : ""
+        )}
         alt={alt}
       />
       {isFullScreen && (
