@@ -34,15 +34,14 @@ function Nav() {
               {/* AI TOOLS 🚀 */}
             </a>
           </li>
-          <li>
+          {/* <li>
             <a
               href="#ourprocess"
               className="p-6 text-xl  cursor-pointer flex lg:p-4 lg:hover:bg-inherit hover:bg-gray-500 transition-colors duration-700 ease-in"
             >
               Our Process
-              {/* AI TOOLS 🚀 */}
             </a>
-          </li>
+          </li> */}
           <li>
             <a
               href="/resources"
