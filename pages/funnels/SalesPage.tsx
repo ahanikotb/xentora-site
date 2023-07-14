@@ -28,20 +28,20 @@ function SalesPage() {
       },
       1,
     ],
-    [
-      {
-        preheadline: "<span class='text-red-500'>Recruiters Only<span/>",
-        headline:
-          "<span class='font-bold'>Add $40,000 Of Additonal Monthly Reccuring Revenue in 30 Days Without Cold Calling Or Manual Outreach</span>",
-        // '10<span class="text-red-500" >  Sales Calls </span>Per Month With <span class="text-red-500" > Ready-To-Buy </span>Leads  That<span class="text-yellow-400" >  Understand  </span>And <span class="text-yellow-400" >Need </span>Your Service',
-        // subtitle: "100% DONE FOR YOU.",
-        subtitle:
-          "Business To Business Digital Marketing and Sales System. <br/><span class='text-red-500'>100% Done For You ",
-        video: "https://ahanikotb.wistia.com/medias/fhi8p923ml",
-        CTA: "Get Started",
-      },
-      1,
-    ],
+    // [
+    //   {
+    //     preheadline: "<span class='text-red-500'>Recruiters Only<span/>",
+    //     headline:
+    //       "<span class='font-bold'>Add $40,000 Of Additonal Monthly Reccuring Revenue in 30 Days Without Cold Calling Or Manual Outreach</span>",
+    //     // '10<span class="text-red-500" >  Sales Calls </span>Per Month With <span class="text-red-500" > Ready-To-Buy </span>Leads  That<span class="text-yellow-400" >  Understand  </span>And <span class="text-yellow-400" >Need </span>Your Service',
+    //     // subtitle: "100% DONE FOR YOU.",
+    //     subtitle:
+    //       "Business To Business Digital Marketing and Sales System. <br/><span class='text-red-500'>100% Done For You ",
+    //     video: "https://ahanikotb.wistia.com/medias/fhi8p923ml",
+    //     CTA: "Get Started",
+    //   },
+    //   1,
+    // ],
   ]);
   const analytics = useGoogleAnalytics();
   useEffect(() => {
@@ -171,7 +171,8 @@ function SalesPage() {
         <img
           className="py-10 px-1 overflow-hidden"
           src="proof/calendar.png"
-        ></img>{" "}
+        ></img>
+
         <img className="py-10 px-1 overflow-hidden" src="proof/ghl.png"></img>
         {/* <img src="proof/email.png"></img> */}
         {/* <img src="proof/email.png"></img> */}
