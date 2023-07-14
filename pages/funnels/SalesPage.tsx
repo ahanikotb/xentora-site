@@ -19,7 +19,7 @@ function SalesPage() {
       {
         preheadline: "<span class='text-red-500'>Agency Owners And CEOs<span/>",
         headline:
-          "<span class='font-bold'>Add 40k MRR in 12 Weeks Or Don't Pay.</span>",
+          "<span class='font-bold'>Add $40,000 Of Additonal Monthly Reccuring Revenue in 30 Days Without Cold Calling Or Manual Outreach</span>",
         // '10<span class="text-red-500" >  Sales Calls </span>Per Month With <span class="text-red-500" > Ready-To-Buy </span>Leads  That<span class="text-yellow-400" >  Understand  </span>And <span class="text-yellow-400" >Need </span>Your Service',
         // subtitle: "100% DONE FOR YOU.",
         subtitle:
