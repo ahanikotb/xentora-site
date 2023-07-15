@@ -2,7 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 body {
-  background-color: #ffffff;
+  /* background-color: #73d0e0;
+  background-image: url("https://www.transparenttextures.com/patterns/escheresque.png"); */
   /*https://www.transparenttextures.com/patterns/escheresque.png*/
   /* background-image: url("https://www.transparenttextures.com/patterns/climpek.png"); */
   /* background-image: radial-gradient(

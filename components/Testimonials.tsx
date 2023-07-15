@@ -57,7 +57,7 @@ function Testimonials() {
               additionalClasses={"hidden xl:flex"}
               // additionalClasses={"mb-5"}
               //   onClick={logClick}
-              CTA="Get Started"
+              CTA="Free Growth Strategy Call"
               href="/apply?disableFirstBlock"
             />
           </div>
@@ -122,7 +122,7 @@ function Testimonials() {
             <CTAButton
               additionalClasses={"hidden xl:flex"}
               //   onClick={logClick}
-              CTA="Get Started"
+              CTA="Free Growth Strategy Call"
               href="/apply?disableFirstBlock"
             />
           </div>
