@@ -20,7 +20,7 @@ const copy = new Map([
   [
     {
       preheadline:
-        "<span class='text-white'>For Recruiters , and Agency Owners  Looking To Fill Their Callendar With Qualified Appointments    <span/>",
+        "<span class='text-black'>For Recruiters , and Agency Owners  Looking To Fill Their Callendar With Qualified Appointments    <span/>",
       headline:
         "We'll Place A Client Aqcuisition System Within Your Business And If You Don't Get 5-10 Sales Calls With Your Ideal Clients Per Month Don't Pay",
       // '10<span class="text-red-500" >  Sales Calls </span>Per Month With <span class="text-red-500" > Ready-To-Buy </span>Leads  That<span class="text-yellow-400" >  Understand  </span>And <span class="text-yellow-400" >Need </span>Your Service',
@@ -242,7 +242,7 @@ function page() {
     <div className="">
       <div className="w-[150px] sm:w-[200px] h-[8vh] text-black font-bold flex items-center justify-center mx-auto">
         <a>
-          <img src="/xentora_logo.png" />
+          <img src="/xentora_logo_black.png" />
         </a>
       </div>
       <h3
@@ -250,11 +250,11 @@ function page() {
         dangerouslySetInnerHTML={{ __html: copyRef.current.preheadline }}
       ></h3>
       <h1
-        className="w-[90%] text-center font-bold my-10 sm:my-2 text-3xl sm:text-4xl text-white sm:w-[60%] mx-auto"
+        className="w-[90%] text-center font-bold my-10 sm:my-2 text-3xl sm:text-4xl text-black sm:w-[60%] mx-auto"
         dangerouslySetInnerHTML={{ __html: copyRef.current.headline }}
       ></h1>
       <h2
-        className="text-center text-white my-5 text-xl sm:text-2xl w-[90%] sm:w-50% mx-auto "
+        className="text-center text-black my-5 text-xl sm:text-2xl w-[90%] sm:w-50% mx-auto "
         dangerouslySetInnerHTML={{ __html: copyRef.current.subtitle }}
       ></h2>
       <CTAButton

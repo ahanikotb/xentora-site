@@ -66,11 +66,11 @@ function App({
         formObj={{
           theme: {
             progressBarFillColor: "#38a169",
-            questionsColor: "white",
+            questionsColor: "black",
             // backgroundColor: "#2E4057",
             backgroundColor: "transparent",
             buttonsBgColor: "#38a169",
-            answersColor: "white",
+            answersColor: "black",
           },
           blocks: removeFirstBlock(
             [

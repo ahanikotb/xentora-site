@@ -93,7 +93,7 @@ function page() {
           dangerouslySetInnerHTML={{ __html: copyRef.current.preheadline }}
         ></h3>
         <h1
-          className="text-center font-bold my-10 sm:my-2 text-3xl sm:text-4xl text-white  w-[80vw] mx-auto xl:w-[50vw]  "
+          className="text-center font-bold my-10 sm:my-2 text-3xl sm:text-4xl text-black  w-[80vw] mx-auto xl:w-[50vw]  "
           dangerouslySetInnerHTML={{ __html: copyRef.current.headline }}
         ></h1>
 

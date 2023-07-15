@@ -21,14 +21,14 @@ const Footer = () => {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <FaLinkedin color="white" size={32} style={{ marginRight: "50px" }} />
+        <FaLinkedin color="black" size={32} style={{ marginRight: "50px" }} />
       </a>
       <a
         href="https://twitter.com/ahmedhanykotb_"
         target="_blank"
         rel="noopener noreferrer"
       >
-        <FaTwitter color="white" size={32} />
+        <FaTwitter color="black" size={32} />
       </a>
     </footer>
   );
@@ -49,9 +49,9 @@ function ThankYou() {
         className="mx-auto my-10 w-[20rem]"
         alt="xentora Logo"
         // style={{ width: "150px", margin: "auto", marginTop: "5vh" }}
-        src={"/xentora_logo.png"}
+        src={"/xentora_logo_black.png"}
       />
-      <h1 className="font-black text-5xl sm:text-6xl text-center text-white">
+      <h1 className="font-black text-5xl sm:text-6xl text-center text-black">
         Application Recieved
       </h1>
       <img
@@ -60,13 +60,13 @@ function ThankYou() {
         src="/confirm_check.png"
       />
       <div
-        className="text-white font-bold mx-auto text-center mt-10 text-xl sm:text-4xl sm:mt-20"
+        className="text-black font-bold mx-auto text-center mt-10 text-xl sm:text-4xl sm:mt-20"
         style={{ width: "90%" }}
       >
         Someone From The Team Will Be Contacting You Soon.
       </div>
       <div
-        className="text-white leading-10  mx-auto text-center mt-10 sm:text-3xl"
+        className="text-black leading-10  mx-auto text-center mt-10 sm:text-3xl"
         style={{ width: "90vw" }}
       >
         {/* We will meet you via Google-meet at your selected date/time.

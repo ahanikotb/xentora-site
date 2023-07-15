@@ -12,7 +12,7 @@ function NavFunnel() {
       <nav className=" flex justify-between items-center relative py-3 lg:px-20 px-5 text-white mx-auto">
         <div className="w-[150px] sm:w-[200px] h-[8vh] text-black font-bold flex items-center justify-center">
           <a>
-            <img src="/xentora_logo.png" />
+            <img src="/xentora_logo_black.png" />
           </a>
         </div>
         {/* <ul className="">
