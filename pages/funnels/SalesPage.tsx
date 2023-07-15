@@ -12,6 +12,27 @@ import CTAButton from "@/components/CtaButton";
 import Testimonials from "@/components/Testimonials";
 import Statement from "@/components/Statement";
 import ImageWithCaption from "@/components/ImageWithCaption";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
+import rehypeRaw from "rehype-raw";
+const Lead = `
+You're about to discover how to Add $30,000 Of additonal monthly reccuring revenue in 90 days without hiring sdrs, or paying for more ads.
+
+if you want to increase your agency's **enterprise value** then this is for you.
+
+if you want a client aquistion system that acts as a moat for your business and that your competitors can't copy then this is for you.
+
+if you want to be able to predictably generate sales calls with your ideal clients with a predictable channel then this is for you.
+
+if you plan to do a 8 figure exit then this is for you.
+
+if you suspect that your sales team is not performing at their best and you want to give them a system that can generate them 10 sales calls per month then this is for you.
+
+if you suspect that your competitors are using a system like this and you want to be able to compete with them then this is for you.
+
+if you fear loosing a key account and want to have a system that can replace that revenue in 30 days then this is for you.
+
+`;
 
 function SalesPage() {
   const copy = new Map([
@@ -19,7 +40,7 @@ function SalesPage() {
       {
         preheadline: "<span class='text-red-500'>Agency Owners And CEOs<span/>",
         headline:
-          "<span class='font-bold'>Add $30,000 Of Additonal Monthly Reccuring Revenue in 90 Days Without Cold Calling Or Manual Outreach</span>",
+          "<span class='font-bold'>Add $30,000 Of Additonal Monthly Reccuring Revenue Every 90 Days Without Paying For Ads or Hiring SDRS</span>",
         // '10<span class="text-red-500" >  Sales Calls </span>Per Month With <span class="text-red-500" > Ready-To-Buy </span>Leads  That<span class="text-yellow-400" >  Understand  </span>And <span class="text-yellow-400" >Need </span>Your Service',
         // subtitle: "100% DONE FOR YOU.",
         subtitle:
@@ -206,41 +227,33 @@ function SalesPage() {
         <div className="w-[90vw] mx-auto  flex flex-col items-center justify-center">
           <div className="flex flex-col py-5  items-center justify-center">
             <h1 className="sm:m-10  text-4xl sm:text-7xl font-black text-white text-center ">
-              Tired Of Uncertainty Within Your Business?
+              Agency Owners Pay Attention:
             </h1>
           </div>
         </div>
-        {
+        {/*
           //3 ROWS GRID
           <div className="w-[80vw] mx-auto   sm:pb-10 grid grid-cols-2 lg:grid-cols-4  gap-10 ">
             <div className=" bg-white rounded-lg outline outline-5 sm:p-10 flex justify-start items-center flex-col">
               <img src={"/painpoint/referrals.jpg"} />
-              {/* <h1 className="text-center text-white text-3xl font-black">
-                Being Over-Reliant on Referrals
-              </h1> */}
             </div>
             <div className="outline bg-white outline-5 rounded-lg sm:p-10 flex justify-start items-center flex-col">
               <img src={"/painpoint/insecurity.jpg"} />
-              {/* <h1 className="text-center text-white text-3xl font-black">
-                Not Knowing Where Your Next Client is Coming From
-              </h1> */}
             </div>
             <div className="outline bg-white outline-5 rounded-lg sm:p-10 flex  justify-start items-center flex-col">
               <img src={"/painpoint/fillingcalendar.jpg"} />
-
-              {/* <h1 className="text-center text-white text-3xl font-black">
-                Losing Money On Paid Ads
-              </h1> */}
-            </div>{" "}
+            </div>
             <div className="outline bg-white outline-5 rounded-lg sm:p-10 flex  justify-start items-center flex-col">
               <img src={"/painpoint/paidads.jpg"} />
-
-              {/* <h1 className="text-center text-white text-3xl font-black">
-                Losing Money On Paid Ads
-              </h1> */}
             </div>
           </div>
-        }
+      */}
+        <ReactMarkdown
+          children={Lead}
+          remarkPlugins={[]}
+          rehypePlugins={[rehypeRaw]}
+          className="prose sm:prose-2xl  prose-invert mx-auto my-10 text-white w-[80vw]"
+        />
       </section>
       {/* <Statement /> */}
       <section className=" mx-auto">
