@@ -20,7 +20,7 @@ You're about to discover how to Add $30,000 Of additonal monthly reccuring reven
 
 if you want to increase your agency's **enterprise value** then this is for you.
 
-if you want a client aquistion system that acts as a moat for your business and that your competitors can't copy then this is for you.
+if you want a client acquistion system that acts as a moat for your business and that your competitors can't copy then this is for you.
 
 if you want to be able to predictably generate sales calls with your ideal clients with a predictable channel then this is for you.
 
