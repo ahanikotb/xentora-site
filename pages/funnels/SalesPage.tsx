@@ -16,21 +16,21 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import rehypeRaw from "rehype-raw";
 const Lead = `
-You're about to discover how to add $30,000 Of additonal monthly reccuring revenue every 90 days without hiring sdrs, or paying for more ads.
+You're about to discover how to  **add $30,000 Of additonal monthly reccuring revenue** every 90 days without hiring sdrs, or paying for more ads.
 
 if you want to increase your agency's **enterprise value** then this is for you.
 
-if you want a client acquistion system that acts as a moat around your business and that your competitors can't copy then this is for you.
+if you want a client acquistion system that acts as **a moat around your business** and that your competitors can't copy then this is for you.
 
-if you want to be able to predictably generate sales calls with your ideal clients with a predictable channel then this is for you.
+if you want to be able to predictably  **generate sales calls** with your ideal clients with a predictable channel then this is for you.
 
 if you plan to do a **8 figure exit** then this is for you.
 
 if you suspect that your sales team is not performing at their best and they are blaming lead quality then this is for you.
 
-if you suspect that your competitors are trying to steal your clients then continue reading.
+if you suspect that your competitors are trying to  **steal your clients** then continue reading.
 
-if you fear loosing a key account and want to have a system that can replace that revenue in 30 days then this is for you.
+if you  **fear loosing a key account** and want to have a system that can replace that revenue in 30 days then this is for you.
 
 `;
 
@@ -46,7 +46,7 @@ function SalesPage() {
         subtitle:
           "<span class='text-red-500'>Keep Reading Or Watch This Video To Find Out How</span> ",
         video: "https://ahanikotb.wistia.com/medias/fhi8p923ml",
-        CTA: "Get Started",
+        CTA: "Free Growth Strategy Call",
       },
       1,
     ],
@@ -281,7 +281,7 @@ function SalesPage() {
 
       <CTAButton
         additionalClasses={"my-10 "}
-        CTA="Get Started"
+        CTA={copyRef.current.CTA}
         // onClick={logClick}
         // CTA={copyRef.current.CTA}
         href="/apply?disableFirstBlock

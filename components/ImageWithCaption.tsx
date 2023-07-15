@@ -30,13 +30,15 @@ function ImageWithCaption({
     >
       <h3
         className={cn(
-          "text-red-500 text-start text-xs sm:text-lg font-medium",
+          "text-black text-start text-xs sm:text-lg font-medium",
           isFullScreen ? "text-center" : ""
         )}
       >
         {caption}
       </h3>
-
+      <a className="text-center text-xs">
+        {!isFullScreen && "Click to enlarge 🔍"}
+      </a>
       <img
         src={src}
         className={cn(
