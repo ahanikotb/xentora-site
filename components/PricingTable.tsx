@@ -5,7 +5,7 @@ const Index = ({ CTA }: { CTA: string }) => (
     <section className="px-6 xl:px-0">
       <div className="mt-20 mx-auto container">
         <div className="flex flex-col lg:items-center justify-center w-full">
-          <h1 className="font-black text-center text-white text-5xl md:text-7xl">
+          <h1 className="font-bold text-center text-white text-5xl md:text-7xl">
             The Right Plan for your business
           </h1>
         </div>

@@ -226,7 +226,7 @@ function SalesPage() {
       <section className="my-10 sm:my-20  rounded-lg w-[90%] mx-auto pb-10 ">
         <div className="w-[90vw] mx-auto  flex flex-col items-center justify-center">
           <div className="flex flex-col py-5  items-center justify-center">
-            <h1 className="sm:m-10  text-4xl sm:text-7xl font-black text-white text-center ">
+            <h1 className="sm:m-10  text-4xl sm:text-7xl font-bold text-white text-center ">
               Agency Owners Pay Attention:
             </h1>
           </div>
@@ -259,7 +259,7 @@ function SalesPage() {
       <section className=" mx-auto">
         <div className="w-[90vw] mx-auto flex flex-col items-center justify-center">
           <div className="flex flex-col items-center justify-center">
-            <h1 className="text-4xl sm:text-7xl font-black text-white text-center mt-10 mb-10">
+            <h1 className="text-4xl sm:text-7xl font-bold text-white text-center mt-10 mb-10">
               A{" "}
               <span className="underline decoration-green-700">Consistent</span>{" "}
               & Repeatable System For Closing Deals
