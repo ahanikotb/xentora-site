@@ -254,7 +254,7 @@ function SalesPage() {
           children={Lead}
           remarkPlugins={[]}
           rehypePlugins={[rehypeRaw]}
-          className="leading-[2.5rem] prose-strong:font-bold  sm:leading-[4rem] font-sans prose sm:prose-2xl  mx-auto my-10 text-black w-[80vw] "
+          className=" prose-strong:font-bold  sm:leading-[2rem] font-sans prose sm:prose-2xl  mx-auto mb-10 text-black w-[80vw] "
         />
       </section>
       {/* <Statement /> */}
