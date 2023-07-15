@@ -24,11 +24,11 @@ if you want a client acquistion system that acts as a moat for your business and
 
 if you want to be able to predictably generate sales calls with your ideal clients with a predictable channel then this is for you.
 
-if you plan to do a 8 figure exit then this is for you.
+if you plan to do a **8 figure exit** then this is for you.
 
-if you suspect that your sales team is not performing at their best and you want to give them a system that can generate them 10 sales calls per month then this is for you.
+if you suspect that your sales team is not performing at their best and they are blaming lead quality then this is for you.
 
-if you suspect that your are trying to steal your clients then continue reading.
+if you suspect that your competitors are trying to steal your clients then continue reading.
 
 if you fear loosing a key account and want to have a system that can replace that revenue in 30 days then this is for you.
 
@@ -252,7 +252,7 @@ function SalesPage() {
           children={Lead}
           remarkPlugins={[]}
           rehypePlugins={[rehypeRaw]}
-          className="prose sm:prose-2xl  prose-invert mx-auto my-10 text-white w-[80vw]"
+          className="leading-[2.5rem] prose-strong:font-bold sm:leading-[4rem] font-sans prose sm:prose-2xl prose-strong:text-xl sm:prose-strong:text-3xl  prose-invert mx-auto my-10 text-white w-[80vw] "
         />
       </section>
       {/* <Statement /> */}

@@ -1,14 +1,20 @@
 import { cn } from "@/lib/utils";
 import React, { useState } from "react";
 
-function ImageWithCaption({ src, alt, caption, className }: any) {
+function ImageWithCaption({
+  src,
+  alt,
+  caption,
+  className,
+  imageClassName,
+}: any) {
   const [isFullScreen, setIsFullScreen] = useState(false);
 
   const toggleFullScreen = () => {
     setIsFullScreen(!isFullScreen);
   };
 
-  const imageClassName = isFullScreen ? "fullscreen-image" : className;
+  const imageClassNames = isFullScreen ? "fullscreen-image" : className;
 
   return (
     <div
@@ -35,10 +41,11 @@ function ImageWithCaption({ src, alt, caption, className }: any) {
         src={src}
         className={cn(
           "hover:cursor-zoom-in",
-          imageClassName,
+          imageClassNames,
           isFullScreen
             ? "object-contain w-full h-full hover:cursor-zoom-out"
-            : ""
+            : "",
+          imageClassName
         )}
         alt={alt}
       />
