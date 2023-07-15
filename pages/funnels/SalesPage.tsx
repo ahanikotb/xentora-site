@@ -20,7 +20,7 @@ You're about to discover how to Add $30,000 Of additonal monthly reccuring reven
 
 if you want to increase your agency's **enterprise value** then this is for you.
 
-if you want a client acquistion system that acts as a moat for your business and that your competitors can't copy then this is for you.
+if you want a client acquistion system that acts as a moat around your business and that your competitors can't copy then this is for you.
 
 if you want to be able to predictably generate sales calls with your ideal clients with a predictable channel then this is for you.
 
@@ -203,21 +203,22 @@ function SalesPage() {
             src="proof/email-3.png"
             className="py-10 px-1 overflow-hidden"
           ></ImageWithCaption>
+          <ImageWithCaption
+            caption="Figure 4: My fully booked calendar on april 2023 all using cold email."
+            src="proof/calendar.png"
+            className="py-10 px-1 overflow-hidden"
+          ></ImageWithCaption>
+          <ImageWithCaption
+            caption="Figure 5: My Crm packed with discovery calls."
+            src="proof/ghl.png"
+            className="py-10 px-1 overflow-hidden"
+          ></ImageWithCaption>
         </div>
         {/* <img
           className="py-10 px-1 overflow-hidden"
           src="proof/calendar.png"
         ></img> */}
-        <ImageWithCaption
-          caption="Figure 4: My fully booked calendar on april 2023 all using cold email."
-          src="proof/calendar.png"
-          className="py-10 px-1 overflow-hidden"
-        ></ImageWithCaption>
-        <ImageWithCaption
-          caption="Figure 5: My Crm packed with discovery calls."
-          src="proof/ghl.png"
-          className="py-10 px-1 overflow-hidden"
-        ></ImageWithCaption>
+
         {/* <img className="py-10 px-1 overflow-hidden" src="proof/ghl.png"></img> */}
         {/* <img src="proof/email.png"></img> */}
         {/* <img src="proof/email.png"></img> */}
@@ -252,7 +253,7 @@ function SalesPage() {
           children={Lead}
           remarkPlugins={[]}
           rehypePlugins={[rehypeRaw]}
-          className="leading-[2.5rem] prose-strong:font-bold sm:leading-[4rem] font-sans prose sm:prose-2xl prose-strong:text-xl sm:prose-strong:text-3xl  prose-invert mx-auto my-10 text-white w-[80vw] "
+          className="leading-[2.5rem] prose-strong:font-bold sm:leading-[4rem] font-sans prose sm:prose-2xl  prose-invert mx-auto my-10 text-white w-[80vw] "
         />
       </section>
       {/* <Statement /> */}
