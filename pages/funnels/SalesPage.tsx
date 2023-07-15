@@ -16,7 +16,7 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import rehypeRaw from "rehype-raw";
 const Lead = `
-You're about to discover how to Add $30,000 Of additonal monthly reccuring revenue in 90 days without hiring sdrs, or paying for more ads.
+You're about to discover how to Add $30,000 Of additonal monthly reccuring revenue every 90 days without hiring sdrs, or paying for more ads.
 
 if you want to increase your agency's **enterprise value** then this is for you.
 
@@ -42,9 +42,9 @@ function SalesPage() {
         headline:
           "<span class='font-bold'>Add $30,000 Of Additonal Monthly Reccuring Revenue Every 90 Days Without Paying For Ads or Hiring SDRS</span>",
         // '10<span class="text-red-500" >  Sales Calls </span>Per Month With <span class="text-red-500" > Ready-To-Buy </span>Leads  That<span class="text-yellow-400" >  Understand  </span>And <span class="text-yellow-400" >Need </span>Your Service',
-        // subtitle: "100% DONE FOR YOU.",
+        //= subtitle: "100% DONE FOR YOU.",
         subtitle:
-          "Business To Business Digital Marketing and Sales System. <br/><span class='text-red-500'>100% Done For You ",
+          "<span class='text-red-500'>Keep Reading Or Watch This Video To Find Out How</span> ",
         video: "https://ahanikotb.wistia.com/medias/fhi8p923ml",
         CTA: "Get Started",
       },
@@ -95,14 +95,14 @@ function SalesPage() {
       <section className="xl:mt-5 xl:flex xl:w-[90vw] xl:content-center xl:justify-center xl:mx-auto">
         <div className="xl:flex-col xl:justify-center xl:content-center xl:my-auto xl:flex-1">
           {" "}
-          <h1
+          <h3
             dangerouslySetInnerHTML={{
               __html: copyRef.current.preheadline,
             }}
             className="xl:my-0 mt-3 font-black leading-[1.2] text-lg  text-white text-center w-[90%] lg:leading-[1.3] mx-auto xl:mx-auto  lg:text-2xl md:w-4/5 md:text-2xl xl:w-3/4 xl:text-xl 2xl:text-xl"
           >
             {/* {copyRef.current.headline} */}
-          </h1>
+          </h3>
           <h1
             dangerouslySetInnerHTML={{
               __html: copyRef.current.headline,
@@ -111,12 +111,12 @@ function SalesPage() {
           >
             {/* {copyRef.current.headline} */}
           </h1>
-          {/* <h1
+          <h3
             dangerouslySetInnerHTML={{
               __html: copyRef.current.subtitle,
             }}
-            className="mt-2 xl:mb-0 text-white font-light 	 text-center w-[90%] mx-auto text-lg lg:text-xl xl:mx-auto md:w-3/4 md:text-lg xl:w-3/4 xl:text-3xl"
-          ></h1> */}
+            className=" mt-3 font-black leading-[1.2] text-sm  text-white text-center w-[90%] lg:leading-[1.3] mx-auto xl:mx-auto  lg:text-sm md:w-4/5 md:text-sm xl:w-3/4"
+          ></h3>
           <CTAButton
             additionalClasses={"mt-5 hidden xl:flex xl:p-0"}
             onClick={logClick}
