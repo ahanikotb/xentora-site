@@ -6,10 +6,10 @@ function Nav() {
     <div>
       <div className="mx-auto sm:hidden w-[150px] sm:w-[200px] h-[8vh] text-black font-bold flex items-center justify-center">
         <a href="/">
-          <img src="/xentora_logo.png" />
+          <img src="/xentora_logo_black.png" />
         </a>
       </div>
-      <nav className="hidden sm:flex justify-between items-center relative py-3 lg:px-20 px-5 text-white mx-auto">
+      <nav className="hidden sm:flex justify-between items-center relative py-3 lg:px-20 px-5 text-black mx-auto">
         <input
           // checked={checked}
           // onClick={() => {
@@ -21,7 +21,7 @@ function Nav() {
         />
         <div className="w-[150px] sm:w-[200px] h-[8vh] text-black font-bold flex items-center justify-center">
           <a href="/">
-            <img src="/xentora_logo.png" />
+            <img src="/xentora_logo_black.png" />
           </a>
         </div>
         <ul className="lg:flex lg:translate-x-0 lg:peer-checked:static absolute hidden lg:static  lg:basis-/5 justify-evenly font-bold peer-checked:block top-[88px] transition-transform duration-0 left-0 right-0  bg-black lg:bg-transparent">
@@ -54,7 +54,7 @@ function Nav() {
           <li>
             <a
               href="/apply?disableFirstBlock"
-              className=" p-6 sm:px-20 text-xl wrap-no  lg:bg-green-700 sm:text-center cursor-pointer lg:rounded-xl flex lg:p-4 lg:hover:p-4 hover:bg-green-800 transition-colors duration-000 ease-in"
+              className=" p-6 sm:px-20 text-xl wrap-no text-white lg:bg-green-700 sm:text-center cursor-pointer lg:rounded-xl flex lg:p-4 lg:hover:p-4 hover:bg-green-800 transition-colors duration-000 ease-in"
             >
               Get Started
             </a>

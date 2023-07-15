@@ -33,8 +33,8 @@ function Testimonials() {
       className="rounded-lg "
       style={{
         mixBlendMode: "normal",
-        background:
-          " radial-gradient(rgba(120,130,200,0.02),rgba(100,130,200,0.1))",
+        // background: "black",
+        // " radial-gradient(rgba(120,130,200,0.02),rgba(100,130,200,0.1))",
       }}
       ref={scope}
     >
@@ -45,11 +45,11 @@ function Testimonials() {
         >
           <div className=" w-[90vw] mx-auto  flex-1 flex flex-col items-center justify-center xl:justify-start xl:content-center">
             <div className="flex flex-col py-10  items-center justify-center ">
-              <h1 className="mt- xl:mt-0 text-5xl sm:text-7xl font-black text-white text-center ">
+              <h1 className="mt- xl:mt-0 text-5xl sm:text-7xl font-black text-black text-center ">
                 CASE STUDY:
                 <br /> BEACON TALENT
               </h1>
-              <h3 className="mt-3 text-white text-xl sm:text-2xl text-center font-bold">
+              <h3 className="mt-3 text-black text-xl sm:text-2xl text-center font-bold">
                 BEACON TALENT is a Recruiting Firm in Brooklyn, New York.
               </h3>
             </div>
@@ -66,35 +66,35 @@ function Testimonials() {
             <div className="w-[80vw] mx-auto flex-1  sm:py-10 grid grid-cols-2 sm:grid-cols-3 gap-10 ">
               <div
                 id="box"
-                className="opacity-0 sm:outline outline-white rounded-lg  sm:p-10 flex justify-center sm:justify-start items-start  sm:items-center flex-row sm:flex-col"
+                className="opacity-0 sm:outline outline-black rounded-lg  sm:p-10 flex justify-center sm:justify-start items-start  sm:items-center flex-row sm:flex-col"
               >
-                <Target color="white" className=" sm:w-1/3 sm:h-1/3 sm:mb-5" />
+                <Target color="black" className=" sm:w-1/3 sm:h-1/3 sm:mb-5" />
 
-                <h1 className=" text-center text-white sm:text-3xl font-black">
+                <h1 className=" text-center text-black sm:text-3xl font-black">
                   60% Open-Rate and 2 Positive Replies Per Day
                 </h1>
               </div>
               <div
                 id="box"
-                className="opacity-0  sm:outline outline-white rounded-lg  sm:p-10 flex justify-center  sm:justify-start items-start  sm:items-center flex-row sm:flex-col"
+                className="opacity-0  sm:outline outline-black rounded-lg  sm:p-10 flex justify-center  sm:justify-start items-start  sm:items-center flex-row sm:flex-col"
               >
                 <CalendarCheck
-                  color="white"
+                  color="black"
                   className=" sm:w-1/3 sm:h-1/3 sm:mb-5"
                 />
-                <h1 className="text-center text-white sm:text-3xl font-black">
+                <h1 className="text-center text-black sm:text-3xl font-black">
                   4 Meetings Booked Per Week
                 </h1>
               </div>
               <div
                 id="box"
-                className="opacity-0  sm:outline outline-white rounded-lg  sm:p-10 flex justify-center  sm:justify-start items-start  sm:items-center  flex-row sm:flex-col"
+                className="opacity-0  sm:outline outline-black rounded-lg  sm:p-10 flex justify-center  sm:justify-start items-start  sm:items-center  flex-row sm:flex-col"
               >
                 <CircleDollarSign
-                  color="white"
+                  color="black"
                   className=" sm:w-1/3 sm:h-1/3 sm:mb-5"
                 />
-                <h1 className="  text-center text-white sm:text-3xl font-black">
+                <h1 className="  text-center text-black sm:text-3xl font-black">
                   Getting On 5-Figure Sales Opportunities Every Week
                 </h1>
               </div>
@@ -111,11 +111,11 @@ function Testimonials() {
         >
           <div className="w-[90vw] mx-auto  flex flex-col items-center justify-center xl:justify-start xl:content-center">
             <div className="flex flex-col py-10  items-center justify-center ">
-              <h1 className="mt-10 text-5xl sm:text-7xl font-black text-white text-center  ">
+              <h1 className="mt-10 text-5xl sm:text-7xl font-black text-black text-center  ">
                 CASE STUDY:
                 <br /> REMOTE REP
               </h1>
-              <h3 className="mt-3 text-white text-xl sm:text-2xl text-center font-bold">
+              <h3 className="mt-3 text-black text-xl sm:text-2xl text-center font-bold">
                 Remote Rep is A Sales Outsourcing Company in Atlanta.
               </h3>
             </div>
@@ -131,35 +131,35 @@ function Testimonials() {
             <div className="w-[80vw] mx-auto   sm:py-10 grid grid-cols-2 sm:grid-cols-3 gap-10 ">
               <div
                 id="box"
-                className="opacity-0  sm:outline outline-white rounded-lg  sm:p-10 flex justify-center sm:justify-start items-start  sm:items-center flex-row sm:flex-col"
+                className="opacity-0  sm:outline outline-black rounded-lg  sm:p-10 flex justify-center sm:justify-start items-start  sm:items-center flex-row sm:flex-col"
               >
-                <Target color="white" className=" sm:w-1/3 sm:h-1/3 sm:mb-5" />
+                <Target color="black" className=" sm:w-1/3 sm:h-1/3 sm:mb-5" />
 
-                <h1 className=" text-center text-white sm:text-3xl font-black">
+                <h1 className=" text-center text-black sm:text-3xl font-black">
                   70% Open-Rate and 3-4 Positive Replies Per Day
                 </h1>
               </div>
               <div
                 id="box"
-                className="opacity-0  sm:outline outline-white rounded-lg  sm:p-10 flex justify-center  sm:justify-start items-start  sm:items-center flex-row sm:flex-col"
+                className="opacity-0  sm:outline outline-black rounded-lg  sm:p-10 flex justify-center  sm:justify-start items-start  sm:items-center flex-row sm:flex-col"
               >
                 <CalendarCheck
-                  color="white"
+                  color="black"
                   className=" sm:w-1/3 sm:h-1/3 sm:mb-5"
                 />
-                <h1 className="text-center text-white sm:text-3xl font-black">
+                <h1 className="text-center text-black sm:text-3xl font-black">
                   4 Meetings Booked Per Week
                 </h1>
               </div>
               <div
                 id="box"
-                className="opacity-0  sm:outline outline-white rounded-lg  sm:p-10 flex justify-center  sm:justify-start items-start  sm:items-center  flex-row sm:flex-col"
+                className="opacity-0  sm:outline outline-black rounded-lg  sm:p-10 flex justify-center  sm:justify-start items-start  sm:items-center  flex-row sm:flex-col"
               >
                 <CircleDollarSign
-                  color="white"
+                  color="black"
                   className=" sm:w-1/3 sm:h-1/3 sm:mb-5"
                 />
-                <h1 className="  text-center text-white sm:text-3xl font-black">
+                <h1 className="  text-center text-black sm:text-3xl font-black">
                   Getting On 5-Figure Sales Opportunities Every Week
                 </h1>
               </div>
@@ -173,22 +173,22 @@ function Testimonials() {
         <div className="flex w-full justify-evenly mx-auto lg:mx-auto xl:mx-0 align-center mb-10 sm:w-2/4  ">
           <div
             onClick={() => switchCaseStudy("back")}
-            className="text-white cursor-pointer"
+            className="text-black cursor-pointer"
           >
-            <ArrowBigLeft fill="white" className="w-[5rem] h-[5rem]" />
+            <ArrowBigLeft fill="black" className="w-[5rem] h-[5rem]" />
           </div>
           <div
             onClick={() => switchCaseStudy("next")}
-            className="text-white cursor-pointer "
+            className="text-black cursor-pointer "
           >
-            <ArrowBigRight fill="white" className="w-[5rem] h-[5rem]" />
+            <ArrowBigRight fill="black" className="w-[5rem] h-[5rem]" />
           </div>
 
           <motion.img
             ref={ref}
             style={{
               position: "absolute",
-              filter: "brightness(0) invert(1)",
+              filter: "brightness(0) ",
               opacity: isInView ? 1 : 0,
               transition: "opacity 0.5s ease-in-out",
             }}

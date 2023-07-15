@@ -16,7 +16,7 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import rehypeRaw from "rehype-raw";
 const Lead = `
-You're about to discover how to Add $30,000 Of additonal monthly reccuring revenue every 90 days without hiring sdrs, or paying for more ads.
+You're about to discover how to add $30,000 Of additonal monthly reccuring revenue every 90 days without hiring sdrs, or paying for more ads.
 
 if you want to increase your agency's **enterprise value** then this is for you.
 
@@ -99,7 +99,7 @@ function SalesPage() {
             dangerouslySetInnerHTML={{
               __html: copyRef.current.preheadline,
             }}
-            className="xl:my-0 mt-3 font-black leading-[1.2] text-lg  text-white text-center w-[90%] lg:leading-[1.3] mx-auto xl:mx-auto  lg:text-2xl md:w-4/5 md:text-2xl xl:w-3/4 xl:text-xl 2xl:text-xl"
+            className="xl:my-0 mt-3 font-black leading-[1.2] text-lg  text-black text-center w-[90%] lg:leading-[1.3] mx-auto xl:mx-auto  lg:text-2xl md:w-4/5 md:text-2xl xl:w-3/4 xl:text-xl 2xl:text-xl"
           >
             {/* {copyRef.current.headline} */}
           </h3>
@@ -107,7 +107,7 @@ function SalesPage() {
             dangerouslySetInnerHTML={{
               __html: copyRef.current.headline,
             }}
-            className="xl:my-0  mt-0 font-black leading-[1.2] text-2xl  text-white text-center w-[90%] lg:leading-[1.3] mx-auto xl:mx-auto  lg:text-4xl md:w-4/5 md:text-3xl xl:w-3/4 xl:text-4xl 2xl:text-5xl"
+            className="xl:my-0  mt-0 font-black leading-[1.2] text-2xl  text-black text-center w-[90%] lg:leading-[1.3] mx-auto xl:mx-auto  lg:text-4xl md:w-4/5 md:text-3xl xl:w-3/4 xl:text-4xl 2xl:text-5xl"
           >
             {/* {copyRef.current.headline} */}
           </h1>
@@ -115,7 +115,7 @@ function SalesPage() {
             dangerouslySetInnerHTML={{
               __html: copyRef.current.subtitle,
             }}
-            className=" mt-3 font-black leading-[1.2] text-sm  text-white text-center w-[90%] lg:leading-[1.3] mx-auto xl:mx-auto  lg:text-sm md:w-4/5 md:text-sm xl:w-3/4"
+            className=" mt-3 font-black leading-[1.2] text-sm  text-black text-center w-[90%] lg:leading-[1.3] mx-auto xl:mx-auto  lg:text-sm md:w-4/5 md:text-sm xl:w-3/4"
           ></h3>
           <CTAButton
             additionalClasses={"mt-5 hidden xl:flex xl:p-0"}
@@ -157,22 +157,23 @@ function SalesPage() {
 "
         />
       </section>
-      <section className="mt-5 rounded-xl sm:p-10  w-[90%] sm:w-[90%] mx-auto">
-        <h1 className="text-white font-black text-center  sm:text-2xl">
+
+      <section className="mt-5 p-4 rounded-xl sm:p-10  mb-10  w-[90%] sm:w-[90%] mx-auto">
+        <h1 className="text-black font-black text-center  sm:text-2xl">
           Clients We've Worked With
         </h1>
         <div className=" mx-auto mt-2 sm:mt-10">
           <div className="grid grid-cols-2 gap-4">
             <div className="flex justify-center items-center ">
               <img
-                src="/clients/1.png"
+                src="/clients/3.png"
                 className="sm:max-h-20 sm:max-w-20 max-h-full max-w-full"
                 alt="Client 1"
               />
             </div>
             <div className="flex justify-center items-center">
               <img
-                src="/clients/2.png"
+                src="/clients/4.png"
                 className="sm:max-h-20 sm:max-w-20 max-h-full max-w-full"
                 alt="Client 2"
               />
@@ -224,10 +225,10 @@ function SalesPage() {
         {/* <img src="proof/email.png"></img> */}
         {/* <img src="proof/linkedin.png"></img> */}
       </section>
-      <section className="my-10 sm:my-20  rounded-lg w-[90%] mx-auto pb-10 ">
+      <section className="my-10 sm:my-20  rounded-lg w-[90%] mx-auto ">
         <div className="w-[90vw] mx-auto  flex flex-col items-center justify-center">
           <div className="flex flex-col py-5  items-center justify-center">
-            <h1 className="sm:m-10  text-4xl sm:text-7xl font-bold text-white text-center ">
+            <h1 className="sm:m-10  text-4xl sm:text-7xl font-bold text-black text-center ">
               Agency Owners Pay Attention:
             </h1>
           </div>
@@ -253,14 +254,14 @@ function SalesPage() {
           children={Lead}
           remarkPlugins={[]}
           rehypePlugins={[rehypeRaw]}
-          className="leading-[2.5rem] prose-strong:font-bold sm:leading-[4rem] font-sans prose sm:prose-2xl  prose-invert mx-auto my-10 text-white w-[80vw] "
+          className="leading-[2.5rem] prose-strong:font-bold  sm:leading-[4rem] font-sans prose sm:prose-2xl  mx-auto my-10 text-black w-[80vw] "
         />
       </section>
       {/* <Statement /> */}
       <section className=" mx-auto">
         <div className="w-[90vw] mx-auto flex flex-col items-center justify-center">
           <div className="flex flex-col items-center justify-center">
-            <h1 className="text-4xl sm:text-7xl font-bold text-white text-center mt-10 mb-10">
+            <h1 className="text-4xl sm:text-7xl font-bold text-black text-center mt-10 mb-10">
               A{" "}
               <span className="underline decoration-green-700">Consistent</span>{" "}
               & Repeatable System For Closing Deals
@@ -295,18 +296,20 @@ function SalesPage() {
         href="/apply?disableFirstBlock
 "
       /> */}
-      <PricingTable CTA={copyRef.current.CTA} />
+      {/* <PricingTable CTA={copyRef.current.CTA} /> */}
       <Testimonials />
       <section
         style={{
-          background: "rgba(0, 0,0, 0.2)",
+          backgroundImage:
+            "url(http://www.transparenttextures.com/patterns/textured-paper.png)",
+          // background: "rgba(0, 0,30, 1)", //"rgba(0, 0,0, 0.2)",
         }}
         className="my-10 w-[90%] sm:w-[70%] p-10   mx-auto rounded-lg"
       >
-        <h1 className="font-black text-4xl sm:text-5xl text-white text-center">
+        <h1 className="font-black text-4xl sm:text-5xl text-black text-center">
           WANT TO TALK TO SOMEONE ?
         </h1>
-        <h3 className="text-center text-2xl text-white mt-2">
+        <h3 className="text-center text-2xl text-black mt-2">
           Our lead generation specialists are available to answer your questions
           💬
         </h3>

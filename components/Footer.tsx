@@ -4,20 +4,22 @@ function Footer() {
   return (
     <div>
       <footer
-        style={{
-          background: "rgba(0,0,0,0.2)",
-        }}
-        className=" text-center text-white dark:bg-neutral-600 dark:text-neutral-200 lg:text-left"
+        style={
+          {
+            // background: "black", //"rgba(0,0,0,0.2)",
+          }
+        }
+        className=" text-center text-black dark:bg-black dark:text-neutral-200 lg:text-left"
       >
-        <div className="flex items-center justify-center border-b-2 border-neutral-200 p-6 dark:border-neutral-500 lg:justify-between">
+        <div className="flex items-center justify-center border-b-2 border-black p-6 lg:justify-between">
           <div className="mr-12 hidden lg:block">
             <span>Get connected with us on social networks:</span>
           </div>
           {/* Social network icons container */}
-          <div className="flex justify-center">
+          <div style={{}} className="flex justify-center">
             {/* <a
               href="https://www.facebook.com"
-              className="mr-6 text-white dark:text-neutral-200"
+              className="mr-6 text-black dark:text-neutral-200"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -30,7 +32,7 @@ function Footer() {
             </a> */}
             <a
               href="https://twitter.com/ahmedhanykotb_"
-              className="mr-6 text-white dark:text-neutral-200"
+              className="mr-6 text-black dark:text-neutral-200"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -41,7 +43,7 @@ function Footer() {
                 <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
               </svg>
             </a>
-            {/* <a href="#!" className="mr-6 text-white dark:text-neutral-200">
+            {/* <a href="#!" className="mr-6 text-black dark:text-neutral-200">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
@@ -55,7 +57,7 @@ function Footer() {
                 />
               </svg>
             </a> */}
-            {/* <a href="#!" className="mr-6 text-white dark:text-neutral-200">
+            {/* <a href="#!" className="mr-6 text-black dark:text-neutral-200">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-4 w-4"
@@ -67,7 +69,7 @@ function Footer() {
             </a> */}
             <a
               href="https://www.linkedin.com/in/ahanikotb/"
-              className="mr-6 text-white dark:text-neutral-200"
+              className="mr-6 text-black dark:text-neutral-200"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -78,7 +80,7 @@ function Footer() {
                 <path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
               </svg>
             </a>
-            {/* <a href="#!" className="text-white dark:text-neutral-200">
+            {/* <a href="#!" className="text-black dark:text-neutral-200">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-4 w-4"
@@ -96,7 +98,7 @@ function Footer() {
             {/* Tailwind Elements section */}
             <div>
               <img
-                src="/xentora_logo.png"
+                src="/xentora_logo_black.png"
                 className="w-[150px] h-[50px] mb-4 mx-auto sm:mx-0"
               />
               {/* <h6 className="mb-4 flex items-center justify-center font-semibold uppercase md:justify-start">
@@ -120,23 +122,23 @@ function Footer() {
               <p className="mb-4">
                 <a
                   href="/resources/how-to-get-1-2-inbound-leads-per-week-on-linkedin.96a0435c523b4e569bf18159df7aeb20"
-                  className="text-white dark:text-neutral-200"
+                  className="text-black dark:text-neutral-200"
                 >
                   How We Get 1-2 Inbound Leads Per Week On LinkedIn
                 </a>
               </p>
               {/* <p className="mb-4">
-                <a href="#!" className="text-white dark:text-neutral-200">
+                <a href="#!" className="text-black dark:text-neutral-200">
                   React
                 </a>
               </p>
               <p className="mb-4">
-                <a href="#!" className="text-white dark:text-neutral-200">
+                <a href="#!" className="text-black dark:text-neutral-200">
                   Vue
                 </a>
               </p>
               <p>
-                <a href="#!" className="text-white dark:text-neutral-200">
+                <a href="#!" className="text-black dark:text-neutral-200">
                   Laravel
                 </a>
               </p> */}
@@ -149,23 +151,23 @@ function Footer() {
               <p className="mb-4">
                 <a
                   href="/privacy-policy"
-                  className="text-white dark:text-neutral-200"
+                  className="text-black dark:text-neutral-200"
                 >
                   Privacy Policy
                 </a>
               </p>
               {/* <p className="mb-4">
-                <a href="#!" className="text-white dark:text-neutral-200">
+                <a href="#!" className="text-black dark:text-neutral-200">
                   Settings
                 </a>
               </p>
               <p className="mb-4">
-                <a href="#!" className="text-white dark:text-neutral-200">
+                <a href="#!" className="text-black dark:text-neutral-200">
                   Orders
                 </a>
               </p>
               <p>
-                <a href="#!" className="text-white dark:text-neutral-200">
+                <a href="#!" className="text-black dark:text-neutral-200">
                   Help
                 </a>
               </p> */}
@@ -234,14 +236,16 @@ function Footer() {
         </div>
         {/*Copyright section*/}
         <div
-          style={{
-            background: "rgba(0,0,0,0.2)",
-          }}
-          className="p-6 text-center dark:bg-neutral-700"
+          style={
+            {
+              // background: "rgba(0,0,0,0.2)",
+            }
+          }
+          className="p-6 text-center"
         >
           <span>© 2023 Copyright: </span>
           <a
-            className="font-semibold text-white dark:text-neutral-400"
+            className="font-semibold text-black dark:text-neutral-400"
             href="https://tailwind-elements.com/"
           >
             Xentora

@@ -12,7 +12,7 @@ async function Page() {
   return (
     <div>
       <Nav />
-      <h1 className="text-center text-6xl font-black text-white mt-10">
+      <h1 className="text-center text-6xl font-black text-black mt-10">
         Resources
       </h1>
       <div className="mx-auto w-[80vw] my-20">

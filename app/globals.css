@@ -2,11 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 body {
-  background: radial-gradient(
+  background-color: #ffffff;
+  /*https://www.transparenttextures.com/patterns/escheresque.png*/
+  /* background-image: url("https://www.transparenttextures.com/patterns/climpek.png"); */
+  /* background-image: radial-gradient(
+      circle at 24.1% 68.8%,
+      rgba(50, 50, 70, 1) 0%,
+      #00030dd9 99.4%
+    ) */
+  /* background-image: url(http://www.transparenttextures.com/patterns/textured-paper.png); */
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+  /* background-color: radial-gradient(
     circle at 24.1% 68.8%,
     rgba(50, 50, 70, 1) 0%,
     rgba(0, 2.5, 13, 0.85) 99.4%
-  );
+  ); */
 }
 @layer base {
   :root {

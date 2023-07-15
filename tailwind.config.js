@@ -15,7 +15,7 @@ module.exports = {
       },
     },
     fontFamily: {
-      sans: ["Verdana", "sans-serif"],
+      sans: ["Urbanist", "sans-serif"],
     },
     extend: {
       colors: {
