@@ -8,6 +8,7 @@ async function Page() {
   const notion = new Notion({ auth: process.env.NOTION_API_KEY });
 
   const db = await notion.loadDatabase(database_id, {});
+  console.log(db);
 
   return (
     <div>
