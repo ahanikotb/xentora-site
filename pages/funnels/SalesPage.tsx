@@ -33,7 +33,13 @@ if you suspect that your competitors are trying to  **steal your clients** then 
 if you  **fear loosing a key account** and want to have a system that can replace that revenue in 30 days then this is for you.
 
 `;
+const Mechanism = `
+- Really easy to find emails at scale online.
+- Highly Scalable with automation.
+- low time and effort investment.
+- higher profit margins due to low customer acquisition costs
 
+`;
 function SalesPage() {
   const copy = new Map([
     [
@@ -233,9 +239,8 @@ function SalesPage() {
             </h1>
           </div>
         </div>
-        {/*
-          //3 ROWS GRID
-          <div className="w-[80vw] mx-auto   sm:pb-10 grid grid-cols-2 lg:grid-cols-4  gap-10 ">
+        <div className="flex flex-row-reverse">
+          <div className="w-[80vw] mx-auto ml-20 hidden xl:grid sm:pb-10  grid-cols-2 lg:grid-cols-2  gap-10 ">
             <div className=" bg-white rounded-lg outline outline-5 sm:p-10 flex justify-start items-center flex-col">
               <img src={"/painpoint/referrals.jpg"} />
             </div>
@@ -249,12 +254,27 @@ function SalesPage() {
               <img src={"/painpoint/paidads.jpg"} />
             </div>
           </div>
-      */}
+          <ReactMarkdown
+            children={Lead}
+            remarkPlugins={[]}
+            rehypePlugins={[rehypeRaw]}
+            className=" prose-strong:font-bold  sm:leading-[2rem] font-sans prose sm:prose-2xl  mx-auto mb-10 text-black w-[80vw] "
+          />
+        </div>
+      </section>
+      <section className="my-10 py-10 sm:my-20 rounded-lg w-[90%] mx-auto ">
+        <div className="w-[90vw] mx-auto  flex flex-col items-center justify-center">
+          <div className="flex flex-col py-5  items-center justify-center">
+            <h1 className="sm:m-10  text-4xl sm:text-7xl font-bold text-black text-center ">
+              Why Automated Cold Email
+            </h1>
+          </div>
+        </div>
         <ReactMarkdown
-          children={Lead}
+          children={Mechanism}
           remarkPlugins={[]}
           rehypePlugins={[rehypeRaw]}
-          className=" prose-strong:font-bold  sm:leading-[2rem] font-sans prose sm:prose-2xl  mx-auto mb-10 text-black w-[80vw] "
+          className=" prose-strong:font-bold sm:leading-[2rem] font-sans prose sm:prose-2xl   mx-auto mb-10 text-black w-[80vw] "
         />
       </section>
       {/* <Statement /> */}
@@ -287,7 +307,37 @@ function SalesPage() {
         href="/apply?disableFirstBlock
 "
       />
+      <section
+        style={
+          {
+            // backgroundImage: "url(/xentora_print.png)",
+            // objectFit: "contain",
+            // background: "rgba(0, 0,30, 1)", //"rgba(0, 0,0, 0.2)",
+          }
+        }
+        className="my-10 w-[90%] sm:w-[80%] p-20  justify-center  mx-auto rounded-lg"
+      >
+        <h1 className="text-4xl sm:text-7xl font-bold text-black text-center sm:my-20 my-10">
+          Who We Are
+        </h1>
+        <div className="lg:flex lg:flex-row">
+          <div className="flex lg:flex-1 m-10 items-center justify-center">
+            <img
+              className="w-[250px] sm:w-full"
+              src="/xentora_logo_black.png"
+            ></img>
+          </div>
 
+          <h3 className="text-start  lg:flex-1 text-2xl text-black mt-2">
+            <br />
+            Founded in 2023 with a mission to make lead generation for b2b
+            companies a problem of the past.
+            <br />
+            In the last 3 months we’ve booked over 50 meetings and generated
+            over $200k in pipeline for our clients using cold email alone.
+          </h3>
+        </div>
+      </section>
       {/* <Timeline /> */}
       {/* <CTAButton
         additionalClasses={"mb-5 xl:hidden"}
