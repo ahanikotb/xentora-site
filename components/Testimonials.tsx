@@ -38,15 +38,15 @@ function Testimonials() {
       }}
       ref={scope}
     >
+      <h1 className="text-center text-4xl mt-10 sm:text-7xl"> CASE STUDIES:</h1>
       {currentCaseStudy == 0 ? (
         <section
           id="casestudies"
-          className=" sm:pt-20 rounded-lg w-[90%] mx-auto pb-10  xl:flex xl:flex-row"
+          className=" rounded-lg w-[90%] mx-auto pb-10  xl:flex xl:flex-row"
         >
           <div className=" w-[90vw] mx-auto  flex-1 flex flex-col items-center justify-center xl:justify-start xl:content-center">
-            <div className="flex flex-col py-10  items-center justify-center ">
-              <h1 className="mt- xl:mt-0 text-5xl sm:text-7xl font-black text-black text-center ">
-                CASE STUDY:
+            <div className="flex flex-col   items-center justify-center ">
+              <h1 className="mt-0 xl:mt-0 text-5xl sm:text-7xl font-black text-black text-center ">
                 <br /> BEACON TALENT
               </h1>
               <h3 className="mt-3 text-black text-xl sm:text-2xl text-center font-bold">
@@ -110,9 +110,8 @@ function Testimonials() {
           className=" rounded-lg w-[90%] mx-auto pb-10  xl:flex xl:flex-row"
         >
           <div className="w-[90vw] mx-auto  flex flex-col items-center justify-center xl:justify-start xl:content-center">
-            <div className="flex flex-col py-10  items-center justify-center ">
-              <h1 className="mt-10 text-5xl sm:text-7xl font-black text-black text-center  ">
-                CASE STUDY:
+            <div className="flex flex-col py-0  items-center justify-center ">
+              <h1 className="mt-0 text-5xl sm:text-7xl font-black text-black text-center  ">
                 <br /> REMOTE REP
               </h1>
               <h3 className="mt-3 text-black text-xl sm:text-2xl text-center font-bold">
@@ -197,7 +196,6 @@ function Testimonials() {
           ></motion.img>
         </div>
       </div>
-
       {/* <CTAButton
         // additionalClasses={"mb-5"}
         //   onClick={logClick}
