@@ -231,27 +231,31 @@ function SalesPage() {
         {/* <img src="proof/email.png"></img> */}
         {/* <img src="proof/linkedin.png"></img> */}
       </section>
-      <section className="my-10 sm:my-20  rounded-lg w-[90%] mx-auto ">
-        <div className="w-[90vw] mx-auto  flex flex-col items-center justify-center">
+      <section className="my-10  sm:my-20  rounded-lg w-[90%] mx-auto ">
+        <div className="w-[90vw]  mx-auto  flex flex-col items-center justify-center">
           <div className="flex flex-col py-5  items-center justify-center">
             <h1 className="sm:m-10  text-4xl sm:text-7xl font-bold text-black text-center ">
               Agency Owners Pay Attention:
             </h1>
           </div>
         </div>
-        <div className="flex flex-row-reverse">
-          <div className="w-[80vw] mx-auto ml-20 hidden xl:grid sm:pb-10  grid-cols-2 lg:grid-cols-2  gap-10 ">
-            <div className=" bg-white rounded-lg outline outline-5 sm:p-10 flex justify-start items-center flex-col">
-              <img src={"/painpoint/referrals.jpg"} />
+        <div className="flex flex-row-reverse ">
+          <div className="w-[40vw] px-20 pb-40   hidden xl:flex ">
+            <div className="flex flex-1 flex-col">
+              <div className=" bg-white rounded-lg sm:p-3 flex justify-center items-center flex-col">
+                <img src={"/painpoint/referrals.jpg"} />
+              </div>
+              <div className=" bg-white rounded-lg sm:p-3 flex justify-center items-center flex-col">
+                <img src={"/painpoint/insecurity.jpg"} />
+              </div>
             </div>
-            <div className="outline bg-white outline-5 rounded-lg sm:p-10 flex justify-start items-center flex-col">
-              <img src={"/painpoint/insecurity.jpg"} />
-            </div>
-            <div className="outline bg-white outline-5 rounded-lg sm:p-10 flex  justify-start items-center flex-col">
-              <img src={"/painpoint/fillingcalendar.jpg"} />
-            </div>
-            <div className="outline bg-white outline-5 rounded-lg sm:p-10 flex  justify-start items-center flex-col">
-              <img src={"/painpoint/paidads.jpg"} />
+            <div className="flex flex-1 flex-col">
+              <div className=" bg-white rounded-lg sm:p-3 flex  justify-center items-center flex-col">
+                <img src={"/painpoint/fillingcalendar.jpg"} />
+              </div>
+              <div className=" bg-white rounded-lg sm:p-3 flex  justify-center items-center flex-col">
+                <img src={"/painpoint/paidads.jpg"} />
+              </div>
             </div>
           </div>
           <ReactMarkdown
@@ -315,13 +319,13 @@ function SalesPage() {
             // background: "rgba(0, 0,30, 1)", //"rgba(0, 0,0, 0.2)",
           }
         }
-        className="my-10 w-[90%] sm:w-[80%] p-20  justify-center  mx-auto rounded-lg"
+        className="my-10 w-[90vw] sm:w-[80%] sm:p-20 p-5  justify-center  mx-auto rounded-lg"
       >
         <h1 className="text-4xl sm:text-7xl font-bold text-black text-center sm:my-20 my-10">
           Who We Are
         </h1>
         <div className="lg:flex lg:flex-row">
-          <div className="flex lg:flex-1 m-10 items-center justify-center">
+          <div className="flex lg:flex-1 sm:m-10 items-center justify-center">
             <img
               className="w-[250px] sm:w-full"
               src="/xentora_logo_black.png"
