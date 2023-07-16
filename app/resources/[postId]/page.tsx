@@ -43,7 +43,7 @@ async function Page({ params: { postId } }: Props) {
         ></ReactMarkdown> */}
       </div>
       <div className="p-10">
-        <CTAButton href="/start" CTA="Get Started"></CTAButton>
+        <CTAButton href="/start" CTA="Free Growth Strategy Call"></CTAButton>
       </div>
     </div>
   );
