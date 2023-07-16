@@ -3,7 +3,7 @@
 @tailwind utilities;
 body {
   background-color: #ffffff;
-  background-image: url("http://www.transparenttextures.com/patterns/textured-paper.png");
+  /* background-image: url("http://www.transparenttextures.com/patterns/textured-paper.png"); */
   /*https://www.transparenttextures.com/patterns/escheresque.png*/
   /* background-image: url("https://www.transparenttextures.com/patterns/climpek.png"); */
   /* background-image: radial-gradient(
