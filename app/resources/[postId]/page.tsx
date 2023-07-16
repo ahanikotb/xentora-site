@@ -10,6 +10,7 @@ import { NotionAPI } from "notion-client";
 import { NotionRenderer } from "react-notion-x";
 import "react-notion-x/src/styles.css";
 import { NotionPage } from "./notionpage";
+import Head from "next/head";
 
 type Props = {
   params: {
@@ -28,6 +29,7 @@ async function Page({ params: { postId } }: Props) {
   return (
     <div className="">
       <Nav />
+
       <div className="">
         {/* <div className="text-lg prose-invert lg:text-2xl  prose xl:prose-2xl xl:text-3xl text-center sm:text-start">
           <MDXRemote source={post} />
