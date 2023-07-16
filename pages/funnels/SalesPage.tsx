@@ -240,8 +240,8 @@ function SalesPage() {
           </div>
         </div>
         <div className="flex flex-row-reverse ">
-          <div className="w-[40vw] px-20 pb-40   hidden xl:flex ">
-            <div className="flex flex-1 flex-col">
+          <div className="w-[40vw] px-20 pb-40   hidden 2xl:flex ">
+            <div className="flex flex-1  flex-col">
               <div className=" bg-white rounded-lg sm:p-3 flex justify-center items-center flex-col">
                 <img src={"/painpoint/referrals.jpg"} />
               </div>
@@ -358,7 +358,7 @@ function SalesPage() {
             "url(http://www.transparenttextures.com/patterns/textured-paper.png)",
           // background: "rgba(0, 0,30, 1)", //"rgba(0, 0,0, 0.2)",
         }}
-        className="my-10 w-[90%] sm:w-[70%] p-10   mx-auto rounded-lg"
+        className="my-10 w-[95%] sm:w-[70%] p-2 py-6 mx-auto rounded-lg"
       >
         <h1 className="font-black text-4xl sm:text-5xl text-black text-center">
           WANT TO TALK TO SOMEONE ?
