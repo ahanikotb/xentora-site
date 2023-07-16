@@ -127,6 +127,14 @@ function Footer() {
                   How We Get 1-2 Inbound Leads Per Week On LinkedIn
                 </a>
               </p>
+              <p className="mb-4">
+                <a
+                  href="/resources/steal-our-cold-email-template-that-prints-meetings.461d18e59ab84c9b86561ad0162b50f2"
+                  className="text-black dark:text-neutral-200"
+                >
+                  Steal This Cold Email Template That Booked 50+ Meetings
+                </a>
+              </p>
               {/* <p className="mb-4">
                 <a href="#!" className="text-black dark:text-neutral-200">
                   React

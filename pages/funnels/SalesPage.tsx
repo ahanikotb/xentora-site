@@ -239,7 +239,7 @@ function SalesPage() {
             </h1>
           </div>
         </div>
-        <div className="flex flex-row-reverse ">
+        <div className="flex flex-row-reverse 2xl:px-40 2xl:pt-10  ">
           <div className="w-[40vw] px-20 pb-40   hidden 2xl:flex ">
             <div className="flex flex-1  flex-col">
               <div className=" bg-white rounded-lg sm:p-3 flex justify-center items-center flex-col">
@@ -262,7 +262,7 @@ function SalesPage() {
             children={Lead}
             remarkPlugins={[]}
             rehypePlugins={[rehypeRaw]}
-            className=" prose-strong:font-bold  sm:leading-[2rem] font-sans prose sm:prose-2xl  mx-auto mb-10 text-black w-[80vw] "
+            className=" prose-strong:font-bold  sm:leading-[2rem] font-sans prose sm:prose-2xl  mx-auto mb-10 text-black 2xl:w-[30vw] w-[80vw] "
           />
         </div>
       </section>
