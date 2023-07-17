@@ -13,5 +13,10 @@
 //     </div>
 //   );
 // }
+import { redirect } from "next/navigation";
 
-// export default page;
+function page() {
+  redirect("/go/inbound-leads/1");
+}
+
+export default page;
