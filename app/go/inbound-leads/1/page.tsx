@@ -151,6 +151,7 @@ function page() {
           name: data.name2,
           email: data.email2,
           phone: data.phone2,
+          optin: data.optin,
         });
         router.push("/go/inbound-leads/2");
       }
@@ -204,6 +205,7 @@ function page() {
         name: data.name,
         email: data.email,
         phone: data.phone,
+        optin: data.optin,
       });
       router.push("/go/inbound-leads/2");
     }
