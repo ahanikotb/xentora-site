@@ -86,17 +86,77 @@ function page() {
   const copyRef = useRef(weightedRandom(copy));
   const [error, setError] = useState({
     name: "",
+    name2: "",
     email: "",
+    email2: "",
     phone: "",
+    phone2: "",
   });
   const [data, setData] = useState({
     name: "",
+    name2: "",
     email: "",
+    email2: "",
     phone: "",
+    phone2: "",
     optin: "Linkedin Inbound",
   });
-  const submitStep = async () => {
+  const submitStep = async (number: any) => {
     let allPass = true;
+    if (number == 2) {
+      if (!data.name2) {
+        setError((err) => {
+          return { ...err, name2: "Please Enter Your Name" };
+        });
+        allPass = false;
+      }
+      if (!data.email2) {
+        setError((err) => {
+          return { ...err, email2: "Please Enter Your Name" };
+        });
+
+        allPass = false;
+      }
+      if (!validateEmail(data.email2)) {
+        setError((err) => {
+          return { ...err, email2: "Please Enter Your Name" };
+        });
+
+        allPass = false;
+      }
+      if (!data.phone2) {
+        setError((err) => {
+          return { ...err, phone2: "Please Enter Your Name" };
+        });
+        allPass = false;
+      }
+      if (!isValidPhoneNumber(data.phone2)) {
+        setError((err) => {
+          return { ...err, phone2: "Please Enter Your Name" };
+        });
+        allPass = false;
+      }
+
+      if (allPass) {
+        setError({
+          name: "",
+          name2: "",
+          email: "",
+          email2: "",
+          phone: "",
+          phone2: "",
+        });
+        setButtonLoading(true);
+        await sendOptin({
+          name: data.name2,
+          email: data.email2,
+          phone: data.phone2,
+        });
+        router.push("/go/inbound-leads/2");
+      }
+      return;
+    }
+
     if (!data.name) {
       setError((err) => {
         return { ...err, name: "Please Enter Your Name" };
@@ -133,14 +193,20 @@ function page() {
     if (allPass) {
       setError({
         name: "",
+        name2: "",
         email: "",
+        email2: "",
         phone: "",
+        phone2: "",
       });
       setButtonLoading(true);
+      await sendOptin({
+        name: data.name,
+        email: data.email,
+        phone: data.phone,
+      });
+      router.push("/go/inbound-leads/2");
     }
-
-    await sendOptin(data);
-    router.push("/go/inbound-leads/2");
   };
   return (
     <div className="bg-white">
@@ -226,7 +292,9 @@ function page() {
             /> */}
             <CTAButton
               loading={buttonLoading}
-              onClick={submitStep}
+              onClick={() => {
+                submitStep(0);
+              }}
               additionalClasses="w-[90%] sm:w-[450px] py-5 lg:w-[70%]"
               CTA={copyRef.current.CTA}
             ></CTAButton>
@@ -244,22 +312,22 @@ function page() {
           Just Enter Your Details Below And I'll Send It To You 👇
         </h2>
         <FunnelInput
-          error={error.name}
-          value={data.name}
+          error={error.name2}
+          value={data.name2}
           setValue={(value: any) => {
-            setData({ ...data, name: value });
-            setError({ ...error, name: "" });
+            setData({ ...data, name2: value });
+            setError({ ...error, name2: "" });
           }}
           type="text"
           placeholder="Enter Your Name"
           additionalClasses="w-[90%] sm:w-[450px] lg:w-[70%] outline outline-gray-300 bg-gray-100 outline-2  "
         />
         <FunnelInput
-          error={error.email}
+          error={error.email2}
           type="email"
-          value={data.email}
+          value={data.email2}
           setValue={(value: any) => {
-            setData({ ...data, email: value });
+            setData({ ...data, email2: value });
           }}
           placeholder="Enter Your Email Address"
           additionalClasses="w-[90%] sm:w-[450px] lg:w-[70%] outline outline-gray-300 bg-gray-100 outline-2  "
@@ -267,9 +335,9 @@ function page() {
         <PhoneInput
           className={cn(
             " no-outline-on-focus mt-5   cursor-pointer  p-4  sm:p-5 mx-auto sm:h-[60px] flex rounded-xl justify-center items-center  shadow-lg w-[90%] sm:w-[450px] lg:w-[70%] outline outline-gray-300 bg-gray-100 outline-2  ",
-            error.phone ? "border-red-500 border-2" : ""
+            error.phone2 ? "border-red-500 border-2" : ""
           )}
-          value={data.phone}
+          value={data.phone2}
           // style={{
           //   background: "white",
           // }}
@@ -277,12 +345,14 @@ function page() {
           // inputComponent={customInput}
           placeHolder="Enter Your Phone Number"
           onChange={(value: any) => {
-            setData({ ...data, phone: value });
+            setData({ ...data, phone2: value });
           }}
         />
         <CTAButton
           loading={buttonLoading}
-          onClick={submitStep}
+          onClick={() => {
+            submitStep(2);
+          }}
           additionalClasses="w-[90%] sm:w-[450px] py-5 lg:w-[70%]"
           CTA={copyRef.current.CTA}
         ></CTAButton>

@@ -4,6 +4,13 @@ import ReactMarkdown from "react-markdown";
 import Nav from "@/components/Nav";
 import rehypeRaw from "rehype-raw";
 import { MDXRemote } from "next-mdx-remote/rsc";
+import {
+  getBlockIcon,
+  getBlockTitle,
+  getPageProperty,
+  isUrl,
+  parsePageId,
+} from "notion-utils";
 
 import CTAButton from "@/components/CtaButton";
 import { NotionAPI } from "notion-client";
