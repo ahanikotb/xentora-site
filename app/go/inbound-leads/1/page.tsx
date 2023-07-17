@@ -210,13 +210,6 @@ function page() {
   };
   return (
     <div className="bg-white">
-      <style jsx global>
-        {`
-          body {
-            background: white;
-          }
-        `}
-      </style>
       {/* <NavFunnel /> */}
       <h3
         className="text-center italic mx-[10%] sm:pt-5"
@@ -233,7 +226,7 @@ function page() {
       <div className="grid grid-cols-1 sm:grid-cols-2 sm:mt-5 gap-10 sm:w-[90vw] sm:mx-auto">
         <div className="sm:row-span-2	order-2 sm:order-1 flex flex-col items-center justify-start  sm:items-center  sm:grid-span-2">
           <img
-            className="w-[450px] h-[100%] sm:max-h-[600px] "
+            className="w-[450px] h-[100%] sm:max-h-[600px] sm:w-[800px] "
             src="/funnel/proven.png"
           ></img>
         </div>
