@@ -24,7 +24,7 @@ const copy = new Map([
       // '10<span class="text-red-500" >  Sales Calls </span>Per Month With <span class="text-red-500" > Ready-To-Buy </span>Leads  That<span class="text-yellow-400" >  Understand  </span>And <span class="text-yellow-400" >Need </span>Your Service',
       // subtitle: "100% DONE FOR YOU.",
       subtitle:
-        "Get Access To The Private Google Doc SOP That Makes us $100,000+ Per Month",
+        "Get Access To The Private Google Doc SOP That Gets Us 1-2 Inbound Leads Per Week",
 
       CTA: "👉  Send Me The Guide",
     },
@@ -211,7 +211,10 @@ function page() {
         phone: data.phone,
         optin: data.optin,
       });
-      router.push("/go/inbound-leads/2");
+      // router.push("/go/inbound-leads/2");
+      router.push(
+        "/resources/how-we-get-1-2-inbound-leads-per-week-on-linkedin.96a0435c523b4e569bf18159df7aeb20"
+      );
     }
   };
   return (
