@@ -153,7 +153,11 @@ function page() {
           phone: data.phone2,
           optin: data.optin,
         });
-        router.push("/go/inbound-leads/2");
+        router.push(
+          "/resources/how-we-get-1-2-inbound-leads-per-week-on-linkedin.96a0435c523b4e569bf18159df7aeb20"
+        );
+
+        // router.push("/go/inbound-leads/2");
       }
       return;
     }
