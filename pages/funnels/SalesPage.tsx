@@ -105,7 +105,7 @@ function SalesPage() {
             dangerouslySetInnerHTML={{
               __html: copyRef.current.preheadline,
             }}
-            className="xl:my-0 mt-3 font-black leading-[1.2] text-lg  text-black text-center xl:text-start w-[90%] lg:leading-[1.3] mx-auto xl:mx-0  lg:text-2xl md:w-4/5 md:text-2xl xl:w-3/4 xl:text-xl 2xl:text-xl"
+            className="xl:my-0 mt-3 font-black leading-[1.2] text-xl  text-black text-center xl:text-start w-[90%] lg:leading-[1.3] mx-auto xl:mx-0  lg:text-2xl md:w-4/5 md:text-2xl xl:w-3/4 xl:text-xl 2xl:text-xl"
           >
             {/* {copyRef.current.headline} */}
           </h3>
@@ -113,7 +113,7 @@ function SalesPage() {
             dangerouslySetInnerHTML={{
               __html: copyRef.current.headline,
             }}
-            className="xl:my-0  mt-0 font-black leading-[1.2] text-2xl xl:text-start text-black text-center w-[90%] lg:leading-[1.3] mx-auto xl:mx-0  lg:text-4xl md:w-4/5 md:text-3xl xl:w-3/4 xl:text-4xl 2xl:text-5xl"
+            className="xl:my-0  mt-0 font-black leading-[1.2] text-3xl xl:text-start text-black text-center w-[90%] lg:leading-[1.3] mx-auto xl:mx-0  lg:text-5xl md:w-4/5 md:text-5xl xl:w-3/4 xl:text-4xl 2xl:text-5xl"
           >
             {/* {copyRef.current.headline} */}
           </h1>
