@@ -46,7 +46,7 @@ function SalesPage() {
       {
         preheadline: "<span class='text-red-500'>Agency Owners And CEOs<span/>",
         headline:
-          "<span class='font-bold'>Add $30,000 Of Additonal Monthly Reccuring Revenue Every 90 Days Without Paying For Ads or Hiring SDRS</span>",
+          "Add <span class='font-bold text-green-600'>$30,000</span> Of Additonal <span class='font-bold text-green-600'>Monthly Reccuring Revenue</span> Every 90 Days <span class='font-bold text-red-600'>Without</span> Paying For Ads or Hiring SDRS",
         // '10<span class="text-red-500" >  Sales Calls </span>Per Month With <span class="text-red-500" > Ready-To-Buy </span>Leads  That<span class="text-yellow-400" >  Understand  </span>And <span class="text-yellow-400" >Need </span>Your Service',
         //= subtitle: "100% DONE FOR YOU.",
         subtitle:
@@ -113,7 +113,7 @@ function SalesPage() {
             dangerouslySetInnerHTML={{
               __html: copyRef.current.headline,
             }}
-            className="xl:my-0  mt-0 font-black leading-[1.2] text-3xl xl:text-start text-black text-center w-[90%] lg:leading-[1.3] mx-auto xl:mx-0  lg:text-5xl md:w-4/5 md:text-5xl xl:w-3/4 xl:text-4xl 2xl:text-5xl"
+            className="xl:my-0  mt-0  leading-[1.2] text-3xl xl:text-start text-black text-center w-[90%] lg:leading-[1.3] mx-auto xl:mx-0  lg:text-5xl md:w-4/5 md:text-5xl xl:w-3/4 xl:text-4xl 2xl:text-5xl"
           >
             {/* {copyRef.current.headline} */}
           </h1>
