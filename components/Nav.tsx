@@ -4,12 +4,12 @@ import { Loader2 } from "lucide-react";
 function Nav() {
   return (
     <div>
-      <div className="mx-auto sm:hidden w-[150px] sm:w-[200px] h-[8vh] text-black font-bold flex items-center justify-center">
+      <div className="mx-auto sm:hidden w-[150px] sm:w-[200px] h-[8vh] text-[#2a2324R] font-bold flex items-center justify-center">
         <a href="/">
           <img src="/xentora_logo_black.png" />
         </a>
       </div>
-      <nav className="hidden sm:flex justify-between items-center relative py-3 lg:px-20 px-5 text-black mx-auto">
+      <nav className="hidden sm:flex justify-between items-center relative py-3 lg:px-10 xl:px-20 px-5 text-[#2a2324] mx-auto">
         <input
           // checked={checked}
           // onClick={() => {
@@ -19,7 +19,7 @@ function Nav() {
           id="Navbar-2-checkbox"
           className="hidden peer"
         />
-        <div className="w-[150px] sm:w-[200px] h-[8vh] text-black font-bold flex items-center justify-center">
+        <div className="w-[150px] sm:w-[200px] h-[8vh] text-[#2a2324] font-bold flex items-center justify-center">
           <a href="/">
             <img src="/xentora_logo_black.png" />
           </a>
