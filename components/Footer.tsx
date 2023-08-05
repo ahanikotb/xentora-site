@@ -155,7 +155,12 @@ function Footer() {
             <div>
               <h6 className="mb-4 flex justify-center font-semibold uppercase md:justify-start">
                 Legal
-              </h6>
+              </h6>{" "}
+              <p className="mb-4">
+                <a href="/contact" className="text-black dark:text-neutral-200">
+                  Contact
+                </a>
+              </p>
               <p className="mb-4">
                 <a
                   href="/privacy-policy"

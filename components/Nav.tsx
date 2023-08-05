@@ -27,7 +27,7 @@ function Nav() {
         <ul className="lg:flex lg:translate-x-0 lg:peer-checked:static absolute hidden lg:static  lg:basis-/5 justify-evenly font-bold peer-checked:block top-[88px] transition-transform duration-0 left-0 right-0  bg-white lg:bg-transparent">
           <li>
             <a
-              href="#casestudies"
+              href="/#casestudies"
               className="p-6 text-xl  cursor-pointer flex lg:p-4 lg:hover:bg-inherit hover:bg-gray-500 transition-colors duration-700 ease-in"
             >
               Case Studies

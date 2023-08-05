@@ -1,12 +1,24 @@
+import Nav from "@/components/Nav";
 import React from "react";
+import ReactMarkdown from "react-markdown";
+import rehypeRaw from "rehype-raw";
 
 function page() {
   return (
-    <div className="text-white mx-auto w-[90%] sm:w-2/4 leading-[2rem]">
-      <h1 className="text-center text-4xl sm:text-7xl font-bold m-10">
-        Privacy Policy
-      </h1>
-      <p>{policy}</p>
+    <div>
+      <Nav />
+      <div className="text-black mx-auto w-[90%] sm:w-2/4 leading-[2rem]">
+        <h1 className="text-center text-4xl sm:text-7xl font-bold m-10">
+          Privacy Policy
+        </h1>
+        <ReactMarkdown
+          children={policy}
+          remarkPlugins={[]}
+          rehypePlugins={[rehypeRaw]}
+          className=" prose-strong:font-bold  sm:leading-[2rem] font-sans prose sm:prose-2xl  mx-auto mb-10 text-black "
+        />
+        {/* <p>{policy}</p> */}
+      </div>
     </div>
   );
 }
