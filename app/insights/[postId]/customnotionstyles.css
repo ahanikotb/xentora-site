@@ -1,0 +1,12 @@
+.notion-text {
+  font-size: 1.15rem;
+  line-height: 2.3rem;
+}
+.notion-text > b {
+  font-size: 1.4rem;
+  line-height: 2.3rem;
+}
+.notion-h-title {
+  font-size: 2rem;
+  line-height: 2.3rem;
+}

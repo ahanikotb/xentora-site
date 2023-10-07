@@ -1,0 +1,119 @@
+@media (max-width: 600px) {
+  .reverse_funnel_calculator ul {
+    margin: 0 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+  }
+
+  .reverse_funnel_calculator li {
+    line-height: 80px;
+    height: 80px;
+    width: 250px;
+    position: relative;
+    background: #ccc;
+    border-bottom: 1px solid #fff;
+  }
+
+  .reverse_funnel_calculator li:before {
+    content: "";
+    position: absolute;
+    z-index: 10;
+    left: 0%;
+    margin-left: -80px;
+    width: 80px;
+    border-top: 80px solid #ccc;
+    border-left: 80px solid transparent;
+  }
+  .reverse_funnel_calculator li:after {
+    content: "";
+    position: absolute;
+    z-index: 10;
+    right: 0%;
+    margin-left: 80px;
+    width: 80px;
+    border-top: 80px solid #ccc;
+    border-right: 80px solid transparent;
+  }
+  .reverse_funnel_calculator li:nth-child(1) {
+    background: #4472c4;
+  }
+  .reverse_funnel_calculator li:nth-child(1):before,
+  .reverse_funnel_calculator li:nth-child(1):after {
+    border-top-color: #4472c4;
+  }
+  .reverse_funnel_calculator li:nth-child(1):before {
+    width: 120px;
+    margin-left: -120px;
+  }
+  .reverse_funnel_calculator li:nth-child(1):after {
+    width: 120px;
+    margin-right: -120px;
+  }
+
+  .reverse_funnel_calculator li:nth-child(2) {
+    background: #5b9bd5;
+  }
+  .reverse_funnel_calculator li:nth-child(2):before,
+  .reverse_funnel_calculator li:nth-child(2):after {
+    border-top-color: #5b9bd5;
+  }
+  .reverse_funnel_calculator li:nth-child(2):before {
+    width: 90px;
+    margin-left: -90px;
+  }
+  .reverse_funnel_calculator li:nth-child(2):after {
+    width: 90px;
+    margin-right: -90px;
+  }
+
+  .reverse_funnel_calculator li:nth-child(3) {
+    background: #ed7d31;
+  }
+  .reverse_funnel_calculator li:nth-child(3):before,
+  .reverse_funnel_calculator li:nth-child(3):after {
+    border-top-color: #ed7d31;
+  }
+  .reverse_funnel_calculator li:nth-child(3):before {
+    width: 60px;
+    margin-left: -60px;
+  }
+  .reverse_funnel_calculator li:nth-child(3):after {
+    width: 60px;
+    margin-right: -60px;
+  }
+
+  .reverse_funnel_calculator li:nth-child(4) {
+    background: #ffc000;
+  }
+  .reverse_funnel_calculator li:nth-child(4):before,
+  .reverse_funnel_calculator li:nth-child(4):after {
+    border-top-color: #ffc000;
+  }
+  .reverse_funnel_calculator li:nth-child(4):before {
+    width: 30px;
+    margin-left: -30px;
+  }
+  .reverse_funnel_calculator li:nth-child(4):after {
+    width: 30px;
+    margin-right: -30px;
+  }
+
+  .reverse_funnel_calculator li:nth-child(5) {
+    background: #a9d18e;
+    width: 200px;
+    margin: auto;
+  }
+  .reverse_funnel_calculator li:nth-child(5):before,
+  .reverse_funnel_calculator li:nth-child(5):after {
+    border-top-color: #a9d18e;
+  }
+  .reverse_funnel_calculator li:nth-child(5):before {
+    width: 10px;
+    margin-left: -10px;
+  }
+  .reverse_funnel_calculator li:nth-child(5):after {
+    width: 10px;
+    margin-right: -10px;
+  }
+}
