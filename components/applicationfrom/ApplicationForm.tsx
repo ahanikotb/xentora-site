@@ -1,6 +1,5 @@
 "use client";
 import { Form } from "@quillforms/renderer-core";
-
 import "@quillforms/renderer-core/build-style/style.css";
 //@ts-ignore
 import { registerCoreBlocks } from "@quillforms/react-renderer-utils";
