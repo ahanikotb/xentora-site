@@ -26,9 +26,15 @@ function NavFunnel({
         )}
       >
         <div className="w-[150px] sm:w-[200px] h-[8vh] text-black font-bold flex-col items-center justify-center">
-          <h3 className={cn("text-sm", dark ? "text-white" : "", "text-right")}>
-            insights
-          </h3>
+          {useBlog ? (
+            <h3
+              className={cn("text-sm", dark ? "text-white" : "", "text-right")}
+            >
+              insights
+            </h3>
+          ) : (
+            ""
+          )}
           <a
             // className={cn("flex-col justify-normal")}
             href={useBlog ? "/insights" : "/"}

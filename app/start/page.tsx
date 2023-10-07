@@ -177,9 +177,9 @@ function page() {
 
           <div className="my-10 ">
             <h2 className=" text-2xl text-center text-black w-[90%] sm:w-[70%] mx-auto">
-              Enter Your Info Below And We'll Send You A Clear Breakdown On How
-              Lynea Carver Of Exp Realty Sold 40 Homes Last Year Online In The
-              Tacoma Washington Market👇
+              Enter Your Info Below And We'll TEXT You Acess to a Clear
+              Breakdown On How Lynea Carver Of Exp Realty Sold 40 Homes Last
+              Year Online In The Tacoma Washington Market👇
             </h2>
             <FunnelInput
               error={error.name}

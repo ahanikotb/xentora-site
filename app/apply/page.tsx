@@ -21,7 +21,7 @@ function Page() {
         height: "100vh",
       }}
     >
-      <NavFunnel />
+      <NavFunnel useBlog={false} />
       {/* STEP 1 8vh nav  */}
       <h1 className="text-center font-bold my-2 sm:my-2 text-3xl sm:text-4xl text-black  w-[80vw] mx-auto xl:w-[50vw]  ">
         Step 1: Fill Out The Form Below. Once Complete, You Will Book Your Call
