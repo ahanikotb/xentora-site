@@ -80,6 +80,7 @@
     "@tailwindcss/typography": "^0.5.10",
     "@types/cleave.js": "^1.4.7",
     "@types/tinycolor2": "^1.4.3",
+    "postcss-nesting": "^12.0.1",
     "sass": "^1.67.0"
   }
 }
