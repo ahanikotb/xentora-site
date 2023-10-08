@@ -9,6 +9,8 @@ import useScript from "../useScript";
 import { useMutationObserver } from "@horat1us/react-hooks";
 import { Button } from "@quillforms/admin-components";
 import "./phoneBlock";
+import { FormBlocks } from "@quillforms/types";
+import { FormObj } from "@quillforms/renderer-core/build-types/types";
 function convertToJsonParams(jsonObject: any) {
   const params = [];
 
@@ -47,7 +49,10 @@ function App({
 
     setShowFirstBlock(FirstBlock);
   }, []);
-  const removeFirstBlock = (myList: any, TrueOrFalse: boolean) => {
+  const removeFirstBlock = (
+    myList: FormBlocks,
+    TrueOrFalse: boolean
+  ): FormBlocks => {
     //return the list without the first item
     // if (TrueOrFalse) return myList;
     return myList.slice(1);
@@ -62,17 +67,17 @@ function App({
       <Form
         applyLogic={true}
         formId={2}
-        formObj={{
-          theme: {
-            progressBarFillColor: "#38a169",
-            questionsColor: "black",
-            // backgroundColor: "#2E4057",
-            backgroundColor: "transparent",
-            buttonsBgColor: "#38a169",
-            answersColor: "black",
-          },
-          blocks: removeFirstBlock(
-            [
+        formObj={
+          {
+            theme: {
+              progressBarFillColor: "#38a169",
+              questionsColor: "black",
+              // backgroundColor: "#2E4057",
+              backgroundColor: "transparent",
+              buttonsBgColor: "#38a169",
+              answersColor: "black",
+            },
+            blocks: removeFirstBlock(
               [
                 {
                   name: "welcome-screen",
@@ -89,161 +94,161 @@ function App({
                     layout: "stack",
                   },
                 },
+
+                {
+                  name: "short-text",
+                  id: "first_name",
+                  attributes: {
+                    classnames: "first-block",
+                    required: true,
+                    label: "Let's start with your First Name",
+                    // attachment: {
+                    //   type: "image",
+
+                    //   url: "/xentora_logo.png",
+                    // },
+                    // layout: "float-right",
+                  },
+                },
+                {
+                  name: "short-text",
+                  id: "last_name",
+                  attributes: {
+                    classnames: "first-block",
+                    required: true,
+                    label: "What About Your Last Name?",
+                  },
+                },
+                {
+                  name: "multiple-choice",
+                  id: "fulltime_agent",
+
+                  attributes: {
+                    classnames: "first-block",
+                    required: true,
+                    label: "Are You A Fulltime Agent ?",
+                    choices: [
+                      {
+                        label: "Yes",
+                        value: "Yes",
+                      },
+                      {
+                        label: "No",
+                        value: "No",
+                      },
+                    ],
+                  },
+                },
+                {
+                  name: "short-text",
+                  id: "market_and_city",
+                  attributes: {
+                    classnames: "first-block",
+                    required: true,
+                    label: "What Market & City Do You Serve?",
+                    description: "City Followed By State ie : Miami, FL",
+                  },
+                },
+                {
+                  name: "multiple-choice",
+                  id: "transactions_last_year",
+
+                  attributes: {
+                    classnames: "first-block",
+                    required: true,
+                    label:
+                      "How many Transactions did your Real Estate Business Close in the last 12 Months ?",
+                    choices: [
+                      {
+                        label: "0 - 5",
+                        value: "0 - 5",
+                      },
+                      {
+                        label: "5 - 10",
+                        value: "5 - 10",
+                      },
+                      {
+                        label: "15 - 20",
+                        value: "15 - 20",
+                      },
+                      {
+                        label: "20+",
+                        value: "20+",
+                      },
+                    ],
+                  },
+                },
+                {
+                  name: "email",
+                  id: "email",
+
+                  attributes: {
+                    classnames: "first-block",
+                    required: true,
+                    label: "What's your email address?",
+                  },
+                },
+                {
+                  name: "phone",
+                  id: "phone",
+                  attributes: {
+                    classnames: "first-block",
+                    required: true,
+                    label: "What's the best number to reach you at? ",
+                  },
+                },
+
+                {
+                  name: "multiple-choice",
+                  id: "referral",
+                  attributes: {
+                    required: true,
+                    multiple: false,
+                    verticalAlign: false,
+                    label: "How Did You Find Out About us?",
+                    choices: [
+                      {
+                        label: "Email",
+                        value: "email",
+                      },
+                      {
+                        label: "LinkedIn",
+                        value: "linkedin",
+                      },
+                      {
+                        label: "Twitter",
+                        value: "twitter",
+                      },
+                      {
+                        label: "Youtube",
+                        value: "youtube",
+                      },
+                      {
+                        label: "Facebook",
+                        value: "facebook",
+                      },
+                    ],
+                  },
+                },
+                // {
+                //   name: "slider",
+                //   id: "change",
+                //   attributes: {
+                //     description: "How Bad Do You Want To Change Your Situation",
+                //     label: "How Commited Are You To Change?",
+                //     // "min":  number; // Default: 0
+                //     // "max":  number; // Default: 100
+                //     // "step": number; // Default: 10
+                //     suffix: "%",
+                //     // "prefix": string; // Default: ""
+                //     // "suffix": string; // Default: ""
+                //   },
+                // },
               ],
-
-              {
-                name: "short-text",
-                id: "first_name",
-                attributes: {
-                  classnames: "first-block",
-                  required: true,
-                  label: "Let's start with your First Name",
-                  // attachment: {
-                  //   type: "image",
-
-                  //   url: "/xentora_logo.png",
-                  // },
-                  // layout: "float-right",
-                },
-              },
-              {
-                name: "short-text",
-                id: "last_name",
-                attributes: {
-                  classnames: "first-block",
-                  required: true,
-                  label: "What About Your Last Name?",
-                },
-              },
-              {
-                name: "multiple-choice",
-                id: "fulltime_agent",
-
-                attributes: {
-                  classnames: "first-block",
-                  required: true,
-                  label: "Are You A Fulltime Agent ?",
-                  choices: [
-                    {
-                      label: "Yes",
-                      value: "Yes",
-                    },
-                    {
-                      label: "No",
-                      value: "No",
-                    },
-                  ],
-                },
-              },
-              {
-                name: "short-text",
-                id: "market_and_city",
-                attributes: {
-                  classnames: "first-block",
-                  required: true,
-                  label: "What Market & City Do You Serve?",
-                  description: "City Followed By State ie : Miami, FL",
-                },
-              },
-              {
-                name: "multiple-choice",
-                id: "transactions_last_year",
-
-                attributes: {
-                  classnames: "first-block",
-                  required: true,
-                  label:
-                    "How many Transactions did your Real Estate Business Close in the last 12 Months ?",
-                  choices: [
-                    {
-                      label: "0 - 5",
-                      value: "0 - 5",
-                    },
-                    {
-                      label: "5 - 10",
-                      value: "5 - 10",
-                    },
-                    {
-                      label: "15 - 20",
-                      value: "15 - 20",
-                    },
-                    {
-                      label: "20+",
-                      value: "20+",
-                    },
-                  ],
-                },
-              },
-              {
-                name: "email",
-                id: "email",
-
-                attributes: {
-                  classnames: "first-block",
-                  required: true,
-                  label: "What's your email address?",
-                },
-              },
-              {
-                name: "phone",
-                id: "phone",
-                attributes: {
-                  classnames: "first-block",
-                  required: true,
-                  label: "What's the best number to reach you at? ",
-                },
-              },
-
-              {
-                name: "multiple-choice",
-                id: "referral",
-                attributes: {
-                  required: true,
-                  multiple: false,
-                  verticalAlign: false,
-                  label: "How Did You Find Out About us?",
-                  choices: [
-                    {
-                      label: "Email",
-                      value: "email",
-                    },
-                    {
-                      label: "LinkedIn",
-                      value: "linkedin",
-                    },
-                    {
-                      label: "Twitter",
-                      value: "twitter",
-                    },
-                    {
-                      label: "Youtube",
-                      value: "youtube",
-                    },
-                    {
-                      label: "Facebook",
-                      value: "facebook",
-                    },
-                  ],
-                },
-              },
-              // {
-              //   name: "slider",
-              //   id: "change",
-              //   attributes: {
-              //     description: "How Bad Do You Want To Change Your Situation",
-              //     label: "How Commited Are You To Change?",
-              //     // "min":  number; // Default: 0
-              //     // "max":  number; // Default: 100
-              //     // "step": number; // Default: 10
-              //     suffix: "%",
-              //     // "prefix": string; // Default: ""
-              //     // "suffix": string; // Default: ""
-              //   },
-              // },
-            ],
-            showFirstBlock
-          ),
-        }}
+              showFirstBlock
+            ),
+          } as FormObj
+        }
         onSubmit={(
           data,
           { completeForm, setIsSubmitting, goToBlock, setSubmissionErr }
