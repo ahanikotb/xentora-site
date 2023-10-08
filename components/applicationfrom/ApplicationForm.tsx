@@ -219,6 +219,10 @@ function App({
                       label: "Youtube",
                       value: "youtube",
                     },
+                    {
+                      label: "Facebook",
+                      value: "facebook",
+                    },
                   ],
                 },
               },
