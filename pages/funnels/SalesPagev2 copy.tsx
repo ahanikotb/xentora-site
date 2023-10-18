@@ -47,8 +47,7 @@ function SalesPage() {
   const copy = new Map([
     [
       {
-        preheadline:
-          "<span class='text-red-500'>For Realtors Looking To Grow Their Business<span/>",
+        preheadline: "<span class='text-red-500'>Want More Business?<span/>",
         headline:
           "Get 10 New <b>Qualified Appointments</b> On A <u>Pay Per Appointment</u> Basis",
         // '10<span class="text-red-500" >  Sales Calls </span>Per Month With <span class="text-red-500" > Ready-To-Buy </span>Leads  That<span class="text-yellow-400" >  Understand  </span>And <span class="text-yellow-400" >Need </span>Your Service',
@@ -104,34 +103,108 @@ function SalesPage() {
     }
   };
   return (
-    <div className="overflow-hidden ">
+    <div className="overflow-hidden font-oswald">
       {" "}
-      <section className=" ">
+      <section className=" xl:mt-5 xl:flex xl:w-[90vw] xl:content-center xl:justify-center xl:mx-auto 2xl:px-20">
+        <div className="xl:flex-col xl:justify-center xl:content-center xl:my-auto xl:flex-1">
+          {" "}
+          <h3
+            dangerouslySetInnerHTML={{
+              __html: copyRef.current.preheadline,
+            }}
+            className=" xl:my-0 mt-3 font-black leading-[1.2] text-xl  text-black text-center xl:text-start w-[90%] lg:leading-[1.3] mx-auto xl:mx-0  lg:text-2xl md:w-4/5 md:text-2xl xl:w-3/4 xl:text-xl 2xl:text-xl"
+          >
+            {/* {copyRef.current.headline} */}
+          </h3>
+          <h1
+            dangerouslySetInnerHTML={{
+              __html: copyRef.current.headline,
+            }}
+            className="  xl:my-0  mt-0  leading-[1.2] text-3xl xl:text-start text-black text-center w-[90%] lg:leading-[1.3] mx-auto xl:mx-0  lg:text-5xl md:w-4/5 md:text-5xl xl:w-3/4 xl:text-5xl 2xl:text-6xl"
+          >
+            {/* {copyRef.current.headline} */}
+          </h1>
+          <h3
+            dangerouslySetInnerHTML={{
+              __html: copyRef.current.subtitle,
+            }}
+            className="!font-oswald mt-3 font-black leading-[1.2] text-sm xl:text-start text-black text-center w-[90%] lg:leading-[1.3] mx-auto xl:mx-0  lg:text-sm md:w-4/5 md:text-sm xl:w-3/4"
+          ></h3>
+          <CTAButton
+            additionalClasses={"mt-5 hidden mx-0  xl:flex xl:p-0"}
+            onClick={logClick}
+            CTA={copyRef.current.CTA}
+            href="/apply?disableFirstBlock
+"
+          />
+        </div>
+        <div className="">
+          <div>
+            <div className=" ">
+              <div>
+                <IframeResizer
+                  src={`https://fast.wistia.net/embed/iframe/${copyRef.current.video}`}
+                  title="VSL_CTA Video"
+                  allow="autoplay; fullscreen"
+                  // allowTransparency={true}
+                  // frameBorder={0}
+                  scrolling={false}
+                  // className="wistia_embed"
+                  // width="100%"
+                  // height="100%"
+                  width={`${Math.round(1080 * 0.3)}`}
+                  height={`${Math.round(1920 * 0.3)}`}
+                  // style={{
+                  //   width: "640",
+                  //   height: "1138",
+                  // }}
+                  className={cn(
+                    "mb-10 mx-auto mt-3 sm:mt-10 min-w-[360px] min-h-[202px] sm:min-w-[640px] sm:min-h-[360px] wistia_embed  wistia_async_4d8229898d"
+                    // copyRef.current.isMOBILE ? "w-[640px] h-[1138px]" : ""
+                  )}
+                  // name=" mx-auto"
+                  // allowFullScreen={true}
+                  // width="420px"
+                  // height="360px"
+                ></IframeResizer>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <CTAButton
+          additionalClasses={"mb-5 xl:hidden"}
+          onClick={logClick}
+          CTA={copyRef.current.CTA}
+          href="/easy-book"
+        />
+      </section>
+      {/* <section className=" ">
         <div className="">
           {" "}
           <h3
             dangerouslySetInnerHTML={{
               __html: copyRef.current.preheadline,
             }}
-            className="font-oswald mt-3 leading-[1.2] text-xl  text-black text-center  w-[90%] lg:leading-[1.3] mx-auto  lg:text-2xl md:w-4/5 md:text-2xl  xl:text-3xl 2xl:text-4xl"
+            className=" mt-3 font-black leading-[1.2] text-xl  text-black text-center  w-[90%] lg:leading-[1.3] mx-auto  lg:text-2xl md:w-4/5 md:text-2xl  xl:text-3xl 2xl:text-4xl"
           ></h3>
           <h1
             dangerouslySetInnerHTML={{
               __html: copyRef.current.headline,
             }}
-            className=" font-oswald mt-0  leading-[1.2] text-3xl text-black text-center w-[90%] lg:leading-[1.3] mx-auto   lg:text-4xl md:w-4/5 md:text-3xl xl:text-5xl 2xl:text-5xl "
+            className="  mt-0  leading-[1.2] text-3xl text-black text-center w-[90%] lg:leading-[1.3] mx-auto   lg:text-4xl md:w-4/5 md:text-3xl xl:text-5xl 2xl:text-5xl "
           ></h1>
-          {/* <h3
+          <h3
             dangerouslySetInnerHTML={{
               __html: copyRef.current.subtitle,
             }}
-            className=" font-oswald mt-3 font-black leading-[1.2] text-sm  text-black text-center w-[90%] lg:leading-[1.3] mx-auto lg:text-lg md:w-4/5 md:text-sm "
-          ></h3> */}
+            className=" mt-3 font-black leading-[1.2] text-sm  text-black text-center w-[90%] lg:leading-[1.3] mx-auto lg:text-lg md:w-4/5 md:text-sm "
+          ></h3>
         </div>
         <div>
           <div className=" ">
             <div>
-              {/* <IframeResizer
+              <IframeResizer
                 src={`https://fast.wistia.net/embed/iframe/${copyRef.current.video}?videoFoam=true`}
                 title="VSL_CTA Video"
                 allow="autoplay; fullscreen"
@@ -144,20 +217,20 @@ function SalesPage() {
                 allowFullScreen={true}
                 // width="420px"
                 // height="360px"
-              ></IframeResizer> */}
+              ></IframeResizer>
             </div>
           </div>
         </div>
-        {/* <LogoCloud /> */}
+        <LogoCloud />
         <CTAButton
-          additionalClasses={"mb-5 mt-10 sm:mt-20"}
+          additionalClasses={"mb-5 mt-5"}
           onClick={logClick}
           CTA={copyRef.current.CTA}
           href="/easy-book"
           //           href="/apply?disableFirstBlock
           // "
         />
-      </section>
+      </section> */}
       {/* 
       <section className="mt-5 p-4 rounded-xl sm:p-10  mb-10  w-[90%] sm:w-[90%] mx-auto">
         <h1 className="text-black font-black text-center  sm:text-2xl">
