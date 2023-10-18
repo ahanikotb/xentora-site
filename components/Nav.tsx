@@ -62,8 +62,8 @@ function Nav() {
           </li> */}
           <li>
             <a
-              href="/easy-book"
-              // href="/apply?disableFirstBlock"
+              // href="/easy-book"
+              href="/apply"
               className=" p-6  text-xl wrap-no text-white lg:bg-green-700 text-center  cursor-pointer lg:rounded-xl flex lg:p-4 lg:hover:p-4 bg-green-800 hover:bg-green-800 transition-colors duration-000 ease-in"
             >
               Schedule Demo
