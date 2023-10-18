@@ -54,7 +54,7 @@ function SalesPage() {
         // '10<span class="text-red-500" >  Sales Calls </span>Per Month With <span class="text-red-500" > Ready-To-Buy </span>Leads  That<span class="text-yellow-400" >  Understand  </span>And <span class="text-yellow-400" >Need </span>Your Service',
         //= subtitle: "100% DONE FOR YOU.",
         subtitle:
-          "No <u>Prospecting</u>, <u>Complicated CRM Setups</u>, <u>Creating Content</u> Involved!",
+          "No <u>Prospecting</u>, <u>Complicated CRM Setups</u>, <u>Content Creation</u> Involved!",
         video: "v833knipcw",
         isMobile: false,
         CTA: "Schedule Demo",
@@ -125,7 +125,7 @@ function SalesPage() {
             dangerouslySetInnerHTML={{
               __html: copyRef.current.subtitle,
             }}
-            className=" font-oswald mt-10  leading-[1.2] text-xl text-black text-center w-[90%] lg:leading-[1.3] mx-auto lg:text-2xl md:w-4/5 md:text-xlg "
+            className=" font-oswald mt-10  leading-[1.2] text-2xl text-black text-center w-[90%] lg:leading-[1.3] mx-auto lg:text-3xl md:w-4/5 md:text-2xl "
           ></h3>
         </div>
         <div>
