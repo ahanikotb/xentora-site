@@ -15,6 +15,7 @@ import Blog from "./resources/Blog";
 import { Metadata } from "next";
 import Banner from "@/components/Banner";
 import CTAButton from "@/components/CtaButton";
+import SalesPagev3 from "@/pages/funnels/SalesPagev3";
 export default function Home() {
   // useClearbit(
   //   "https://tag.clearbitscripts.com/v1/pk_60e7c0678f1219a2a34fcf5c2b8be745/tags.js"
@@ -28,6 +29,7 @@ export default function Home() {
   return (
     <main>
       {/* <Banner /> */}
+      {/* <SalesPagev3 /> */}
       <Nav />
       <SalesPage />
       <h1 className="text-center font-bold pt-10 text-4xl lg:text-6xl">
@@ -57,8 +59,8 @@ export default function Home() {
         ></CTAButton>
       </section>
       <Footer />
-      {/* 
-      <BookNow /> */}
+
+      {/* <BookNow /> */}
     </main>
   );
 }

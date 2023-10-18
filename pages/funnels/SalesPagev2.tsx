@@ -47,10 +47,8 @@ function SalesPage() {
   const copy = new Map([
     [
       {
-        preheadline:
-          "<span class='text-red-500'>Escape the Real Estate Rat Race<span/>",
-        headline:
-          "Add An Additional 1-2 Closings per month On Pay Per Close Basis",
+        preheadline: "<span class='text-red-500'>Want More Business?<span/>",
+        headline: "Get 10 New Appointments on A Pay Per Appointment Basis",
         // '10<span class="text-red-500" >  Sales Calls </span>Per Month With <span class="text-red-500" > Ready-To-Buy </span>Leads  That<span class="text-yellow-400" >  Understand  </span>And <span class="text-yellow-400" >Need </span>Your Service',
         //= subtitle: "100% DONE FOR YOU.",
         subtitle:
@@ -104,7 +102,7 @@ function SalesPage() {
     }
   };
   return (
-    <div className="overflow-hidden ">
+    <div className="overflow-hidden font-oswald">
       {" "}
       <section className=" xl:mt-5 xl:flex xl:w-[90vw] xl:content-center xl:justify-center xl:mx-auto 2xl:px-20">
         <div className="xl:flex-col xl:justify-center xl:content-center xl:my-auto xl:flex-1">
@@ -113,7 +111,7 @@ function SalesPage() {
             dangerouslySetInnerHTML={{
               __html: copyRef.current.preheadline,
             }}
-            className="xl:my-0 mt-3 font-black leading-[1.2] text-xl  text-black text-center xl:text-start w-[90%] lg:leading-[1.3] mx-auto xl:mx-0  lg:text-2xl md:w-4/5 md:text-2xl xl:w-3/4 xl:text-xl 2xl:text-xl"
+            className=" xl:my-0 mt-3 font-black leading-[1.2] text-xl  text-black text-center xl:text-start w-[90%] lg:leading-[1.3] mx-auto xl:mx-0  lg:text-2xl md:w-4/5 md:text-2xl xl:w-3/4 xl:text-xl 2xl:text-xl"
           >
             {/* {copyRef.current.headline} */}
           </h3>
@@ -121,7 +119,7 @@ function SalesPage() {
             dangerouslySetInnerHTML={{
               __html: copyRef.current.headline,
             }}
-            className="xl:my-0  mt-0  leading-[1.2] text-3xl xl:text-start text-black text-center w-[90%] lg:leading-[1.3] mx-auto xl:mx-0  lg:text-5xl md:w-4/5 md:text-5xl xl:w-3/4 xl:text-5xl 2xl:text-6xl"
+            className="  xl:my-0  mt-0  leading-[1.2] text-3xl xl:text-start text-black text-center w-[90%] lg:leading-[1.3] mx-auto xl:mx-0  lg:text-5xl md:w-4/5 md:text-5xl xl:w-3/4 xl:text-5xl 2xl:text-6xl"
           >
             {/* {copyRef.current.headline} */}
           </h1>
@@ -129,7 +127,7 @@ function SalesPage() {
             dangerouslySetInnerHTML={{
               __html: copyRef.current.subtitle,
             }}
-            className=" mt-3 font-black leading-[1.2] text-sm xl:text-start text-black text-center w-[90%] lg:leading-[1.3] mx-auto xl:mx-0  lg:text-sm md:w-4/5 md:text-sm xl:w-3/4"
+            className="!font-oswald mt-3 font-black leading-[1.2] text-sm xl:text-start text-black text-center w-[90%] lg:leading-[1.3] mx-auto xl:mx-0  lg:text-sm md:w-4/5 md:text-sm xl:w-3/4"
           ></h3>
           <CTAButton
             additionalClasses={"mt-5 hidden mx-0  xl:flex xl:p-0"}

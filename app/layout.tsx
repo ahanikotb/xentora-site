@@ -2,6 +2,15 @@ import { useEffect } from "react";
 import "./globals.css";
 import Trackers from "@/components/Trackers";
 import { Analytics } from "@vercel/analytics/react";
+import { Oswald, Lato } from "next/font/google";
+import { cn } from "@/lib/utils";
+// If loading a variable font, you don't need to specify the font weight
+const oswald = Oswald({ subsets: ["latin"], variable: "--font-oswald" });
+const lato = Lato({
+  subsets: ["latin"],
+  variable: "--font-lato",
+  weight: "400",
+});
 
 export const metadata = {
   title: "XENTORA - Real Estate Growth Partners",
@@ -62,7 +71,9 @@ export default function RootLayout({
           `}
         </style> */}
 
-        <div id="root">{children}</div>
+        <div id="root" className={cn(oswald.variable, lato.variable)}>
+          {children}
+        </div>
         <Trackers />
         <Analytics />
 

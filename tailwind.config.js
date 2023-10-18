@@ -16,6 +16,10 @@ module.exports = {
       },
     },
     extend: {
+      fontFamily: {
+        oswald: ["var(--font-oswald)"],
+        lato: ["var(--font-lato)"],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
