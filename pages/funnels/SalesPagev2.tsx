@@ -161,7 +161,7 @@ function SalesPage() {
           )}
           onClick={logClick}
           CTA={copyRef.current.CTA}
-          href="/easy-book"
+          href="/apply"
           //           href="/apply?disableFirstBlock
           // "
         />
