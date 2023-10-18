@@ -54,7 +54,7 @@ function SalesPage() {
         // '10<span class="text-red-500" >  Sales Calls </span>Per Month With <span class="text-red-500" > Ready-To-Buy </span>Leads  That<span class="text-yellow-400" >  Understand  </span>And <span class="text-yellow-400" >Need </span>Your Service',
         //= subtitle: "100% DONE FOR YOU.",
         subtitle:
-          "<span class='text-red-500'>Watch This Video To Learn More 👇</span> ",
+          "No <u>Prospecting</u>, <u>Complicated CRM Setups</u>, <u>Creating Content</u> Involved!",
         video: "v833knipcw",
         isMobile: false,
         CTA: "Schedule Demo",
@@ -121,12 +121,12 @@ function SalesPage() {
             }}
             className=" font-oswald mt-0  leading-[1.2] text-5xl text-black text-center w-[90%] lg:leading-[1.3] mx-auto   lg:text-5xl md:w-4/5 md:text-6xl xl:text-7xl 2xl:text-7xl "
           ></h1>
-          {/* <h3
+          <h3
             dangerouslySetInnerHTML={{
               __html: copyRef.current.subtitle,
             }}
-            className=" font-oswald mt-3 font-black leading-[1.2] text-sm  text-black text-center w-[90%] lg:leading-[1.3] mx-auto lg:text-lg md:w-4/5 md:text-sm "
-          ></h3> */}
+            className=" font-oswald mt-10  leading-[1.2] text-lg  text-black text-center w-[90%] lg:leading-[1.3] mx-auto lg:text-xl md:w-4/5 md:text-lg "
+          ></h3>
         </div>
         <div>
           <div className=" ">
