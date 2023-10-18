@@ -152,7 +152,7 @@ function SalesPage() {
         <CTAButton
           additionalClasses={cn(
             "mb-5 mt-10 sm:mt-20",
-            "w-[470px] sm:w-[600px]",
+            "w-[350px] sm:w-[600px]",
             "!p-0",
             "rounded-md",
             "!h-20",
