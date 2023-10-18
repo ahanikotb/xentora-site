@@ -49,7 +49,7 @@ function SalesPage() {
       {
         preheadline: "<span class='text-red-500'>Want More Business?<span/>",
         headline:
-          "Get 10 New Appointments on A <u>Pay Per Appointment Basis</u>",
+          "Get 10 New Appointments on A <u>Pay Per Appointment</u> Basis",
         // '10<span class="text-red-500" >  Sales Calls </span>Per Month With <span class="text-red-500" > Ready-To-Buy </span>Leads  That<span class="text-yellow-400" >  Understand  </span>And <span class="text-yellow-400" >Need </span>Your Service',
         //= subtitle: "100% DONE FOR YOU.",
         subtitle:
