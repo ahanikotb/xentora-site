@@ -125,7 +125,7 @@ function SalesPage() {
             dangerouslySetInnerHTML={{
               __html: copyRef.current.subtitle,
             }}
-            className=" font-oswald mt-10  leading-[1.2] text-lg  text-black text-center w-[90%] lg:leading-[1.3] mx-auto lg:text-xl md:w-4/5 md:text-lg "
+            className=" font-oswald mt-10  leading-[1.2] text-xl text-black text-center w-[90%] lg:leading-[1.3] mx-auto lg:text-2xl md:w-4/5 md:text-xlg "
           ></h3>
         </div>
         <div>
