@@ -54,7 +54,7 @@ function SalesPage() {
         // '10<span class="text-red-500" >  Sales Calls </span>Per Month With <span class="text-red-500" > Ready-To-Buy </span>Leads  That<span class="text-yellow-400" >  Understand  </span>And <span class="text-yellow-400" >Need </span>Your Service',
         //= subtitle: "100% DONE FOR YOU.",
         subtitle:
-          "No <u>Prospecting</u>, <u>Complicated CRM Setups</u>, <u>Content Creation</u> Involved!",
+          "No <i><u>Prospecting</u></i>, <i><u>Complicated CRM Setups</u></i> or <i><u>Content Creation</u></i> Involved!",
         video: "v833knipcw",
         isMobile: false,
         CTA: "Schedule Demo",
