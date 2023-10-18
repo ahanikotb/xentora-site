@@ -32,11 +32,11 @@ export default function Home() {
       {/* <SalesPagev3 /> */}
       <Nav />
       <SalesPage />
-      <h1 className="text-center font-bold pt-10 text-4xl lg:text-6xl">
+      {/* <h1 className="text-center font-bold pt-10 text-4xl lg:text-6xl">
         Learn With Us 👇
-      </h1>
-      <Blog />
-      <section
+      </h1> */}
+      {/* <Blog /> */}
+      {/* <section
         style={{
           backgroundImage:
             "url(http://www.transparenttextures.com/patterns/textured-paper.png)",
@@ -57,8 +57,8 @@ export default function Home() {
           // href="/start"
           CTA="Free Growth Strategy Call"
         ></CTAButton>
-      </section>
-      <Footer />
+      </section> */}
+      {/* <Footer /> */}
 
       {/* <BookNow /> */}
     </main>

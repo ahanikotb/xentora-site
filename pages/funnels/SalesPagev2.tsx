@@ -119,7 +119,7 @@ function SalesPage() {
             dangerouslySetInnerHTML={{
               __html: copyRef.current.headline,
             }}
-            className=" font-oswald mt-0  leading-[1.2] text-3xl text-black text-center w-[90%] lg:leading-[1.3] mx-auto   lg:text-4xl md:w-4/5 md:text-3xl xl:text-5xl 2xl:text-5xl "
+            className=" font-oswald mt-0  leading-[1.2] text-5xl text-black text-center w-[90%] lg:leading-[1.3] mx-auto   lg:text-5xl md:w-4/5 md:text-6xl xl:text-7xl 2xl:text-7xl "
           ></h1>
           {/* <h3
             dangerouslySetInnerHTML={{
@@ -150,7 +150,15 @@ function SalesPage() {
         </div>
         {/* <LogoCloud /> */}
         <CTAButton
-          additionalClasses={"mb-5 mt-10 sm:mt-20"}
+          additionalClasses={cn(
+            "mb-5 mt-10 sm:mt-20",
+            "w-[470px] sm:w-[600px]",
+            "!p-0",
+            "rounded-md",
+            "!h-20",
+            "text-4xl",
+            "font-oswald"
+          )}
           onClick={logClick}
           CTA={copyRef.current.CTA}
           href="/easy-book"
