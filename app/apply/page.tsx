@@ -29,7 +29,7 @@ function Page() {
       </h1>
       <ApplicationForm
         width={"100vw"}
-        height={"70vh"}
+        height={"60vh"}
         goToThankYouPage={(params: any) => {
           router.push(`/thankyou?${params}`);
         }}
