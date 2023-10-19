@@ -151,7 +151,7 @@ function SalesPage() {
         {/* <LogoCloud /> */}
         <CTAButton
           additionalClasses={cn(
-            "mb-5 mt-10 sm:mt-20",
+            "mb-5 mt-5 sm:mt-10",
             "w-[350px] sm:w-[600px]",
             "!p-0",
             "rounded-md",
