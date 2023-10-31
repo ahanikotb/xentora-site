@@ -5,7 +5,7 @@ const nextConfig = {
   sassOptions: {
     includePaths: [path.join(__dirname, "tools/*/*")],
   },
-  experimental: {},
+  experimental: { serverActions: true },
 };
 
 module.exports = nextConfig;

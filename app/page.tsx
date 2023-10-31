@@ -30,13 +30,7 @@ export default function Home() {
     <main>
       {/* <Banner /> */}
       {/* <SalesPagev3 /> */}
-      {/* <Nav /> */}
-      <div className="flex justify-center items-center mt-10">
-        <div className="w-[200px] h-[8vh] text-black font-bold flex-col items-center justify-center">
-          <img src={"/xentora_logo_black.png"} />
-        </div>
-      </div>
-
+      <Nav />
       <SalesPage />
       {/* <h1 className="text-center font-bold pt-10 text-4xl lg:text-6xl">
         Learn With Us 👇
