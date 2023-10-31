@@ -1,7 +1,7 @@
 "use client";
 import useScript from "@/components/useScript";
 import IframeResizer from "iframe-resizer-react";
-import React, { Suspense, useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import Image from "next/image";
 import { CalendarCheck, CircleDollarSign, Target } from "lucide-react";
 import weightedRandom from "ts-weighted-random";
@@ -18,8 +18,6 @@ import remarkGfm from "remark-gfm";
 import rehypeRaw from "rehype-raw";
 import LogoCloud from "@/components/LogoCloud";
 import { cn } from "@/lib/utils";
-import Cal, { getCalApi } from "@calcom/embed-react";
-
 const Lead = `
 You're about to discover how to  **add $30,000 Of additonal monthly reccuring revenue** every 90 days without hiring sdrs, or paying for more ads.
 
@@ -51,32 +49,23 @@ const ExtraSpace = () => (
     <br />
   </>
 );
-const SubHeadline = ({ text, noMB }: { text: string; noMB?: boolean }) => (
-  <h3
-    className={cn(
-      "my-20 font-oswald text-5xl text-center mx-auto ",
-      noMB ? "mb-0" : ""
-    )}
-  >
-    {text}
-  </h3>
+const SubHeadline = ({ text }: { text: string }) => (
+  <h3 className="my-20 font-oswald text-5xl text-center mx-auto ">{text}</h3>
 );
-const SubMinHeadline = ({ text }: { text: string }) => (
-  <h3 className="my-5 font-oswald text-4xl text-center mx-auto ">{text}</h3>
-);
+
 const NewLine = () => <br />;
 function SalesPage() {
   const copy = new Map([
     [
       {
         preheadline:
-          "<span class='text-red-500'>For Realtors Looking To Predicatbly Grow Their Business<span/>",
+          "<span class='text-red-500'>For Realtors Looking To Grow Their Business<span/>",
         headline:
-          "Add <b>3</b> New Listings <b>Every Month</b> With <br/>In-Market Precognition",
+          "Get 10 New <b>Qualified Appointments</b> On A <u>Pay Per Appointment</u> Basis",
         // '10<span class="text-red-500" >  Sales Calls </span>Per Month With <span class="text-red-500" > Ready-To-Buy </span>Leads  That<span class="text-yellow-400" >  Understand  </span>And <span class="text-yellow-400" >Need </span>Your Service',
         //= subtitle: "100% DONE FOR YOU.",
         subtitle:
-          "A New Way To Find Exclusive Listing Leads Before They Hit The Market!",
+          "No <i><u>Prospecting</u></i>, <i><u>Complicated CRM Setups</u></i> or <i><u>Content Creation</u></i> Involved!",
         video: "v833knipcw",
         isMobile: false,
         CTA: "Schedule Demo",
@@ -100,16 +89,6 @@ function SalesPage() {
   ]);
   const subheadline = [];
   const analytics = useGoogleAnalytics();
-  useEffect(() => {
-    (async function () {
-      const cal = await getCalApi();
-      cal("ui", {
-        styles: { branding: { brandColor: "#000000" } },
-        hideEventTypeDetails: false,
-        layout: "month_view",
-      });
-    })();
-  }, []);
   useEffect(() => {
     //@ts-ignore
     if (analytics) {
@@ -157,11 +136,105 @@ function SalesPage() {
             dangerouslySetInnerHTML={{
               __html: copyRef.current.subtitle,
             }}
-            className=" font-oswald xl:mt-7 mt-2 lg:mt-1  leading-[1.2] text-2xl text-black text-center w-[90%] lg:leading-[1.3] mx-auto lg:text-2xl xl:text-3xl md:w-4/5 md:text-2xl "
+            className=" font-oswald mt-10  leading-[1.2] text-2xl text-black text-center w-[90%] lg:leading-[1.3] mx-auto lg:text-3xl md:w-4/5 md:text-2xl "
           ></h3>
         </div>
-
-        {/* <CTAButton
+        <div>
+          <div className=" ">
+            <div>
+              {/* <IframeResizer
+                src={`https://fast.wistia.net/embed/iframe/${copyRef.current.video}?videoFoam=true`}
+                title="VSL_CTA Video"
+                allow="autoplay; fullscreen"
+                allowTransparency={true}
+                frameBorder={0}
+                scrolling={false}
+                // className="wistia_embed"
+                className="mb-10 mx-auto mt-3 sm:mt-10 min-w-[360px] min-h-[202px] sm:min-w-[640px] sm:min-h-[360px]"
+                // name=" mx-auto"
+                allowFullScreen={true}
+                // width="420px"
+                // height="360px"
+              ></IframeResizer> */}
+            </div>
+          </div>{" "}
+          <div className="xl:grid grid-cols-5 w-[90%] sm:w-[80%] mx-auto pt-10">
+            <div className="flex justify-center xl:justify-start items-start mt-5 sm:mt-10 ">
+              <img className="  w-[200px] h-[200px]" src="/headshot.png"></img>
+            </div>{" "}
+            <div className=" col-span-3">
+              <p className="ml-10 font-lato text-2xl  mt-10 ">
+                From The Desk Of Ahmed Kotb
+                <NewLine />
+                Middletown, DE <ExtraSpace /> Dear Friend, <ExtraSpace />
+                Are you a Realtor who's{" "}
+                <b>
+                  frustrated with the small financial reward you receive from
+                  all your hard work and effort
+                </b>
+                ?
+                <ExtraSpace />
+                Is the unpredictability of the market{" "}
+                <b> leaking into your personal life</b> and causing you unwanted
+                stress and conflict with your loved ones?
+                <ExtraSpace />
+                If you said yes, please keep reading because I am going to show
+                you how
+                <u> in just 7 days</u>, you can transform your business and join
+                thousands of agents who are currently <b>paying for success.</b>
+                <ExtraSpace />i will walk you through the exact process in a
+                moment...
+                <ExtraSpace />
+                And if you pass my qualification criteria, i will give you the
+                opportunity to directly work with me and my team here at xentora
+                to implement it for you.
+                <ExtraSpace />
+                But first, let me explain why I believe I've earned the right to
+                teach you how to quickly grow your income to give you financial
+                stability and remove any stress or frustration you may be
+                experiencing.
+              </p>{" "}
+              <SubHeadline
+                text=" “Not Another Fake Real Estate Guru or Agency Selling You A
+                Dream…”"
+              />
+              <p className="ml-10 font-lato text-2xl col-span-3  mt-10 ">
+                After graduating from a globally ranked University with a degree
+                in marketing and international business.
+                <ExtraSpace />
+                Earning my stripes and gaining trust as the <b>Real Deal</b>
+                <ExtraSpace /> I became a confidant, marketing consultant, and
+                advisor to a seven-figure CEO.
+                <ExtraSpace />
+                This helped me secure a fair share of tactics that are beyond
+                the reach of 99.9% of marketers. <ExtraSpace />
+                That's why i'm so confident about what i'm about to share with
+                you today ... <ExtraSpace /> it's not a hack , tactic , or new
+                gimick...
+                <ExtraSpace /> it's <b>timeless marketing</b> that works now and
+                will continue to work for years to come...
+              </p>{" "}
+              <SubHeadline text="“An Effective Lead Generation System For Realtors in any market.… ”" />
+              {/* <h1 className="my-20 font-oswald text-5xl text-center mx-auto ">
+                “An Effective Lead Generation System For Realtors in any
+                market.… ”
+              </h1> */}
+            </div>
+            {/* <h1 className="mt-10 font-oswald text-3xl text-center mx-auto ">
+              Want To Review The Program, How It Works, How Much it Costs, And
+              How You Can Get Started?
+            </h1> */}
+            <ReactMarkdown
+              children={`    
+              `}
+              remarkPlugins={[]}
+              rehypePlugins={[rehypeRaw]}
+              className="font-lato"
+            />
+          </div>
+        </div>
+        {/* <LogoCloud /> */}
+        <CTAButton
           additionalClasses={cn(
             "mb-5 mt-5 sm:mt-10",
             "w-[350px] sm:w-[600px]",
@@ -173,13 +246,10 @@ function SalesPage() {
           )}
           onClick={logClick}
           CTA={copyRef.current.CTA}
-          href="#"
-          data-cal-link="xentora/action-plan"
-          data-cal-config='{"layout":"month_view"}'
-          // href="/apply"
+          href="/apply"
           //           href="/apply?disableFirstBlock
           // "
-        /> */}
+        />
       </section>
       {/* 
       <section className="mt-5 p-4 rounded-xl sm:p-10  mb-10  w-[90%] sm:w-[90%] mx-auto">
@@ -276,15 +346,6 @@ function SalesPage() {
 "
         />
       </section> */}
-      <Suspense>
-        <div className="m-10">
-          <Cal
-            calLink="xentora/action-plan"
-            style={{ width: "100%", height: "100%", overflow: "scroll" }}
-            config={{ layout: "month_view" }}
-          />
-        </div>
-      </Suspense>
     </div>
   );
 }

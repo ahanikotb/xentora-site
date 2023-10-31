@@ -5,11 +5,16 @@ import { Analytics } from "@vercel/analytics/react";
 import { Oswald, Lato } from "next/font/google";
 import { cn } from "@/lib/utils";
 // If loading a variable font, you don't need to specify the font weight
-const oswald = Oswald({ subsets: ["latin"], variable: "--font-oswald" });
+const oswald = Oswald({
+  subsets: ["latin"],
+  variable: "--font-oswald",
+  fallback: ["oswald"],
+});
 const lato = Lato({
   subsets: ["latin"],
   variable: "--font-lato",
   weight: "400",
+  fallback: ["lato"],
 });
 
 export const metadata = {
