@@ -21,7 +21,7 @@ function CTAButton({
         }
       }}
       className={cn(
-        "font-black  text-white text-2xl hover:bg-green-800 cursor-pointer bg-green-700 p-2 h-[50px] w-[340px] sm:p-5 mx-auto sm:h-[60px] sm:w-[340px] flex rounded-xl justify-center items-center  shadow-lg",
+        "font-black font-oswald  text-white text-2xl hover:bg-green-800 cursor-pointer bg-green-700 p-2 h-[50px] w-[340px] sm:p-5 mx-auto sm:h-[60px] sm:w-[340px] flex rounded-md justify-center items-center  shadow-lg",
         additionalClasses
       )}
     >

@@ -276,15 +276,27 @@ function SalesPage() {
 "
         />
       </section> */}
-      <Suspense>
+      <CTAButton
+        additionalClasses={"mt-5"}
+        onClick={logClick}
+        CTA={copyRef.current.CTA}
+        href="/apply?disableFirstBlock
+"
+      />
+      {/* <Suspense>
         <div className="m-10">
           <Cal
             calLink="xentora/action-plan"
             style={{ width: "100%", height: "100%", overflow: "scroll" }}
-            config={{ layout: "month_view" }}
+            config={{
+              // name: "Ahmed",
+              // lastName: "Kotb",
+              // email: "booker@example.org",
+              layout: "month_view",
+            }}
           />
         </div>
-      </Suspense>
+      </Suspense> */}
     </div>
   );
 }
