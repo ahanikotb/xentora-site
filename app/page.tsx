@@ -28,9 +28,15 @@ export default function Home() {
 
   return (
     <main>
+      {" "}
+      <div className="pt-5 pb-2 w-[100%] text-[#2a2324] font-bold flex items-center justify-center">
+        <a className="w-[200px]" href="/">
+          <img src="/xentora_logo_black.png" />
+        </a>
+      </div>
       {/* <Banner /> */}
       {/* <SalesPagev3 /> */}
-      <Nav />
+      {/* <Nav /> */}
       <SalesPage />
       {/* <h1 className="text-center font-bold pt-10 text-4xl lg:text-6xl">
         Learn With Us 👇
@@ -59,7 +65,6 @@ export default function Home() {
         ></CTAButton>
       </section> */}
       {/* <Footer /> */}
-
       {/* <BookNow /> */}
     </main>
   );

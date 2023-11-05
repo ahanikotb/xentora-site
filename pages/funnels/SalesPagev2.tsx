@@ -70,16 +70,16 @@ function SalesPage() {
     [
       {
         preheadline:
-          "<span class='text-red-500'>For Realtors Looking To Predicatbly Grow Their Business<span/>",
+          "<span class='text-red-500'>Investors, Wholesalers and flippers<span/>",
         headline:
-          "Add <b>3</b> New Listings <b>Every Month</b> With <br/>In-Market Precognition",
+          "Add <b>3</b> <b>Direct-To-Seller Deals </b> Month With In-Market Precognition",
         // '10<span class="text-red-500" >  Sales Calls </span>Per Month With <span class="text-red-500" > Ready-To-Buy </span>Leads  That<span class="text-yellow-400" >  Understand  </span>And <span class="text-yellow-400" >Need </span>Your Service',
         //= subtitle: "100% DONE FOR YOU.",
         subtitle:
-          "A New Way To Find Exclusive Listing Leads Before They Hit The Market!",
+          "A New System To Find Motivated Sellers Without Middlemen Killing Your Margins!",
         video: "v833knipcw",
         isMobile: false,
-        CTA: "Schedule Demo",
+        CTA: "LEARN MORE",
       },
       1,
     ],
