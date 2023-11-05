@@ -51,7 +51,7 @@ function ThankYou() {
         // style={{ width: "150px", margin: "auto", marginTop: "5vh" }}
         src={"/xentora_logo_black.png"}
       />
-      <h1 className="font-black text-5xl sm:text-6xl text-center text-black">
+      <h1 className="font-oswald font-bold text-5xl sm:text-6xl text-center text-black">
         You're Booked !
       </h1>
       <img
