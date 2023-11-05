@@ -70,14 +70,12 @@ export default function Home() {
   );
 }
 export const metadata: Metadata = {
-  title:
-    "Xentora - Real Estate Marketing Agency - Digital Ads That Drive Results.",
+  title: "Xentora - Marketing Agency - Digital Ads That Drive Results.",
   description:
-    "We specialize in custom digital marketing campaigns for real estate professionals. Our YouTube, Facebook and TikTok ads are designed to boost visibility, engagement and leads. Trust our experts to manage your digital presence and growth.",
+    "We specialize in custom digital marketing campaigns. Our YouTube, Facebook and TikTok ads are designed to boost visibility, engagement and leads. Trust our experts to manage your digital presence and growth.",
   openGraph: {
-    title:
-      "Xentora - Real Estate Marketing Agency - Digital Ads That Drive Results",
+    title: "Xentora - Marketing Agency - Digital Ads That Drive Results",
     description:
-      "We specialize in custom digital marketing campaigns for real estate professionals. Our YouTube, Facebook and TikTok ads are designed to boost visibility, engagement and leads. Trust our experts to manage your digital presence and growth.",
+      "We specialize in custom digital marketing campaigns. Our YouTube, Facebook and TikTok ads are designed to boost visibility, engagement and leads. Trust our experts to manage your digital presence and growth.",
   },
 };
