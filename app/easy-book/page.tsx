@@ -45,6 +45,11 @@ function Page() {
           <Loader2 size={64} color="white" className="animate-spin" />
         </div>
       ) : null}
+      <h1 className="font-bold font-oswald mt-5 mb-5 leading-[1.2] text-5xl text-black text-center w-[90%] lg:leading-[1.3] mx-auto   lg:text-5xl md:w-4/5 md:text-6xl xl:text-7xl 2xl:text-7xl ">
+        Pick A Time To See How We Can Help You Add 3 More Deals Every Month
+        <br />
+        &#8595;
+      </h1>
 
       <Iframe
         onLoad={() => {
