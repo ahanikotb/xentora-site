@@ -72,7 +72,7 @@ function SalesPage() {
         preheadline:
           "<span class='text-red-500'>Investors, Wholesalers and flippers<span/>",
         headline:
-          "Add <b>3</b> <b>Direct-To-Seller Deals </b> Month With In-Market Precognition",
+          "Add <b>3</b> <b>Direct-To-Seller Deals</b> Every Month With In-Market Precognition",
         // '10<span class="text-red-500" >  Sales Calls </span>Per Month With <span class="text-red-500" > Ready-To-Buy </span>Leads  That<span class="text-yellow-400" >  Understand  </span>And <span class="text-yellow-400" >Need </span>Your Service',
         //= subtitle: "100% DONE FOR YOU.",
         subtitle:
@@ -280,8 +280,8 @@ function SalesPage() {
         additionalClasses={"mt-5"}
         onClick={logClick}
         CTA={copyRef.current.CTA}
-        href="/apply?disableFirstBlock
-"
+        href="/easy-book"
+        // href="/apply?disableFirstBlock"
       />
       {/* <Suspense>
         <div className="m-10">
